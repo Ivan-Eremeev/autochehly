@@ -7,8 +7,8 @@
 
 // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
-$max-width: 1200px; // Максимальная ширина контейнера
-$gutter: 15px; // Расстояние между колонками
+$max-width: 1260px; // Максимальная ширина контейнера
+$gutter: 30px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
 // Брэйкпоинты
@@ -26,15 +26,29 @@ $break_xs: 500px;
 // $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
 
 // Шрифты
-// @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
+@include font-face("Open-Sans", "../fonts/OpenSansLight/OpenSansLight", 300, normal);
+@include font-face("Open-Sans", "../fonts/OpenSansLightItalic/OpenSansLightItalic", 300, italic);
+@include font-face("Open-Sans", "../fonts/OpenSansRegular/OpenSansRegular", 400, normal);
+@include font-face("Open-Sans", "../fonts/OpenSansRegularItalic/OpenSansRegularItalic", 400, italic);
+@include font-face("Open-Sans", "../fonts/OpenSansSemiBold/OpenSansSemiBold", 600, normal);
+@include font-face("Open-Sans", "../fonts/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic", 600, italic);
+@include font-face("Open-Sans", "../fonts/OpenSansBold/OpenSansBold", 700, normal);
+@include font-face("Open-Sans", "../fonts/OpenSansBoldItalic/OpenSansBoldItalic", 700, italic);
+@include font-face("Open-Sans", "../fonts/OpenSansExtraBold/OpenSansExtraBold", 900, normal);
+@include font-face("Open-Sans", "../fonts/OpenSansExtraBoldItalic/OpenSansExtraBoldItalic", 900, italic);
 
 // Цвета
-// $black: #000;
+$black: #111010;
+$green: #1e9229;
+$greenL: #e3f2e4;
+$red: #e11f1f;
+$orange: #d19225;
+$orangeL: #ffe9c4;
+$gray: #eaecf0;
 
-// Блоки
+// Блоки стилей
+@import 'template';
 @import 'blocks/menu';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';
-
-@import 'template';

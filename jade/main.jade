@@ -1,0 +1,240 @@
+extends blocks/base.jade
+
+block title 
+	title Главная
+
+block content
+
+	include blocks/header.jade
+	
+	.content
+		.wrapper
+
+			.filter-factories
+
+				// factories
+				.factories.js-match-height
+					h2.factories_title Все фабрики чехлов на одном сайте
+					ul.factories_list
+						li.factories_item
+							a(href="#").factories_icon
+								img(src="img/autopilot-logo.png", alt="logo")
+						li.factories_item
+							a(href="#").factories_icon
+								img(src="img/avtolider-logo.png", alt="logo")
+						li.factories_item
+							a(href="#").factories_icon
+								img(src="img/autopilot-logo.png", alt="logo")
+						li.factories_item
+							a(href="#").factories_icon
+								img(src="img/avtolider-logo.png", alt="logo")
+						li.factories_item
+							a(href="#").factories_icon
+								img(src="img/autopilot-logo.png", alt="logo")
+				// /factories
+
+				.filter-wrapper
+
+					// filter
+					.filter.js-match-height
+						form(action="#").filter_selects
+							.filter_select
+								select(name="#")
+									option(value="#") BMW
+									option(value="#") Mercedes
+									option(value="#") Audi
+							.filter_select
+								select(name="#")
+									option(value="#") 3 серия
+									option(value="#") 5 серия
+									option(value="#") 7 серия
+							.filter_select
+								select(name="#")
+									option(value="#") Поколение
+							.filter_select
+								select(name="#")
+									option(value="#") Комплектация
+							button(type="submit").filter_btn Показать
+						.filter_body
+							.filter_title Марка автомобиля
+							.filter_content
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/audi.jpg", alt="audi")
+										span.filter_text Audi
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/audi.jpg", alt="audi")
+										span.filter_text Audi
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/audi.jpg", alt="audi")
+										span.filter_text Audi
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/audi.jpg", alt="audi")
+										span.filter_text Audi
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/bmw.jpg", alt="bmw")
+										span.filter_text BMW
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/bmw.jpg", alt="bmw")
+										span.filter_text BMW
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/bmw.jpg", alt="bmw")
+										span.filter_text BMW
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/bmw.jpg", alt="bmw")
+										span.filter_text BMW
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/chevrolet.jpg", alt="chevrolet")
+										span.filter_text Chevrolet
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/chevrolet.jpg", alt="chevrolet")
+										span.filter_text Chevrolet
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/chevrolet.jpg", alt="chevrolet")
+										span.filter_text Chevrolet
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/chevrolet.jpg", alt="chevrolet")
+										span.filter_text Chevrolet
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/citroen.jpg", alt="citroen")
+										span.filter_text Citroen
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/citroen.jpg", alt="citroen")
+										span.filter_text Citroen
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/citroen.jpg", alt="citroen")
+										span.filter_text Citroen
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/citroen.jpg", alt="citroen")
+										span.filter_text Citroen
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/daewoo.jpg", alt="daewoo")
+										span.filter_text Daewoo
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/daewoo.jpg", alt="daewoo")
+										span.filter_text Daewoo
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/daewoo.jpg", alt="daewoo")
+										span.filter_text Daewoo
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/daewoo.jpg", alt="daewoo")
+										span.filter_text Daewoo
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/ford.jpg", alt="ford")
+										span.filter_text Ford
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/ford.jpg", alt="ford")
+										span.filter_text Ford
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/ford.jpg", alt="ford")
+										span.filter_text Ford
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/ford.jpg", alt="ford")
+										span.filter_text Ford
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/hyundai.jpg", alt="hyundai")
+										span.filter_text Hyundai
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/hyundai.jpg", alt="hyundai")
+										span.filter_text Hyundai
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/hyundai.jpg", alt="hyundai")
+										span.filter_text Hyundai
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/hyundai.jpg", alt="hyundai")
+										span.filter_text Hyundai
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/kia.jpg", alt="kia")
+										span.filter_text Kia
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/kia.jpg", alt="kia")
+										span.filter_text Kia
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/kia.jpg", alt="kia")
+										span.filter_text Kia
+								.filter_item
+									a(href="#").filter_link
+										.filter_img
+											img(src="img/kia.jpg", alt="kia")
+										span.filter_text Kia
+					// /filter
+		
+	include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	//- script(src="js/slick.min.js")
+	script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	//- script(src="js/jquery.vide.min.js")
+	//- script(src="js/jquery.scrollbar.min.js")
+	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
+	script(src="js/script.js")

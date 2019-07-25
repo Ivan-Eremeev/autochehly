@@ -1,33 +1,55 @@
 // header
 header.header#header
 	.wrapper
-		.header_container
+		
+		.header_left
 
-			// menu
-			//- .menu--left .menu--right .menu--top .menu--bottom .menu--drop
-			#menu.menu.menu--right
-				button#menu-btn.menu_btn.hamburger.hamburger--vortex(type="button")
-					span.hamburger-box
-						span.hamburger-inner
-				nav#mmenu.menu_nav
-					ul.menu_list
-						li.menu_item
-							a(href="#").menu_link Меню 1
-						li.menu_item
-							a(href="#").menu_link Меню 2
-						li.menu_item
-							a(href="#").menu_link Меню 3
-						li.menu_item
-							a(href="#").menu_link Меню 4
-						li.menu_item
-							a(href="#").menu_link Меню 5
-						li.menu_item
-							a(href="#").menu_link Меню 6
-						li.menu_item
-							a(href="#").menu_link Меню 7
-						li.menu_item
-							a(href="#").menu_link Меню 8
-				.menu_over
-			// /menu
+			a(href="main.html").logo
+				img(src="img/logo.svg", alt="logo")
+
+			a(href="#").location
+				img(src="img/location.svg", alt="location").location_icon
+				span.location_text Москва
+
+		.header_right
+
+			.call
+				img(src="img/call.svg", alt="call").call_img
+				.call_content
+					a(href="tel:88006005429").call_num 8 800 600-54-29
+					.call_text Ежедневно с 9 до 21
+
+			.cart
+				a(href="#").cart_img
+					img(src="img/cart.svg", alt="cart")
+					span.cart_count 4
+				a(href="#").cart_btn Оформить заказ
+
+			//- // menu
+			//- //- .menu--left .menu--right .menu--top .menu--bottom .menu--drop
+			//- #menu.menu.menu--right
+			//- 	button#menu-btn.menu_btn.hamburger.hamburger--vortex(type="button")
+			//- 		span.hamburger-box
+			//- 			span.hamburger-inner
+			//- 	nav#mmenu.menu_nav
+			//- 		ul.menu_list
+			//- 			li.menu_item
+			//- 				a(href="#").menu_link Меню 1
+			//- 			li.menu_item
+			//- 				a(href="#").menu_link Меню 2
+			//- 			li.menu_item
+			//- 				a(href="#").menu_link Меню 3
+			//- 			li.menu_item
+			//- 				a(href="#").menu_link Меню 4
+			//- 			li.menu_item
+			//- 				a(href="#").menu_link Меню 5
+			//- 			li.menu_item
+			//- 				a(href="#").menu_link Меню 6
+			//- 			li.menu_item
+			//- 				a(href="#").menu_link Меню 7
+			//- 			li.menu_item
+			//- 				a(href="#").menu_link Меню 8
+			//- 	.menu_over
+			//- // /menu
 
 // /header
