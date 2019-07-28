@@ -1,0 +1,24 @@
+.main-sidebar {
+	margin: 25px 0;
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+}
+.main {
+	margin-right: 270px;
+	&--maw-780 {
+		max-width: 780px;
+	}
+}
+.sidebar {
+	float: right;
+	width: 250px;
+}
+.sideb {
+	padding: 0 20px 20px;
+	border: 1px solid $border;
+	border-radius: 5px;
+}

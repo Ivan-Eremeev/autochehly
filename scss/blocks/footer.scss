@@ -1,0 +1,57 @@
+.footer {
+	padding-top: 80px;
+	&_top {
+		padding: 130px 0 20px;
+		border-top: 1px solid $border;
+	}
+	&_col {
+		@include col(2.4);
+	}
+	&_col-big {
+		@include col(7.2);
+	}
+	&_nav {
+		font-size: 14px;
+	}
+	&_item {
+		margin-bottom: 20px;
+	}
+	&_link {
+		color: $black;
+		&:hover {
+			color: $red;
+		}
+	}
+	&_rectangle {
+		max-width: 230px;
+		min-height: 120px;
+		background-color: $gray;
+	}
+	&_logo {
+		float: right;
+	}
+	&_bottom {
+		padding: 45px 0;
+		background-color: $gray;
+		font-size: 14px;
+		color: $grayD;
+		.wrapper {
+			position: relative;
+			padding-right: 60px;
+		}
+	}
+	&_linkb {
+		padding-bottom: 5px;
+		color: $grayD;
+		border-bottom: 1px solid transparent;
+		&:hover {
+			border-color: #b3b3b3
+		}
+	}
+	&_wings {
+		position: absolute;
+		top: 50%;
+		right: 40px;
+		transform: translate(0,-50%);
+	}
+}

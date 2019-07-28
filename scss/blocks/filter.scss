@@ -1,0 +1,101 @@
+.filter {
+	padding: 18px 18px 0;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
+	&_selects {
+		margin-bottom: 24px;
+	}
+	&_select {
+		display: inline-block;
+		width: 100%;
+		max-width: 166px;
+		margin-right: 10px;
+		margin-bottom: 18px;
+		position: relative;
+		select {
+			width: 100%;
+			height: 40px;
+			padding: 0 25px 0 14px;
+			border: 1px solid $border;
+			border-radius: 5px;
+			background-color: #fff;
+			transition: .15s;
+			appearance: none;
+			&::-ms-expand {
+			  display: none;
+			}
+			&:hover, &:focus {
+				border-color: $red;
+				color: $red;
+				+.filter_arrow {
+					color: $red;
+				}
+			}
+		}
+	}
+	&_arrow {
+		font-size: 25px;
+		position: absolute;
+		top: 9px;
+		right: 5px;
+		color: $grayD;
+		transition: .15s;
+	}
+	&_btn {
+		width: 100%;
+		height: 40px;
+		max-width: 170px;
+		padding: 4px 10px;
+		border: 1px solid transparent;
+		background-color: $red;
+		border-radius: 5px;
+		transition: .15s;
+		cursor: pointer;
+		&:hover {
+			background-color: #fff;
+			border-color: $red;
+			color: $red;
+		}
+	}
+	&_body {
+		padding-bottom: 18px;
+		overflow-y: auto;
+	}
+	&_title {
+		margin-bottom: 22px;
+		font-size: 30px;
+	}
+	&_content {
+
+	}
+	&_item {
+		display: inline-block;
+		width: 100%;
+		max-width: 218px;
+		margin-bottom: 3px;
+	}
+	&_link {
+		color: $black;
+		transition: .05s;
+		&:hover {
+			color: $red;
+		}
+	}
+	&_img {
+		width: 50px;
+		height: 40px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 20px;
+		position: relative;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	}
+	&_text {
+		vertical-align: middle;
+	}
+}

@@ -10,7 +10,7 @@
 // Подключение файлов. При использовании gulp поменять "// @prepros-append" на "//="
 // libs-settings/fancybox_settings.js
 // libs-settings/mmenu_settings.js
-// libs-settings/slick_settings.js
+// @prepros-append libs-settings/slick_settings.js
 // libs-settings/wow_js_settings.js
 // libs-settings/fullpage_settings.js
 // libs-settings/tinyscrollbar-settings.js
@@ -170,6 +170,18 @@ $(document).ready(function () {
 	    $img.replaceWith($svg);
 	  }, 'xml');
 	});
+
+	// Задаем фоновое изображение .data-img из атибута data
+	function imgData() {
+		var block = $('.data-img');
+		block.each(function(index, el) {
+			var blockData = $(this).data('img');
+			$(this).css({
+				'background-image': 'url('+ blockData +')'
+			});
+		});
+	};
+	imgData();
 	
 });
 
@@ -603,5 +615,132 @@ $(document).ready(function () {
 //   	$(this).parent().text(arr[index]);
 //   });
 // };
+function slider(slider,sliderFor) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    asNavFor: '.slider-for', // Связь со слайдерами
+    dots: true, // Пагинация
+    arrows: true, // Стрелки
+    speed: 500, // Скорость перехода слайдов
+    autoplay: false, // Автопрокрутка
+    autoplaySpeed: 2000, // Скорость автопрокрутки
+    centerMode: false, // Задает класс .slick-center слайду в центре
+    focusOnSelect: true, // Выбрать слайд кликом
+    infinite: false, // Зацикленное пролистывание
+    vertical: false, // Вертикальный слайдер
+    rtl: false, // Слайды листаются справа налево
+    centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+    adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
+    variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+    responsive: [ // Адаптация
+      {
+      breakpoint: 992,
+        settings: {
+          arrows: false,
+        }
+      },
+      {
+      breakpoint: 720,
+        settings: {
+          arrows: false,
+        }
+      }
+    ]
+    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
+  });
+  
+  sliderFor.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+    asNavFor: '.slider-nav' // Связь со слайдерами
+  });
+
+  // Кастомные кнопки "вперед" "назад"
+  $('.sliderButton_prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.sliderButton_next').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
+// Добавляем кастомную пагинацию в слайдер
+function addDotsInPagination(sliderB, sliderPagination) {
+  var sliderCount = sliderB.find('.js-slider-slide');
+  for (var i = 1; i < sliderCount.length + 1; i++) {
+    var dot = $('<div class="slider-pagination_dot"></div>');
+    dot.text(i);
+    sliderPagination.append(dot);
+  };
+  // Вызов слайдера нужно делать после добавления пагинации
+  slider();
+};
+
+// Инициализация слайдеров на десктопе и мобилке
+// function sliderReinstall() {
+//   if (window.matchMedia("(max-width: 769px)").matches) {
+//     $('.slick-initialized').slick('unslick');
+//   }
+//   else {
+//     $('.slick-initialized').slick('unslick');
+//     sliderInit($('.slider'), $('.slider-for'));
+//   }
+// }
+
+// $('.your-slider').slick('unslick'); // Уничтожить слайдер
+
+
+
+
+function cardsSlider(slider) {
+  slider.slick({
+    slidesToShow: 4, // Сколько слайдов показывать на экране
+    slidesToScroll: 2, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    // speed: 500, // Скорость перехода слайдов
+    // autoplay: false, // Автопрокрутка
+    // autoplaySpeed: 2000, // Скорость автопрокрутки
+    // centerMode: false, // Задает класс .slick-center слайду в центре
+    // focusOnSelect: true, // Выбрать слайд кликом
+    infinite: true, // Зацикленное пролистывание
+    // vertical: false, // Вертикальный слайдер
+    // rtl: false, // Слайды листаются справа налево
+    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
+    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+    swipe: false, // Перелистывание пальцем
+    draggable: false, // Перелистывание мышью
+    // responsive: [ // Адаптация
+    //   {
+    //   breakpoint: 992,
+    //     settings: {
+    //       arrows: false,
+    //     }
+    //   },
+    //   {
+    //   breakpoint: 720,
+    //     settings: {
+    //       arrows: false,
+    //     }
+    //   }
+    // ]
+    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
+  });
+
+  // Кастомные кнопки "вперед" "назад"
+  $('#cards-slider-prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('#cards-slider-next').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
+cardsSlider($('#cards-slider'));
 
 //# sourceMappingURL=script.js.map

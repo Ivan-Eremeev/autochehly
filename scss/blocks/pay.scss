@@ -1,0 +1,46 @@
+.pay {
+	&_list {
+
+	}
+	&_item {
+		margin-bottom: 25px;
+		padding-left: 63px;
+		position: relative;
+	}
+	&_img {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
+	}
+	&_text {
+
+	}
+	&_cards {
+		margin-bottom: 50px;
+		font-size: 14px;
+	}
+	&_card {
+		display: inline-block;
+		width: 50px;
+		height: 40px;
+		margin-right: 14px;
+		position: relative;
+	}
+	&_card-img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	&_sberbank {
+
+	}
+	&_sberbank-logo {
+
+	}
+	&_sberbank-text {
+		max-width: 190px;
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,72 @@
+.card {
+	padding: 20px;
+	&_img {
+		&:after {
+			padding-top: 121%;
+		}
+	}
+	&_content {
+		padding-top: 31px;
+	}
+	&_text {
+		margin-bottom: 10px;
+		line-height: 1.7;
+	}
+	&_presens {
+		margin-bottom: 11px;
+		font-size: 13px;
+		color: #fff;
+		span {
+			padding: 0 5px;
+			border-radius: 3px;
+		}
+		&--orange {
+			span {
+				background-color: $orange;
+			}
+		}
+		&--green {
+			span {
+				background-color: $green;
+			}
+		}
+	}
+	&_order {
+		
+	}
+	&_price {
+		display: inline-block;
+		padding-top: 7px;
+		font-weight: 700;
+		line-height: 1;
+		span {
+			font-size: 25px;
+		}
+	}
+	&_btn {
+		float: right;
+		width: 100%;
+		height: 42px;
+		max-width: 136px;
+		padding: 0 10px;
+		border: none;
+		border-radius: 5px;
+		color: $black;
+		transition: .15s;
+		cursor: pointer;
+		&--orange {
+			background-color: #ffe9c4;
+			&:hover {
+				background-color: $orange;
+				color: #fff;
+			}
+		}
+		&--green {
+			background-color: #e3f2e4;
+			&:hover {
+				background-color: $green;
+				color: #fff;
+			}
+		}
+	}
+}

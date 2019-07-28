@@ -1,0 +1,91 @@
+html {
+	&.lock {
+		overflow: hidden;
+	}
+}
+a {
+	transition: .15s;
+	text-decoration: none;
+}
+button {
+	font-family: "Open-Sans";
+	outline: none;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 600;
+}
+input, select {
+	font-family: "Open-Sans";
+	font-size: 16px;
+	outline: none;
+}
+.row {
+	@include row();
+}
+.wrapper {
+	@include wrapper();
+}
+body {
+	background-color: #fff;
+	font-family: "Open-Sans";
+	font-size: 16px;
+	position: relative;
+}
+.mobile-hide {
+	@media (max-width: $break_sm) {
+		display: none !important;
+	}
+}
+.mobile-visible {
+	@media (min-width: $break_sm + 1) {
+		display: none !important;
+	}
+}
+.img-responsive {
+	position: relative;
+	overflow: hidden;
+	img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%,0);
+	}
+	&:after {
+		content: '';
+		display: block;
+		padding-top: 56.25%;
+	}
+}
+.clearfix {
+	position: relative;
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+}
+.center {
+	text-align: center;
+}
+.subtitle {
+	margin: 30px 0;
+	font-size: 30px;
+	font-weight: 700;
+}
+.text {
+	p {
+		margin-bottom: 20px;
+	}
+	a {
+		padding-bottom: 2px;
+		color: $red;
+		border-bottom: 1px solid $border;
+		&:hover {
+			border-color: $red;
+		}
+	}
+}
+.slick-slide {
+	outline: none;
+}

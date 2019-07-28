@@ -1,0 +1,20 @@
+.factories {
+	padding: 30px 25px;
+	border: 1px solid $border;
+	border-radius: 5px;
+	&_title {
+		margin-bottom: 25px;
+		font-size: 25px;
+		font-weight: 900;
+		line-height: 1.2;
+	}
+	&_item {
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+	&_icon {
+		display: inline-block;
+	}
+}

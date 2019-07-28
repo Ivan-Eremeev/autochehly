@@ -39,16 +39,32 @@ $break_xs: 500px;
 
 // Цвета
 $black: #111010;
-$green: #1e9229;
+$green: #28873a;
 $greenL: #e3f2e4;
 $red: #e11f1f;
 $orange: #d19225;
 $orangeL: #ffe9c4;
 $gray: #eaecf0;
+$grayD: #9e9e9e;
+$border: #ddd;
 
 // Блоки стилей
+@import 'blocks/settings';
 @import 'template';
 @import 'blocks/menu';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';
+@import 'blocks/header';
+@import 'blocks/main-sidebar';
+@import 'blocks/filter';
+@import 'blocks/factories';
+@import 'blocks/categories';
+@import 'blocks/cards-slider';
+@import 'blocks/card';
+@import 'blocks/tutorial';
+@import 'blocks/install';
+@import 'blocks/delivery';
+@import 'blocks/pay';
+@import 'blocks/footer';
+@import 'blocks/social';

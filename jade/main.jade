@@ -7,225 +7,466 @@ block content
 
 	include blocks/header.jade
 	
-	.content
-		.wrapper
+	.wrapper
 
-			.filter-factories
+		.main-sidebar
+
+			.sidebar
 
 				// factories
-				.factories.js-match-height
+				.factories
 					h2.factories_title Все фабрики чехлов на одном сайте
 					ul.factories_list
 						li.factories_item
 							a(href="#").factories_icon
-								img(src="img/autopilot-logo.png", alt="logo")
+								img(src="img/autopilot.png", alt="logo")
 						li.factories_item
 							a(href="#").factories_icon
-								img(src="img/avtolider-logo.png", alt="logo")
+								img(src="img/psv.png", alt="logo")
 						li.factories_item
 							a(href="#").factories_icon
-								img(src="img/autopilot-logo.png", alt="logo")
+								img(src="img/seintex.png", alt="logo")
 						li.factories_item
 							a(href="#").factories_icon
-								img(src="img/avtolider-logo.png", alt="logo")
+								img(src="img/brotkers.png", alt="logo")
 						li.factories_item
 							a(href="#").factories_icon
-								img(src="img/autopilot-logo.png", alt="logo")
+								img(src="img/avtolider.png", alt="logo")
+						li.factories_item
+							a(href="#").factories_icon
+								img(src="img/autoslon.png", alt="logo")
+						li.factories_item
+							a(href="#").factories_icon
+								img(src="img/dinas.png", alt="logo")
+						li.factories_item
+							a(href="#").factories_icon
+								img(src="img/pochin.png", alt="logo")
 				// /factories
 
-				.filter-wrapper
+			.main
 
-					// filter
-					.filter.js-match-height
-						form(action="#").filter_selects
-							.filter_select
-								select(name="#")
-									option(value="#") BMW
-									option(value="#") Mercedes
-									option(value="#") Audi
-							.filter_select
-								select(name="#")
-									option(value="#") 3 серия
-									option(value="#") 5 серия
-									option(value="#") 7 серия
-							.filter_select
-								select(name="#")
-									option(value="#") Поколение
-							.filter_select
-								select(name="#")
-									option(value="#") Комплектация
-							button(type="submit").filter_btn Показать
-						.filter_body
-							.filter_title Марка автомобиля
-							.filter_content
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/audi.jpg", alt="audi")
-										span.filter_text Audi
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/audi.jpg", alt="audi")
-										span.filter_text Audi
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/audi.jpg", alt="audi")
-										span.filter_text Audi
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/audi.jpg", alt="audi")
-										span.filter_text Audi
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/bmw.jpg", alt="bmw")
-										span.filter_text BMW
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/bmw.jpg", alt="bmw")
-										span.filter_text BMW
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/bmw.jpg", alt="bmw")
-										span.filter_text BMW
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/bmw.jpg", alt="bmw")
-										span.filter_text BMW
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/chevrolet.jpg", alt="chevrolet")
-										span.filter_text Chevrolet
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/chevrolet.jpg", alt="chevrolet")
-										span.filter_text Chevrolet
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/chevrolet.jpg", alt="chevrolet")
-										span.filter_text Chevrolet
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/chevrolet.jpg", alt="chevrolet")
-										span.filter_text Chevrolet
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/citroen.jpg", alt="citroen")
-										span.filter_text Citroen
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/citroen.jpg", alt="citroen")
-										span.filter_text Citroen
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/citroen.jpg", alt="citroen")
-										span.filter_text Citroen
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/citroen.jpg", alt="citroen")
-										span.filter_text Citroen
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/daewoo.jpg", alt="daewoo")
-										span.filter_text Daewoo
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/daewoo.jpg", alt="daewoo")
-										span.filter_text Daewoo
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/daewoo.jpg", alt="daewoo")
-										span.filter_text Daewoo
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/daewoo.jpg", alt="daewoo")
-										span.filter_text Daewoo
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/ford.jpg", alt="ford")
-										span.filter_text Ford
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/ford.jpg", alt="ford")
-										span.filter_text Ford
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/ford.jpg", alt="ford")
-										span.filter_text Ford
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/ford.jpg", alt="ford")
-										span.filter_text Ford
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/hyundai.jpg", alt="hyundai")
-										span.filter_text Hyundai
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/hyundai.jpg", alt="hyundai")
-										span.filter_text Hyundai
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/hyundai.jpg", alt="hyundai")
-										span.filter_text Hyundai
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/hyundai.jpg", alt="hyundai")
-										span.filter_text Hyundai
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/kia.jpg", alt="kia")
-										span.filter_text Kia
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/kia.jpg", alt="kia")
-										span.filter_text Kia
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/kia.jpg", alt="kia")
-										span.filter_text Kia
-								.filter_item
-									a(href="#").filter_link
-										.filter_img
-											img(src="img/kia.jpg", alt="kia")
-										span.filter_text Kia
-					// /filter
-		
+				// filter
+				.filter
+					form(action="#").filter_selects
+						.filter_select
+							select(name="#")
+								option(value="#") BMW
+								option(value="#") Mercedes
+								option(value="#") Audi
+							.filter_arrow.icon-keyboard_arrow_down
+						.filter_select
+							select(name="#")
+								option(value="#") 3 серия
+								option(value="#") 5 серия
+								option(value="#") 7 серия
+							.filter_arrow.icon-keyboard_arrow_down
+						.filter_select
+							select(name="#")
+								option(value="#") Поколение
+							.filter_arrow.icon-keyboard_arrow_down
+						.filter_select
+							select(name="#")
+								option(value="#") Комплектация
+							.filter_arrow.icon-keyboard_arrow_down
+						button(type="submit").filter_btn Показать
+					.filter_body
+						.filter_title Марка автомобиля
+						.filter_content
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/audi.jpg", alt="audi")
+									span.filter_text Audi
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/audi.jpg", alt="audi")
+									span.filter_text Audi
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/audi.jpg", alt="audi")
+									span.filter_text Audi
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/audi.jpg", alt="audi")
+									span.filter_text Audi
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/bmw.jpg", alt="bmw")
+									span.filter_text BMW
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/bmw.jpg", alt="bmw")
+									span.filter_text BMW
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/bmw.jpg", alt="bmw")
+									span.filter_text BMW
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/bmw.jpg", alt="bmw")
+									span.filter_text BMW
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/chevrolet.jpg", alt="chevrolet")
+									span.filter_text Chevrolet
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/chevrolet.jpg", alt="chevrolet")
+									span.filter_text Chevrolet
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/chevrolet.jpg", alt="chevrolet")
+									span.filter_text Chevrolet
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/chevrolet.jpg", alt="chevrolet")
+									span.filter_text Chevrolet
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/citroen.jpg", alt="citroen")
+									span.filter_text Citroen
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/citroen.jpg", alt="citroen")
+									span.filter_text Citroen
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/citroen.jpg", alt="citroen")
+									span.filter_text Citroen
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/citroen.jpg", alt="citroen")
+									span.filter_text Citroen
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/daewoo.jpg", alt="daewoo")
+									span.filter_text Daewoo
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/daewoo.jpg", alt="daewoo")
+									span.filter_text Daewoo
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/daewoo.jpg", alt="daewoo")
+									span.filter_text Daewoo
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/daewoo.jpg", alt="daewoo")
+									span.filter_text Daewoo
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/ford.jpg", alt="ford")
+									span.filter_text Ford
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/ford.jpg", alt="ford")
+									span.filter_text Ford
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/ford.jpg", alt="ford")
+									span.filter_text Ford
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/ford.jpg", alt="ford")
+									span.filter_text Ford
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/hyundai.jpg", alt="hyundai")
+									span.filter_text Hyundai
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/hyundai.jpg", alt="hyundai")
+									span.filter_text Hyundai
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/hyundai.jpg", alt="hyundai")
+									span.filter_text Hyundai
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/hyundai.jpg", alt="hyundai")
+									span.filter_text Hyundai
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/kia.jpg", alt="kia")
+									span.filter_text Kia
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/kia.jpg", alt="kia")
+									span.filter_text Kia
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/kia.jpg", alt="kia")
+									span.filter_text Kia
+							.filter_item
+								a(href="#").filter_link
+									.filter_img
+										img(src="img/car-brands/kia.jpg", alt="kia")
+									span.filter_text Kia
+				// /filter
+
+		// categories
+		.categories
+			.row
+				.categories_col
+					a(href="#").categories_item.data-img(data-img="img/cover-green.jpg")
+						.categories_title Модельные чехлы из экокожи
+				.categories_col
+					a(href="#").categories_item.data-img(data-img="img/cover-brown.jpg")
+						.categories_title Модельные чехлы комбинированные
+		// /categories
+
+		// cards-slider
+		.cards-slider
+
+			.cards-slider_title
+				.cards-slider_controll
+					#cards-slider-prev.cards-slider_prev
+						span.icon-keyboard_arrow_left
+					#cards-slider-next.cards-slider_next
+						span.icon-keyboard_arrow_right
+				h2.subtitle Вы смотрели
+
+			#cards-slider
+	
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--orange
+								span На заказ 14-21 день
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--orange Предзаказ
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+		// /cards-slider
+
+		.main-sidebar
+
+			.sidebar
+
+				.sideb
+
+					h2.subtitle Доставка
+					
+					// delivery
+					.delivery
+						a(href="#").delivery_link
+							img(src="img/dpd.jpg", alt="dpd").delivery_img
+						a(href="#").delivery_link
+							img(src="img/boxberry.jpg", alt="boxberry").delivery_img
+						a(href="#").delivery_link
+							img(src="img/iml.jpg", alt="iml").delivery_img
+						a(href="#").delivery_link
+							img(src="img/pec.jpg", alt="pec").delivery_img
+						a(href="#").delivery_link
+							img(src="img/cdek.jpg", alt="cdek").delivery_img
+					// /delivery
+
+					h2.subtitle Оплата
+
+					// pay
+					.pay
+						ul.pay_list
+							li.pay_item
+								img(src="img/bank-card.svg", alt="bank-card").pay_img
+								span.pay_text Банковской картой на сайте
+							li.pay_item
+								img(src="img/cash.svg", alt="cash").pay_img
+								span.pay_text Наличными при получении
+						ul.pay_cards
+							li.pay_card
+								img(src="img/visa.svg", alt="visa-logo").pay_card-img
+							li.pay_card
+								img(src="img/mastercard.svg", alt="mastercard-logo").pay_card-img
+							li.pay_card
+								img(src="img/maestro.svg", alt="maestro-logo").pay_card-img
+						.pay_sberbank
+							img(src="img/sbarbank.svg", alt="sbarbank-logo").pay_sberbank-logo
+							.pay_sberbank-text Обработку платежей осуществляет ПАО Сбербанк
+					// /pay
+
+			.main.main--maw-780
+
+				h2.subtitle Как заказать
+				
+				// tutorial
+				ul.tutorial
+					li.tutorial_item
+						img(src="img/purse.svg", alt="purse").tutorial_img
+						p.tutorial_text Сделайте заказ на сайте или любым удобным способом
+					li.tutorial_item
+						img(src="img/truck.svg", alt="truck").tutorial_img
+						p.tutorial_text Мы подготовим и отправим заказ на следующий день
+					li.tutorial_item
+						img(src="img/smartphone.svg", alt="smartphone").tutorial_img
+						p.tutorial_text Дождитесь СМС о доставке и получите заказ
+				// /tutorial
+
+				h2.subtitle Установка чехлов
+				
+				// install
+				.install
+
+					.text
+						p Установить чехлы можно как в любом нашем 
+							a(href="#") сервисном центре
+							|  в Москве, так и с выездом к вам.
+
+					.row
+						.install_col
+							a(href="#").install_item
+								img(src="img/house.svg", alt="house").install_img
+								.install_content
+									.install_text Установка в сервисном центре
+									.install_price 1000 Руб
+						.install_col
+							a(href="#").install_item.install_item--2
+								img(src="img/seat.svg", alt="seat").install_img
+								.install_content
+									.install_text Установка с подшивкой к сиденьям
+									.install_price 4500 Руб
+						.install_col
+							a(href="#").install_item
+								img(src="img/car.svg", alt="car").install_img
+								.install_content
+									.install_text Установка с выездом
+									.install_price 1500 Руб
+						.install_col
+							a(href="#").install_item
+								img(src="img/car-end-seat.svg", alt="car-end-seat").install_img
+								.install_content
+									.install_text Установка с подшивкой к сиденьям с выездом
+									.install_price 5500 Руб
+				// /install
+
 	include blocks/footer.jade
 
 block js
 	script(src="js/jquery-3.2.1.min.js")
 	//- script(src="js/jquery.fancybox.min.js")
-	//- script(src="js/slick.min.js")
+	script(src="js/slick.min.js")
 	script(src="js/jquery.matchHeight-min.js")
 	//- script(src="js/jquery.inputmask.bundle.min.js")
 	//- script(src="js/autosize.min.js")

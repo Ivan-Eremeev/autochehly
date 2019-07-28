@@ -1,0 +1,43 @@
+.install {
+	.text {
+		padding: 15px 0 25px;
+	}
+	&_col {
+		@include col(6);
+		margin-bottom: $gutter;
+	}
+	&_item {
+		display: block;
+		min-height: 130px;
+		padding: 18px 18px 25px 141px;
+		border: 1px solid $border;
+		border-radius: 5px;
+		font-size: 18px;
+		color: $black;
+		position: relative;
+		&--2 {
+			.install_img {
+				left: 40px;
+			}
+		}
+		&:hover {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+	&_img {
+		position: absolute;
+		top: 50%;
+		left: 28px;
+		transform: translate(0,-50%);
+	}
+	&_content {
+		
+	}
+	&_text {
+		margin-bottom: 15px;
+	}
+	&_price {
+		font-weight: 600;
+	}
+}

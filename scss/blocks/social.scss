@@ -1,0 +1,15 @@
+.social {
+	padding-top: 20px;
+	&_list {
+
+	}
+	&_item {
+		display: inline-block;
+		&:not(:last-child) {
+			margin-right: 33px;
+		}
+	}
+	&_link {
+
+	}
+}

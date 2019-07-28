@@ -10,7 +10,7 @@
 // Подключение файлов. При использовании gulp поменять "// @prepros-append" на "//="
 // libs-settings/fancybox_settings.js
 // libs-settings/mmenu_settings.js
-// libs-settings/slick_settings.js
+// @prepros-append libs-settings/slick_settings.js
 // libs-settings/wow_js_settings.js
 // libs-settings/fullpage_settings.js
 // libs-settings/tinyscrollbar-settings.js
@@ -170,6 +170,18 @@ $(document).ready(function () {
 	    $img.replaceWith($svg);
 	  }, 'xml');
 	});
+
+	// Задаем фоновое изображение .data-img из атибута data
+	function imgData() {
+		var block = $('.data-img');
+		block.each(function(index, el) {
+			var blockData = $(this).data('img');
+			$(this).css({
+				'background-image': 'url('+ blockData +')'
+			});
+		});
+	};
+	imgData();
 	
 });
 

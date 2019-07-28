@@ -1,0 +1,35 @@
+.cards-slider {
+	padding-bottom: 69px;
+	margin-left: -40px;
+	&_title {
+		
+	}
+	&_controll {
+		float: right;
+	}
+	&_prev, &_next {
+		float: left;
+		padding: 3px 20px;
+		border: 1px solid $border;
+		font-size: 25px;
+		color: $grayD;
+		cursor: pointer;
+		transition: .1s;
+		&:hover {
+			background-color: #eaecf0;
+			color: $red;
+		}
+	}
+	&_prev {
+		border-radius: 5px 0 0 5px;
+	}
+	&_next {
+		border-radius: 0 5px 5px 0;
+	}
+	&_slide {
+
+	}
+	.card {
+		padding: 10px 0 0 40px;
+	}
+}

@@ -1,0 +1,15 @@
+.delivery {
+	&_link {
+		width: 94px;
+		height: 60px;
+		display: inline-block;
+		margin: 2px;
+		position: relative;
+	}
+	&_img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
