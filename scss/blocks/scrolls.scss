@@ -1,0 +1,19 @@
+.scroll-filter {
+	overflow-y: auto;
+	max-height: 455px;
+	&--h360 {
+		max-height: 360px;
+	}
+	&--generation {
+		max-height: 375px;
+	}
+	.scroll-element.scroll-y {
+    width: 17px;
+	}
+	.scroll-bar {
+		background-color: $grayD;
+	}
+	.scroll-element .scroll-element_track {
+		background-color: $gray;
+	}
+}

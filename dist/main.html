@@ -12,7 +12,21 @@
     <!-- header-->
     <header class="header" id="header">
       <div class="wrapper">
-        <div class="header_left"><a class="logo" href="main.html"><img src="img/logo.svg" alt="logo"></a><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a></div>
+        <div class="header_left"><a class="logo" href="main.html"><img src="img/logo.svg" alt="logo"></a>
+          <div class="location-wrapper"><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a>
+            <div class="location-dropdown">
+              <form class="location-dropdown_block" action="#">
+                <div class="clearfix">
+                  <div class="location-dropdown_close"></div>
+                  <div class="location-dropdown_text">Город доставки: <span>Санкт-Петербург</span></div>
+                  <input class="location-dropdown_input" type="text" placeholder="Город или населенный пункт">
+                </div>
+                <button class="location-dropdown_btn" type="submit">Выбрать</button>
+                <button class="location-dropdown_btn location-dropdown_btn--remove" type="submit">Изменить</button>
+              </form>
+            </div>
+          </div>
+        </div>
         <div class="header_right">
           <div class="call"><img class="call_img" src="img/call.svg" alt="call">
             <div class="call_content mobile-hide"><a class="call_num" href="tel:88006005429">8 800 600-54-29</a>
@@ -46,37 +60,95 @@
         <div class="main">
           <!-- filter-->
           <div class="filter">
-            <form class="filter_selects" action="#">
-              <div class="filter_select">
-                <select name="#">
-                  <option value="#">BMW</option>
-                  <option value="#">Mercedes</option>
-                  <option value="#">Audi</option>
-                </select>
-                <div class="filter_arrow icon-keyboard_arrow_down"></div>
+            <div class="filter_selects">
+              <div class="filter_select js-dropdown-wrapper">
+                <div class="filter_trigger js-drop-trigger">Марка
+                  <div class="filter_arrow icon-keyboard_arrow_down"></div>
+                </div>
+                <div class="dropdown dropdown--maw js-dropdown">
+                  <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--h360">
+                    <ul class="dropdown_list">
+                      <li class="dropdown_item dropdown_item"><a class="dropdown_link dropdown_link--reset" href="#">Любая<span class="dropdown_reset"></span></a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Audi</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">BMW</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Chevrolet</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Citroen</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Daewoo</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Ford</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Audi</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">BMW</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Chevrolet</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="filter_select">
-                <select name="#">
-                  <option value="#">3 серия</option>
-                  <option value="#">5 серия</option>
-                  <option value="#">7 серия</option>
-                </select>
-                <div class="filter_arrow icon-keyboard_arrow_down"></div>
+              <div class="filter_select js-dropdown-wrapper">
+                <div class="filter_trigger js-drop-trigger">Серия
+                  <div class="filter_arrow icon-keyboard_arrow_down"></div>
+                </div>
+                <div class="dropdown dropdown--maw js-dropdown">
+                  <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--h360">
+                    <ul class="dropdown_list">
+                      <li class="dropdown_item dropdown_item"><a class="dropdown_link dropdown_link--reset" href="#">Любая<span class="dropdown_reset"></span></a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">3 серия </a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">4 серия</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">5 серия</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">6 серия</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">7 серия</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Х1</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Х2</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Х</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="filter_select">
-                <select name="#">
-                  <option value="#">Поколение</option>
-                </select>
-                <div class="filter_arrow icon-keyboard_arrow_down"></div>
+              <div class="filter_select js-dropdown-wrapper">
+                <div class="filter_trigger js-drop-trigger">Поколение
+                  <div class="filter_arrow icon-keyboard_arrow_down"></div>
+                </div>
+                <div class="dropdown js-dropdown">
+                  <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--generation">
+                    <ul class="dropdown_list">
+                      <div class="dropdown_row">
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col"><a class="filter_generation-link" href="#">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="filter_select">
-                <select name="#">
-                  <option value="#">Комплектация</option>
-                </select>
-                <div class="filter_arrow icon-keyboard_arrow_down"></div>
+              <div class="filter_select js-dropdown-wrapper">
+                <div class="filter_trigger js-drop-trigger">Комплектация
+                  <div class="filter_arrow icon-keyboard_arrow_down"></div>
+                </div>
+                <div class="dropdown js-dropdown">
+                  <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--h360">
+                    <ul class="dropdown_list">
+                      <li class="dropdown_item dropdown_item"><a class="dropdown_link dropdown_link--reset" href="#">Любая<span class="dropdown_reset"></span></a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Задняя спинка 40 на 60, сиденье единое. (С AIR-Bag и БЕЗ AIR-Bag перед сиденья)</a></li>
+                      <li class="dropdown_item"><a class="dropdown_link" href="#">Задние спинка и сиденье единые. ( с AIR-Bag и БЕЗ AIR-Bag перед сиденья)</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <button class="filter_btn" type="submit">Показать</button>
-            </form>
+            </div>
             <div class="filter_body">
               <div class="filter_title">Марка автомобиля</div>
               <div class="filter_content">
@@ -146,17 +218,92 @@
                     <div class="filter_img"><img src="img/car-brands/kia.jpg" alt="kia"></div><span class="filter_text">Kia</span></a></div>
               </div>
             </div>
+            <div class="filter_body">
+              <div class="filter_title">Модель автомобиля</div>
+              <div class="filter_content">
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">3 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">3 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">3 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">3 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">4 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">4 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">4 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">4 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">5 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">5 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">5 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">5 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">6 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">6 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">6 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">6 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">7 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">7 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">7 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">7 серия</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х1</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х1</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х1</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х1</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х2</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х2</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х2</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х2</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х</span></a></div>
+                <div class="filter_item filter_item--mb"><a class="filter_link" href="#"><span class="filter_text">Х</span></a></div>
+              </div>
+            </div>
+            <div class="filter_body">
+              <div class="filter_title">Поколение автомобиля</div>
+              <div class="js-scrollbar scrollbar-inner scroll-filter">
+                <div class="filter_row">
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                  <div class="filter_col"><a class="filter_generation-link" href="#">
+                      <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_body">
+              <div class="filter_title">Комплектация автомобиля</div>
+              <div class="filter_content">
+                <div class="filter_item filter_item--config"><a class="filter_link" href="#"><span class="filter_text">Задняя спинка 40 на 60, сиденье единое. (С AIR-Bag и БЕЗ AIR-Bag перед сиденья)</span></a></div>
+                <div class="filter_item filter_item--config"><a class="filter_link" href="#"><span class="filter_text">Задние спинка и сиденье единые. ( с AIR-Bag и БЕЗ AIR-Bag перед сиденья)</span></a></div>
+              </div>
+            </div>
           </div>
           <!-- /filter-->
         </div>
-      </div>
-      <!-- categories-->
-      <div class="categories">
-        <div class="row">
-          <div class="categories_col"><a class="categories_item data-img" href="#" data-img="img/cover-green.jpg">
-              <div class="categories_title">Модельные чехлы из экокожи</div></a></div>
-          <div class="categories_col"><a class="categories_item data-img" href="#" data-img="img/cover-brown.jpg">
-              <div class="categories_title">Модельные чехлы комбинированные</div></a></div>
+        <!-- categories-->
+        <div class="categories">
+          <div class="row">
+            <div class="categories_col"><a class="categories_item data-img" href="#" data-img="img/cover-eco.jpg">
+                <div class="categories_title">Модельные чехлы из экокожи</div></a></div>
+            <div class="categories_col"><a class="categories_item data-img" href="#" data-img="img/cover-combo.jpg">
+                <div class="categories_title">Модельные чехлы комбинированные</div></a></div>
+          </div>
         </div>
       </div>
       <!-- /categories-->
@@ -394,6 +541,8 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -7,9 +7,19 @@ header.header#header
 			a(href="main.html").logo
 				img(src="img/logo.svg", alt="logo")
 
-			a(href="#").location
-				img(src="img/location.svg", alt="location").location_icon
-				span.location_text Москва
+			.location-wrapper
+				a(href="#").location
+					img(src="img/location.svg", alt="location").location_icon
+					span.location_text Москва
+				.location-dropdown
+					form(action="#").location-dropdown_block
+						.clearfix
+							.location-dropdown_close
+							.location-dropdown_text Город доставки: 
+								span Санкт-Петербург
+							input(type="text" placeholder="Город или населенный пункт").location-dropdown_input
+						button(type="submit").location-dropdown_btn Выбрать
+						button(type="submit").location-dropdown_btn.location-dropdown_btn--remove Изменить
 
 		.header_right
 

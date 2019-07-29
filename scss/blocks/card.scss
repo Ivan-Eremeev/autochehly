@@ -1,6 +1,10 @@
 .card {
 	padding: 20px;
 	&_img {
+		img {
+			left: 50%;
+			transform: translate(-50%,0);
+		}
 		&:after {
 			padding-top: 121%;
 		}

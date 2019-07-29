@@ -2,6 +2,7 @@
 	padding: 18px 18px 0;
 	box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 	border-radius: 5px;
+	position: relative;
 	&_selects {
 		margin-bottom: 24px;
 	}
@@ -11,25 +12,20 @@
 		max-width: 166px;
 		margin-right: 10px;
 		margin-bottom: 18px;
+		user-select: none;
+	}
+	&_trigger {
+		padding: 10px 25px 10px 14px;
+		border: 1px solid $border;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: .15s;
 		position: relative;
-		select {
-			width: 100%;
-			height: 40px;
-			padding: 0 25px 0 14px;
-			border: 1px solid $border;
-			border-radius: 5px;
-			background-color: #fff;
-			transition: .15s;
-			appearance: none;
-			&::-ms-expand {
-			  display: none;
-			}
-			&:hover, &:focus {
-				border-color: $red;
+		&:hover, &.active {
+			border-color: $red;
+			color: $red;
+			>.filter_arrow {
 				color: $red;
-				+.filter_arrow {
-					color: $red;
-				}
 			}
 		}
 	}
@@ -59,20 +55,26 @@
 	}
 	&_body {
 		padding-bottom: 18px;
-		overflow-y: auto;
 	}
 	&_title {
 		margin-bottom: 22px;
 		font-size: 30px;
 	}
 	&_content {
-
+		
 	}
 	&_item {
 		display: inline-block;
 		width: 100%;
 		max-width: 218px;
 		margin-bottom: 3px;
+		&--mb {
+			margin-bottom: 15px;
+		}
+		&--config {
+			max-width: 100%;
+			margin-bottom: 15px;
+		}
 	}
 	&_link {
 		color: $black;
@@ -97,5 +99,128 @@
 	}
 	&_text {
 		vertical-align: middle;
+	}
+	&_row {
+		margin-left: -13px;
+		padding-right: 40px;
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
+	}
+	&_col {
+		width: 25%;
+		padding-left: 13px;
+		padding-bottom: 13px;
+		float: left;
+	}
+	&_generation-link {
+		display: block;
+		color: $black;
+		transition: .15s;
+		background-color: $gray;
+		border-radius: 5px;
+		&:hover {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+	&_generation-img {
+		border-radius: 5px;
+		&:after {
+			padding-top: 75%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	&_generation-text {
+		display: block;
+		padding: 10px 13px;
+	}
+}
+.dropdown {
+	display: none;
+	padding-top: 18px;
+	transition: 1s;
+	position: absolute;
+	z-index: 2;
+	&.open {
+		display: block;
+	}
+	&--maw {
+		width: 1000%;
+		max-width: 240px;
+	}
+	&_list {
+		// max-height: 360px;
+		padding: 10px 14px;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+		// overflow-y: auto;
+	}
+	&_item {
+		margin-bottom: 18px;
+	}
+	&_link {
+		color: $black;
+		transition: .05s;
+		position: relative;
+		&:hover {
+			color: $red;
+			.dropdown_reset {
+				&:after, &:before {
+					background-color: $red;
+				}
+			}
+		}
+		&--reset {
+			padding-left: 50px;
+		}
+	}
+	&_reset {
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
+		&:after, &:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height:1px;
+			background-color: $black;
+			position: absolute;
+			top: 9px;
+			left: 0px;
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
+	}
+	&_row {
+		margin-left: -10px;
+		padding-right: 20px;
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
+	}
+	&_col {
+		float: left;
+		width: 33.33%;
+		padding-left: 10px;
+		padding-bottom: 10px;
+		font-size: 12px;
 	}
 }

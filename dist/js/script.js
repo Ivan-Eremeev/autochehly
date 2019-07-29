@@ -57,6 +57,9 @@ $(document).ready(function () {
 	// matchHeight // Задание елементам одинаковой высоты
 	$('.js-match-height').matchHeight();
 
+	// Выпадайки Dropdown
+	dropdown();
+
 	// Autosize Изменение высоты текстового поля при добавлении контента
 	// autosize($('textarea'));
 	
@@ -117,7 +120,10 @@ $(document).ready(function () {
 	// initGoogleMap();
 
 	// Инициализация стилизуемого скроллбара
-	// $('#scrollbar').scrollbar();
+	$('.js-scrollbar').scrollbar();
+
+	// jQuery Form Styler| Стилизация элементов форм
+	// $('.filter select').styler();
 
 	// 3d эффект вращения элемента при наведении
 	// rotate($('.card3d'));
@@ -615,6 +621,31 @@ $(document).ready(function () {
 //   	$(this).parent().text(arr[index]);
 //   });
 // };
+
+// Выпадайки Dropdown
+function dropdown() {
+	var trigger = $('.js-drop-trigger'),
+			dropdown = $('.js-dropdown');
+			select = $('.js-dropdown-wrapper');
+	trigger.click(function() {
+		if (!$(this).hasClass('active')) {
+			trigger.removeClass('active');
+			dropdown.removeClass('open');
+			$(this).next(dropdown).addClass('open');
+			$(this).addClass('active');
+		}else {
+			trigger.removeClass('active');
+			dropdown.removeClass('open');
+		}
+	});
+	$(document).mouseup(function (e) {
+		if (!select.is(e.target) && select.has(e.target).length === 0) {
+			trigger.removeClass('active');
+			dropdown.removeClass('open');
+			select.removeClass('active');
+		}
+	});
+}
 function slider(slider,sliderFor) {
   slider.slick({
     slidesToShow: 1, // Сколько слайдов показывать на экране

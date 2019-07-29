@@ -13,7 +13,21 @@
       <!-- header-->
       <header class="header" id="header">
         <div class="wrapper">
-          <div class="header_left"><a class="logo" href="main.html"><img src="img/logo.svg" alt="logo"></a><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a></div>
+          <div class="header_left"><a class="logo" href="main.html"><img src="img/logo.svg" alt="logo"></a>
+            <div class="location-wrapper"><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a>
+              <div class="location-dropdown">
+                <form class="location-dropdown_block" action="#">
+                  <div class="clearfix">
+                    <div class="location-dropdown_close"></div>
+                    <div class="location-dropdown_text">Город доставки: <span>Санкт-Петербург</span></div>
+                    <input class="location-dropdown_input" type="text" placeholder="Город или населенный пункт">
+                  </div>
+                  <button class="location-dropdown_btn" type="submit">Выбрать</button>
+                  <button class="location-dropdown_btn location-dropdown_btn--remove" type="submit">Изменить</button>
+                </form>
+              </div>
+            </div>
+          </div>
           <div class="header_right">
             <div class="call"><img class="call_img" src="img/call.svg" alt="call">
               <div class="call_content mobile-hide"><a class="call_num" href="tel:88006005429">8 800 600-54-29</a>

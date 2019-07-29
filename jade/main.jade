@@ -47,28 +47,131 @@ block content
 
 				// filter
 				.filter
-					form(action="#").filter_selects
-						.filter_select
-							select(name="#")
-								option(value="#") BMW
-								option(value="#") Mercedes
-								option(value="#") Audi
-							.filter_arrow.icon-keyboard_arrow_down
-						.filter_select
-							select(name="#")
-								option(value="#") 3 серия
-								option(value="#") 5 серия
-								option(value="#") 7 серия
-							.filter_arrow.icon-keyboard_arrow_down
-						.filter_select
-							select(name="#")
-								option(value="#") Поколение
-							.filter_arrow.icon-keyboard_arrow_down
-						.filter_select
-							select(name="#")
-								option(value="#") Комплектация
-							.filter_arrow.icon-keyboard_arrow_down
+					.filter_selects
+
+						.filter_select.js-dropdown-wrapper
+							.filter_trigger.js-drop-trigger Марка
+								.filter_arrow.icon-keyboard_arrow_down
+							.dropdown.dropdown--maw.js-dropdown
+								.js-scrollbar.scrollbar-inner.scroll-filter.scroll-filter--h360
+									ul.dropdown_list
+										li.dropdown_item.dropdown_item
+											a(href="#").dropdown_link.dropdown_link--reset Любая
+												span.dropdown_reset
+										li.dropdown_item
+											a(href="#").dropdown_link Audi
+										li.dropdown_item
+											a(href="#").dropdown_link BMW
+										li.dropdown_item
+											a(href="#").dropdown_link Chevrolet
+										li.dropdown_item
+											a(href="#").dropdown_link Citroen
+										li.dropdown_item
+											a(href="#").dropdown_link Daewoo
+										li.dropdown_item
+											a(href="#").dropdown_link Ford
+										li.dropdown_item
+											a(href="#").dropdown_link Audi
+										li.dropdown_item
+											a(href="#").dropdown_link BMW
+										li.dropdown_item
+											a(href="#").dropdown_link Chevrolet
+
+						.filter_select.js-dropdown-wrapper
+							.filter_trigger.js-drop-trigger Серия
+								.filter_arrow.icon-keyboard_arrow_down
+							.dropdown.dropdown--maw.js-dropdown
+								.js-scrollbar.scrollbar-inner.scroll-filter.scroll-filter--h360
+									ul.dropdown_list
+										li.dropdown_item.dropdown_item
+											a(href="#").dropdown_link.dropdown_link--reset Любая
+												span.dropdown_reset
+										li.dropdown_item
+											a(href="#").dropdown_link 3 серия 
+										li.dropdown_item
+											a(href="#").dropdown_link 4 серия
+										li.dropdown_item
+											a(href="#").dropdown_link 5 серия
+										li.dropdown_item
+											a(href="#").dropdown_link 6 серия
+										li.dropdown_item
+											a(href="#").dropdown_link 7 серия
+										li.dropdown_item
+											a(href="#").dropdown_link Х1
+										li.dropdown_item
+											a(href="#").dropdown_link Х2
+										li.dropdown_item
+											a(href="#").dropdown_link Х
+
+						.filter_select.js-dropdown-wrapper
+							.filter_trigger.js-drop-trigger Поколение
+								.filter_arrow.icon-keyboard_arrow_down
+							.dropdown.js-dropdown
+								.js-scrollbar.scrollbar-inner.scroll-filter.scroll-filter--generation
+									ul.dropdown_list
+										.dropdown_row
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi1.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi2.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi3.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi1.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi2.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi3.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi1.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi2.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+											.dropdown_col
+												a(href="#").filter_generation-link
+													.filter_generation-img.img-responsive
+														img(src="img/car-generation/audi3.jpg", alt="audi")
+													span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+
+						.filter_select.js-dropdown-wrapper
+							.filter_trigger.js-drop-trigger Комплектация
+								.filter_arrow.icon-keyboard_arrow_down
+							.dropdown.js-dropdown
+								.js-scrollbar.scrollbar-inner.scroll-filter.scroll-filter--h360
+									ul.dropdown_list
+										li.dropdown_item.dropdown_item
+											a(href="#").dropdown_link.dropdown_link--reset Любая
+												span.dropdown_reset
+										li.dropdown_item
+											a(href="#").dropdown_link Задняя спинка 40 на 60, сиденье единое. (С AIR-Bag и БЕЗ AIR-Bag перед сиденья)
+										li.dropdown_item
+											a(href="#").dropdown_link Задние спинка и сиденье единые. ( с AIR-Bag и БЕЗ AIR-Bag перед сиденья)
+
 						button(type="submit").filter_btn Показать
+
 					.filter_body
 						.filter_title Марка автомобиля
 						.filter_content
@@ -232,17 +335,192 @@ block content
 									.filter_img
 										img(src="img/car-brands/kia.jpg", alt="kia")
 									span.filter_text Kia
+
+					.filter_body
+						.filter_title Модель автомобиля
+						.filter_content
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 3 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 3 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 3 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 3 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 4 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 4 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 4 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 4 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 5 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 5 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 5 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 5 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 6 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 6 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 6 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 6 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 7 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 7 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 7 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text 7 серия
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х1
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х1
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х1
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х1
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х2
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х2
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х2
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х2
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х
+							.filter_item.filter_item--mb
+								a(href="#").filter_link
+									span.filter_text Х
+
+					.filter_body
+						.filter_title Поколение автомобиля
+						.js-scrollbar.scrollbar-inner.scroll-filter
+							.filter_row
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi1.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi2.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi3.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi1.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi1.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi2.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi3.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi1.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi1.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi2.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi3.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+								.filter_col
+									a(href="#").filter_generation-link
+										.filter_generation-img.img-responsive
+											img(src="img/car-generation/audi1.jpg", alt="audi")
+										span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+
+					.filter_body
+						.filter_title Комплектация автомобиля
+						.filter_content
+							.filter_item.filter_item--config
+								a(href="#").filter_link
+									span.filter_text Задняя спинка 40 на 60, сиденье единое. (С AIR-Bag и БЕЗ AIR-Bag перед сиденья)
+							.filter_item.filter_item--config
+								a(href="#").filter_link
+									span.filter_text Задние спинка и сиденье единые. ( с AIR-Bag и БЕЗ AIR-Bag перед сиденья)
 				// /filter
 
-		// categories
-		.categories
-			.row
-				.categories_col
-					a(href="#").categories_item.data-img(data-img="img/cover-green.jpg")
-						.categories_title Модельные чехлы из экокожи
-				.categories_col
-					a(href="#").categories_item.data-img(data-img="img/cover-brown.jpg")
-						.categories_title Модельные чехлы комбинированные
+			// categories
+			.categories
+				.row
+					.categories_col
+						a(href="#").categories_item.data-img(data-img="img/cover-eco.jpg")
+							.categories_title Модельные чехлы из экокожи
+					.categories_col
+						a(href="#").categories_item.data-img(data-img="img/cover-combo.jpg")
+							.categories_title Модельные чехлы комбинированные
 		// /categories
 
 		// cards-slider
@@ -475,7 +753,8 @@ block js
 	//- script(src="js/wow.min.js")
 	//- script(src="js/fullpage.min.js")
 	//- script(src="js/jquery.vide.min.js")
-	//- script(src="js/jquery.scrollbar.min.js")
+	script(src="js/jquery.scrollbar.min.js")
 	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
+	script(src="js/jquery.formstyler.min.js")
 	script(src="js/script.js")
