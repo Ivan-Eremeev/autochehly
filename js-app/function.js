@@ -34,7 +34,7 @@ $(document).ready(function () {
 	});
 
 	// Мобильное меню
-	// myMenu($('#menu'));
+	myMenu($('#menu'));
 
 	// Блок с высотой окна браузера
 	// screenHeight($('#full-height'));
@@ -192,29 +192,29 @@ $(document).ready(function () {
 });
 
 // Мобильное меню
-// function myMenu(menu) {
-// 	var menuBtn = menu.find('#menu-btn')
-// 			over = menu.find('.menu_over'),
-// 			documentWidth = parseInt(document.documentElement.clientWidth),
-// 			windowsWidth = parseInt(window.innerWidth),
-// 			scrollbarWidth = windowsWidth - documentWidth,
-// 			html = $('html');
-// 	menuBtn.click(function () {
-// 		html.toggleClass('lock').css('padding-right',scrollbarWidth);
-// 		menu.toggleClass('open');
-// 		menuBtn.toggleClass('is-active');
-// 		over.click(function() {
-// 			html.removeClass('lock').css('padding-right',0);
-// 			menu.removeClass('open');
-// 			menuBtn.removeClass('is-active');
-// 		});
-// 		menu.find('a').click(function() {
-// 			html.removeClass('lock').css('padding-right',0);
-// 			menu.removeClass('open');
-// 			menuBtn.removeClass('is-active');
-// 		});
-// 	});	
-// };
+function myMenu(menu) {
+	var menuBtn = menu.find('#menu-btn'),
+			close = menu.find('#menu-close'),
+			documentWidth = parseInt(document.documentElement.clientWidth),
+			windowsWidth = parseInt(window.innerWidth),
+			scrollbarWidth = windowsWidth - documentWidth,
+			html = $('html');
+	menuBtn.click(function () {
+		html.toggleClass('lock').css('padding-right',scrollbarWidth);
+		menu.toggleClass('open');
+		menuBtn.toggleClass('is-active');
+		close.click(function() {
+			html.removeClass('lock').css('padding-right',0);
+			menu.removeClass('open');
+			menuBtn.removeClass('is-active');
+		});
+		// menu.find('a').click(function() {
+		// 	html.removeClass('lock').css('padding-right',0);
+		// 	menu.removeClass('open');
+		// 	menuBtn.removeClass('is-active');
+		// });
+	});	
+};
 
 // // Блок с высотой окна браузера
 // function screenHeight(fullHeight) {

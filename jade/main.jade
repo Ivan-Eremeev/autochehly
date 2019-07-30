@@ -47,6 +47,9 @@ block content
 
 				// filter
 				.filter
+
+					.subtitle.mobile-visible Выберите автомобиль
+
 					.filter_selects
 
 						.filter_select.js-dropdown-wrapper
@@ -170,7 +173,7 @@ block content
 										li.dropdown_item
 											a(href="#").dropdown_link Задние спинка и сиденье единые. ( с AIR-Bag и БЕЗ AIR-Bag перед сиденья)
 
-						button(type="submit").filter_btn Показать
+						button(type="submit").btn.btn--red Показать
 
 					.filter_body
 						.filter_title Марка автомобиля
@@ -512,16 +515,16 @@ block content
 									span.filter_text Задние спинка и сиденье единые. ( с AIR-Bag и БЕЗ AIR-Bag перед сиденья)
 				// /filter
 
-			// categories
-			.categories
+			// image-btn
+			.image-btn
 				.row
-					.categories_col
-						a(href="#").categories_item.data-img(data-img="img/cover-eco.jpg")
-							.categories_title Модельные чехлы из экокожи
-					.categories_col
-						a(href="#").categories_item.data-img(data-img="img/cover-combo.jpg")
-							.categories_title Модельные чехлы комбинированные
-		// /categories
+					.image-btn_col
+						a(href="#").image-btn_item.data-img(data-img="img/cover-eco.jpg")
+							.image-btn_title Модельные чехлы из экокожи
+					.image-btn_col
+						a(href="#").image-btn_item.data-img(data-img="img/cover-combo.jpg")
+							.image-btn_title Модельные чехлы комбинированные
+		// /image-btn
 
 		// cards-slider
 		.cards-slider
@@ -534,7 +537,7 @@ block content
 						span.icon-keyboard_arrow_right
 				h2.subtitle Вы смотрели
 
-			#cards-slider
+			#cards-slider.cards-slider_slider
 	
 				.cards-slider_slide
 					// card
@@ -642,7 +645,7 @@ block content
 
 		.main-sidebar
 
-			.sidebar
+			.sidebar.mobile-hide--md
 
 				.sideb
 
@@ -675,13 +678,13 @@ block content
 								span.pay_text Наличными при получении
 						ul.pay_cards
 							li.pay_card
-								img(src="img/visa.svg", alt="visa-logo").pay_card-img
+								img(src="img/visa.png", alt="visa-logo").pay_card-img
 							li.pay_card
 								img(src="img/mastercard.svg", alt="mastercard-logo").pay_card-img
 							li.pay_card
-								img(src="img/maestro.svg", alt="maestro-logo").pay_card-img
+								img(src="img/maestro.png", alt="maestro-logo").pay_card-img
 						.pay_sberbank
-							img(src="img/sbarbank.svg", alt="sbarbank-logo").pay_sberbank-logo
+							img(src="img/sberbank.svg", alt="sbarbank-logo").pay_sberbank-logo
 							.pay_sberbank-text Обработку платежей осуществляет ПАО Сбербанк
 					// /pay
 
@@ -714,30 +717,73 @@ block content
 
 					.row
 						.install_col
-							a(href="#").install_item
+							a(href="#").install_item.js-match-height
 								img(src="img/house.svg", alt="house").install_img
 								.install_content
 									.install_text Установка в сервисном центре
 									.install_price 1000 Руб
 						.install_col
-							a(href="#").install_item.install_item--2
+							a(href="#").install_item.js-match-height.install_item--2
 								img(src="img/seat.svg", alt="seat").install_img
 								.install_content
 									.install_text Установка с подшивкой к сиденьям
 									.install_price 4500 Руб
 						.install_col
-							a(href="#").install_item
+							a(href="#").install_item.js-match-height
 								img(src="img/car.svg", alt="car").install_img
 								.install_content
 									.install_text Установка с выездом
 									.install_price 1500 Руб
 						.install_col
-							a(href="#").install_item
+							a(href="#").install_item.js-match-height
 								img(src="img/car-end-seat.svg", alt="car-end-seat").install_img
 								.install_content
 									.install_text Установка с подшивкой к сиденьям с выездом
 									.install_price 5500 Руб
 				// /install
+
+			.sidebar.mobile-visible--md
+
+				.sideb
+
+					h2.subtitle Доставка
+					
+					// delivery
+					.delivery
+						a(href="#").delivery_link
+							img(src="img/dpd.jpg", alt="dpd").delivery_img
+						a(href="#").delivery_link
+							img(src="img/boxberry.jpg", alt="boxberry").delivery_img
+						a(href="#").delivery_link
+							img(src="img/iml.jpg", alt="iml").delivery_img
+						a(href="#").delivery_link
+							img(src="img/pec.jpg", alt="pec").delivery_img
+						a(href="#").delivery_link
+							img(src="img/cdek.jpg", alt="cdek").delivery_img
+					// /delivery
+
+					h2.subtitle Оплата
+
+					// pay
+					.pay
+						ul.pay_list
+							li.pay_item
+								img(src="img/bank-card.svg", alt="bank-card").pay_img
+								span.pay_text Банковской картой на сайте
+							li.pay_item
+								img(src="img/cash.svg", alt="cash").pay_img
+								span.pay_text Наличными при получении
+						ul.pay_cards
+							li.pay_card
+								img(src="img/visa.png", alt="visa-logo").pay_card-img
+							li.pay_card
+								img(src="img/mastercard.svg", alt="mastercard-logo").pay_card-img
+							li.pay_card
+								img(src="img/maestro.png", alt="maestro-logo").pay_card-img
+						.pay_sberbank
+							img(src="img/sberbank.svg", alt="sbarbank-logo").pay_sberbank-logo
+							.pay_sberbank-text Обработку платежей осуществляет ПАО Сбербанк
+					// /pay
 
 	include blocks/footer.jade
 

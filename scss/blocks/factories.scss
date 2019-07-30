@@ -17,4 +17,7 @@
 	&_icon {
 		display: inline-block;
 	}
+	@media (max-width: $break_md) {
+		display: none;
+	}
 }

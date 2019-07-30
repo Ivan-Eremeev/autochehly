@@ -1,7 +1,8 @@
-.categories {
+.image-btn {
 	padding: 64px 0 88px;
 	&_col {
 		@include col(6);
+		@include col-sm(12);
 	}
 	&_item {
 		display: block;
@@ -11,15 +12,17 @@
 		overflow: hidden;
 		background-size: cover;
 		background-position: center;
-		background-size: 100%;
 		transition: 0.3s;
-		&:hover {
-			background-size: 105%;
-		}
 	}
 	&_title {
 		font-size: 28px;
 		font-weight: 900;
 		color: #fff;
+	}
+	@media (max-width: $break_sm) {
+		padding: 10px 0;
+		&_item {
+			margin-bottom: 35px;
+		}
 	}
 }

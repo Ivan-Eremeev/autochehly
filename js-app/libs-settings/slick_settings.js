@@ -98,20 +98,21 @@ function cardsSlider(slider) {
     // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
     swipe: false, // Перелистывание пальцем
     draggable: false, // Перелистывание мышью
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
+    responsive: [ // Адаптация
+      {
+      breakpoint: breakSm,
+        settings: {
+          slidesToShow: 2, // Сколько слайдов показывать на экране
+          swipe: true, // Перелистывание пальцем
+        }
+      },
+      {
+      breakpoint: breakXs,
+        settings: {
+          slidesToShow: 1 // Сколько слайдов показывать на экране
+        }
+      }
+    ]
     // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
   });
 

@@ -4,62 +4,72 @@ header.header#header
 		
 		.header_left
 
-			a(href="main.html").logo
+			#menu.menu
+				#menu-btn.menu_btn
+
+				nav.menu_nav
+					.menu_header
+						#menu-close.menu_close
+						a(href="main.html").logo
+							img(src="img/logo.svg", alt="logo")
+					ul.menu_list
+						li.menu_item
+							a(href="#").menu_link Доставка
+						li.menu_item
+							a(href="#").menu_link Оплата
+						li.menu_item
+							a(href="#").menu_link Установка чехлов
+						li.menu_item
+							a(href="#").menu_link Индивидуальный пошив
+						li.menu_item
+							a(href="#").menu_link Где купить
+						li.menu_item
+							a(href="#").menu_link Контакты
+						li.menu_item
+							a(href="#").menu_link Отзывы
+						li.menu_item
+							a(href="#").menu_link Отслеживание заказа
+						li.menu_item
+							a(href="#").menu_link Гарантия и возврат
+						li.menu_item
+							a(href="#").menu_link Скидки и акции
+						li.menu_item
+							a(href="#").menu_link Правила продажи
+						li.menu_item
+							a(href="#").menu_link Политика конфиденциальности
+
+			a(href="main.html").logo.logo--desktop
 				img(src="img/logo.svg", alt="logo")
 
 			.location-wrapper
 				a(href="#").location
 					img(src="img/location.svg", alt="location").location_icon
 					span.location_text Москва
-				.location-dropdown
-					form(action="#").location-dropdown_block
-						.clearfix
-							.location-dropdown_close
-							.location-dropdown_text Город доставки: 
-								span Санкт-Петербург
-							input(type="text" placeholder="Город или населенный пункт").location-dropdown_input
-						button(type="submit").location-dropdown_btn Выбрать
-						button(type="submit").location-dropdown_btn.location-dropdown_btn--remove Изменить
+			//- .location-dropdown
+				form(action="#").location-dropdown_block
+					.clearfix
+						.location-dropdown_close
+						.location-dropdown_text Город доставки: 
+							span Санкт-Петербург
+						input(type="text" placeholder="Город или населенный пункт").location-dropdown_input
+					button(type="submit").btn.btn--green Выбрать
+					button(type="submit").btn.btn--gray Изменить
 
 		.header_right
 
 			.call
-				img(src="img/call.svg", alt="call").call_img
-				.call_content.mobile-hide
+				a(href="tel:88006005429")
+					img(src="img/call.svg", alt="call").call_img.mobile-hide
+					img(src="img/call-mob.svg", alt="call").call_img.mobile-visible
+				.call_content.mobile-hide--md
 					a(href="tel:88006005429").call_num 8 800 600-54-29
 					.call_text Ежедневно с 9 до 21
 
 			.cart
 				a(href="#").cart_img
-					img(src="img/cart.svg", alt="cart")
+					img(src="img/cart.svg", alt="cart").mobile-hide
+					img(src="img/cart-mob.svg", alt="cart").mobile-visible
 					span.cart_count 4
 				a(href="#").cart_btn.mobile-hide Оформить заказ
-
-			//- // menu
-			//- //- .menu--left .menu--right .menu--top .menu--bottom .menu--drop
-			//- #menu.menu.menu--right
-			//- 	button#menu-btn.menu_btn.hamburger.hamburger--vortex(type="button")
-			//- 		span.hamburger-box
-			//- 			span.hamburger-inner
-			//- 	nav#mmenu.menu_nav
-			//- 		ul.menu_list
-			//- 			li.menu_item
-			//- 				a(href="#").menu_link Меню 1
-			//- 			li.menu_item
-			//- 				a(href="#").menu_link Меню 2
-			//- 			li.menu_item
-			//- 				a(href="#").menu_link Меню 3
-			//- 			li.menu_item
-			//- 				a(href="#").menu_link Меню 4
-			//- 			li.menu_item
-			//- 				a(href="#").menu_link Меню 5
-			//- 			li.menu_item
-			//- 				a(href="#").menu_link Меню 6
-			//- 			li.menu_item
-			//- 				a(href="#").menu_link Меню 7
-			//- 			li.menu_item
-			//- 				a(href="#").menu_link Меню 8
-			//- 	.menu_over
-			//- // /menu
 
 // /header

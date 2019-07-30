@@ -1,6 +1,6 @@
 .cards-slider {
 	padding-bottom: 69px;
-	margin-left: -40px;
+	overflow: hidden;
 	&_title {
 		
 	}
@@ -26,10 +26,18 @@
 	&_next {
 		border-radius: 0 5px 5px 0;
 	}
+	&_slider {
+		margin-left: -40px;
+	}
 	&_slide {
 
 	}
 	.card {
 		padding: 10px 0 0 40px;
+	}
+	@media (max-width: $break_sm) {
+		&_controll {
+			display: none;
+		}
 	}
 }

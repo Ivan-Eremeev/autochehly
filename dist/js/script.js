@@ -34,7 +34,7 @@ $(document).ready(function () {
 	});
 
 	// Мобильное меню
-	// myMenu($('#menu'));
+	myMenu($('#menu'));
 
 	// Блок с высотой окна браузера
 	// screenHeight($('#full-height'));
@@ -192,29 +192,29 @@ $(document).ready(function () {
 });
 
 // Мобильное меню
-// function myMenu(menu) {
-// 	var menuBtn = menu.find('#menu-btn')
-// 			over = menu.find('.menu_over'),
-// 			documentWidth = parseInt(document.documentElement.clientWidth),
-// 			windowsWidth = parseInt(window.innerWidth),
-// 			scrollbarWidth = windowsWidth - documentWidth,
-// 			html = $('html');
-// 	menuBtn.click(function () {
-// 		html.toggleClass('lock').css('padding-right',scrollbarWidth);
-// 		menu.toggleClass('open');
-// 		menuBtn.toggleClass('is-active');
-// 		over.click(function() {
-// 			html.removeClass('lock').css('padding-right',0);
-// 			menu.removeClass('open');
-// 			menuBtn.removeClass('is-active');
-// 		});
-// 		menu.find('a').click(function() {
-// 			html.removeClass('lock').css('padding-right',0);
-// 			menu.removeClass('open');
-// 			menuBtn.removeClass('is-active');
-// 		});
-// 	});	
-// };
+function myMenu(menu) {
+	var menuBtn = menu.find('#menu-btn'),
+			close = menu.find('#menu-close'),
+			documentWidth = parseInt(document.documentElement.clientWidth),
+			windowsWidth = parseInt(window.innerWidth),
+			scrollbarWidth = windowsWidth - documentWidth,
+			html = $('html');
+	menuBtn.click(function () {
+		html.toggleClass('lock').css('padding-right',scrollbarWidth);
+		menu.toggleClass('open');
+		menuBtn.toggleClass('is-active');
+		close.click(function() {
+			html.removeClass('lock').css('padding-right',0);
+			menu.removeClass('open');
+			menuBtn.removeClass('is-active');
+		});
+		// menu.find('a').click(function() {
+		// 	html.removeClass('lock').css('padding-right',0);
+		// 	menu.removeClass('open');
+		// 	menuBtn.removeClass('is-active');
+		// });
+	});	
+};
 
 // // Блок с высотой окна браузера
 // function screenHeight(fullHeight) {
@@ -746,20 +746,21 @@ function cardsSlider(slider) {
     // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
     swipe: false, // Перелистывание пальцем
     draggable: false, // Перелистывание мышью
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
+    responsive: [ // Адаптация
+      {
+      breakpoint: breakSm,
+        settings: {
+          slidesToShow: 2, // Сколько слайдов показывать на экране
+          swipe: true, // Перелистывание пальцем
+        }
+      },
+      {
+      breakpoint: breakXs,
+        settings: {
+          slidesToShow: 1 // Сколько слайдов показывать на экране
+        }
+      }
+    ]
     // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
   });
 

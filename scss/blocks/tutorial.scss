@@ -26,8 +26,19 @@
 		top: 50%;
 		left: 0;
 		transform: translate(0,-50%);
+		stroke: $red;
 	}
 	&_text {
 		
+	}
+	@media (max-width: $break_sm) {
+		font-size: 28px;
+		&_item {
+			width: 100%;
+			margin-bottom: 45px;
+			&:not(:last-child):after {
+				display: none;
+			}
+		}
 	}
 }

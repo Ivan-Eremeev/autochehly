@@ -4,6 +4,7 @@
 	}
 	&_col {
 		@include col(6);
+		@include col-sm(12);
 		margin-bottom: $gutter;
 	}
 	&_item {
@@ -23,6 +24,10 @@
 		&:hover {
 			background-color: $red;
 			color: #fff;
+			.install_img {
+				stroke: #fff;
+				fill: #fff;
+			}
 		}
 	}
 	&_img {
@@ -30,6 +35,9 @@
 		top: 50%;
 		left: 28px;
 		transform: translate(0,-50%);
+		stroke: $red;
+		fill: $red;
+		transition: .15s;
 	}
 	&_content {
 		
@@ -39,5 +47,8 @@
 	}
 	&_price {
 		font-weight: 600;
+	}
+	@media (max-width: $break_sm) {
+
 	}
 }

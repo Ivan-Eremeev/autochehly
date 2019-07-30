@@ -1,29 +1,39 @@
 .header {
-	padding: 32px 0;
+	padding: 32px 0 12px;
 	background-color: $gray;
-	&:after {
-		content: '';
-		display: table;
-		clear: both;
-		width: 100%;
+	.wrapper {
+		position: relative;
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
 	}
 	&_left {
 		float: left;
+		margin-bottom: 20px;
 	}
 	&_right {
 		float: right;
+		margin-bottom: 10px;
 	}
 }
 .logo {
+	margin-right: 35px;
 	svg {
 		fill: $red;
+	}
+	@media (max-width: $break_xs) {
+		&--desktop {
+			display: none;
+		}
 	}
 }
 .location-wrapper {
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 5px;
-	margin-left: 35px;
 }
 .location {
 	font-size: 15px;
@@ -31,9 +41,7 @@
 	&_icon {
 		margin-right: 12px;
 		vertical-align: middle;
-		svg {
-			fill: #b3b3b3;
-		}
+		stroke: #b3b3b3;
 	}
 	&_text {
 		padding-bottom: 4px;
@@ -45,11 +53,21 @@
 			border-color: #b3b3b3;
 		}
 	}
+	@media (max-width: $break_sm) {
+		font-size: 26px;
+		&_icon {
+			display: none;
+		}
+	}
+	@media (max-width: $break_xs) {
+		display: none;
+	}
 }
 .call {
 	display: inline-block;
 	&_img {
 		margin-right: 14px;
+		stroke: #111010;
 	}
 	&_content {
 		display: inline-block;
@@ -64,6 +82,12 @@
 		font-size: 12px;
 		color: #9e9e9e;
 	}
+	@media (max-width: $break_md) {
+		margin-top: 5px;
+	}
+	@media (max-width: $break_sm) {
+		margin-top: 0;
+	}
 }
 .cart {
 	display: inline-block;
@@ -73,6 +97,9 @@
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
+		svg {
+			stroke: #111010;
+		}
 	}
 	&_count {
 		display: block;
@@ -115,17 +142,27 @@
 			}
 		}
 	}
+	@media (max-width: $break_sm) {
+		&_count {
+			width: 28px;
+			height: 28px;
+			font-size: 19px;
+			top: -5px;
+			left: 15px;
+		}
+	}
 }
 @keyframes light {
 	from {left: -20%;}
 	to {left: 120%;}
 }
 .location-dropdown {
-	width: 100%;
-	max-width: 335px;
+	width: 90%;
+	max-width: 320px;
 	padding-top: 20px;
 	position: absolute;
 	z-index: 2;
+	left: 180px;
 	&_block {
 		padding: 30px 20px 20px;
 		background-color: #fff;
@@ -140,6 +177,7 @@
 		margin-bottom: 20px;
 		span {
 			color: $black;
+			white-space: nowrap;
 		}
 	}
 	&_input {
@@ -178,19 +216,14 @@
 			transform: rotate(-45deg);
 		}
 	}
-	&_btn {
+	.btn {
 		width: 100%;
 		max-width: 100px;
 		height: 30px;
 		margin-right: 15px;
-		padding: 0 10px;
-		background-color: $green;
-		border: none;
-		border-radius: 5px;
 		font-size: 14px;
-		&--remove {
-			background-color: $gray;
-			color: $black;
-		}
+	}
+	@media (max-width: $break_xs) {
+		left: 15px;
 	}
 }

@@ -6,9 +6,9 @@
 	}
 	&_col {
 		@include col(2.4);
-	}
-	&_col-big {
-		@include col(7.2);
+		@include col-md(4);
+		@include col-sm(6);
+		@include col-xs(12);
 	}
 	&_nav {
 		font-size: 14px;
@@ -23,7 +23,6 @@
 		}
 	}
 	&_rectangle {
-		max-width: 230px;
 		min-height: 120px;
 		background-color: $gray;
 	}
@@ -39,6 +38,15 @@
 			position: relative;
 			padding-right: 60px;
 		}
+		&_col {
+			@include col(2.4);
+			@include col-sm(12);
+			margin-bottom: 50px;
+		}
+		&_col-big {
+			@include col(7.2);
+			@include col-sm(12);
+		}
 	}
 	&_linkb {
 		padding-bottom: 5px;
@@ -53,5 +61,15 @@
 		top: 50%;
 		right: 40px;
 		transform: translate(0,-50%);
+	}
+	@media (max-width: $break_md) {
+		&_nav {
+			display: none;
+		}
+	}
+	@media (max-width: $break_xs) {
+		&_rectangle {
+			display: none;
+		}
 	}
 }

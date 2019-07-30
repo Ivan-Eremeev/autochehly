@@ -16,4 +16,20 @@
 	.scroll-element .scroll-element_track {
 		background-color: $gray;
 	}
+	@media (max-width: $break_sm) {
+		.scroll-element.scroll-y {
+	    width: 44px;
+		}
+		> .scroll-element .scroll-element_outer, > .scroll-element .scroll-element_track, > .scroll-element .scroll-bar {
+			border-radius: 15px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		.scroll-element.scroll-y {
+	    width: 17px;
+		}
+		> .scroll-element .scroll-element_outer, > .scroll-element .scroll-element_track, > .scroll-element .scroll-bar {
+			border-radius: 5px;
+		}
+	}
 }
