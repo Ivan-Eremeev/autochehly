@@ -74,4 +74,46 @@
 			}
 		}
 	}
+	@media (max-width: $break_sm) {
+		&_text {
+			font-size: 28px;
+			line-height: 1.2;
+		}
+		&_presens {
+			font-size: 22px;
+		}
+		&_price {
+			display: block;
+			margin-bottom: 30px;
+			font-size: 28px;
+			span {
+				font-size: 40px;
+			}
+		}
+		&_btn {
+			float: none;
+			height: 57px;
+			max-width: 220px;
+			font-size: 30px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		&_text {
+			font-size: 20px;
+			line-height: 1.4;
+		}
+		&_presens {
+			font-size: 16px;
+		}
+		&_price {
+			font-size: 16px;
+			span {
+				font-size: 25px;
+			}
+		}
+		&_btn {
+			height: 40px;
+			font-size: 16px;
+		}
+	}
 }

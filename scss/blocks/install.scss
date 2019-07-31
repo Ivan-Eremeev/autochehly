@@ -49,6 +49,61 @@
 		font-weight: 600;
 	}
 	@media (max-width: $break_sm) {
-
+		&_item {
+			padding: 60px 18px 60px 230px;
+		}
+		&_img {
+			&--house {
+				width: 113px;
+				height: 97px;
+			}
+			&--seat {
+				width: 86px;
+				height: 121px;
+			}
+			&--car {
+				width: 132px;
+				height: 70px;
+			}
+			&--car-end-seat {
+				width: 162px;
+				height: 82px;
+			}
+		}
+		.text {
+			font-size: 30px;
+		}
+		&_content {
+			font-size: 28px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		&_item {
+			padding: 18px 18px 25px 141px;
+		}
+		&_img {
+			&--house {
+				width: auto;
+				height: auto;
+			}
+			&--seat {
+				width: auto;
+				height: auto;
+			}
+			&--car {
+				width: auto;
+				height: auto;
+			}
+			&--car-end-seat {
+				width: auto;
+				height: auto;
+			}
+		}
+		.text {
+			font-size: 16px;
+		}
+		&_content {
+			font-size: 16px;
+		}	
 	}
 }

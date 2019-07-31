@@ -12,14 +12,16 @@
 	&_select {
 		display: inline-block;
 		width: 100%;
-		max-width: 166px;
+		width: 166px;
 		margin-right: 10px;
 		margin-bottom: 18px;
 		user-select: none;
 	}
 	&_trigger {
-		padding: 10px 25px 10px 14px;
+		height: 40px;
+		padding: 8px 25px 0 14px;
 		border: 1px solid $border;
+		overflow: hidden;
 		border-radius: 5px;
 		cursor: pointer;
 		transition: .15s;
@@ -35,7 +37,7 @@
 	&_arrow {
 		font-size: 25px;
 		position: absolute;
-		top: 9px;
+		top: 8px;
 		right: 5px;
 		color: $grayD;
 		transition: .15s;
@@ -43,6 +45,7 @@
 	.btn {
 		width: 100%;
 		max-width: 170px;
+		vertical-align: top;
 	}
 	&_body {
 		padding-bottom: 18px;
@@ -137,7 +140,7 @@
 			display: none;
 		}
 		&_select {
-			max-width: none;
+			width: 100%;
 			font-size: 30px;
 			position: relative;
 		}
@@ -146,7 +149,8 @@
 			top: 18px;
 		}
 		&_trigger {
-			padding: 23px 25px 23px 14px;
+			height: 90px;
+			padding: 23px 50px 0 14px;
 			border-radius: 10px;
 		}
 		.btn {
@@ -162,7 +166,8 @@
 			font-size: 20px;
 		}
 		&_trigger {
-			padding: 15px 25px 15px 14px;
+			height: 60px;
+			padding: 15px 25px 0 14px;
 			border-radius: 10px;
 		}
 		&_arrow {
@@ -179,7 +184,10 @@
 }
 .dropdown {
 	display: none;
-	padding-top: 18px;
+	margin-top: 18px;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	background-color: #fff;
 	transition: 1s;
 	position: absolute;
 	z-index: 2;
@@ -192,7 +200,6 @@
 	}
 	&_list {
 		padding: 10px 20px 10px 14px;
-		background-color: #fff;
 		border-radius: 5px;
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 	}
@@ -262,9 +269,22 @@
 			width: 100%;
 			max-width: none;
 		}
-	}
-	&_list {
+		&_list {
 		padding: 10px 50px 10px 14px;
+		}
+		&_link {
+			display: block;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		&_reset {
+			width: 34px;
+			height: 34px;
+			&:after, &:before {
+				top: 23px;
+				height: 2px;
+			}
+		}
 	}
 	@media (max-width: $break_xs) {
 		&_list {
@@ -272,6 +292,14 @@
 		}
 		&_col {
 			width: 100%;
+		}
+		&_reset {
+			width: 20px;
+			height: 20px;
+			&:after, &:before {
+				height:1px;
+				top: 9px;
+			}
 		}
 	}
 }

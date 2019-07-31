@@ -87,6 +87,20 @@
 	}
 	@media (max-width: $break_sm) {
 		margin-top: 0;
+		&_num {
+			font-size: 41px;
+		}
+		&_text {
+			font-size: 20px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		&_num {
+			font-size: 25px;
+		}
+		&_text {
+			font-size: 12px;
+		}
 	}
 }
 .cart {

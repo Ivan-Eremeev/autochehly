@@ -104,12 +104,15 @@ function cardsSlider(slider) {
         settings: {
           slidesToShow: 2, // Сколько слайдов показывать на экране
           swipe: true, // Перелистывание пальцем
+          draggable: false, // Перелистывание мышью
         }
       },
       {
       breakpoint: breakXs,
         settings: {
-          slidesToShow: 1 // Сколько слайдов показывать на экране
+          slidesToShow: 1, // Сколько слайдов показывать на экране
+          swipe: true, // Перелистывание пальцем
+          draggable: false, // Перелистывание мышью
         }
       }
     ]

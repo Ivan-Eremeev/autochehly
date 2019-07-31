@@ -622,27 +622,56 @@ function myMenu(menu) {
 //   });
 // };
 
-// Выпадайки Dropdown
+// Выпадайки в фильтре
 function dropdown() {
 	var trigger = $('.js-drop-trigger'),
-			dropdown = $('.js-dropdown');
-			select = $('.js-dropdown-wrapper');
+			dropdown = $('.js-dropdown'),
+			select = $('.js-dropdown-wrapper'),
+			link = $('.js-drop_link'),
+			triggerText = [];
+	// Перебираем селекты, создаем массив с текстами селектов и задаем каждому селекту data-index для вывода этого текста из массива в селект
+	trigger.each(function(index, el) {
+		triggerText.push($(this).find('span').text());
+		$(this).data('index', index);
+	});
+	// Клик по селекту
 	trigger.click(function() {
+		// Если селект не содержит класс .active, задаем его и открываем выпадайку классом .open
 		if (!$(this).hasClass('active')) {
 			trigger.removeClass('active');
 			dropdown.removeClass('open');
 			$(this).next(dropdown).addClass('open');
 			$(this).addClass('active');
+		// Иначе убираем активный класс и закрываем выпадайку
 		}else {
 			trigger.removeClass('active');
 			dropdown.removeClass('open');
 		}
 	});
+	// Клик вне селекта. Закрываем выпадайку
 	$(document).mouseup(function (e) {
 		if (!select.is(e.target) && select.has(e.target).length === 0) {
 			trigger.removeClass('active');
 			dropdown.removeClass('open');
-			select.removeClass('active');
+		}
+	});
+	// Клик по ссылке в выпадайке
+	link.click(function() {
+		var linkText = $(this).text();
+		// Если клик по .dropdown_link--reset то зададим изначальный текст селекту
+		if ($(this).hasClass('dropdown_link--reset')) {
+			var index = $(this).closest(select).find(trigger).data('index');
+			link.removeClass('active');
+			$(this).closest(select).find(trigger).find('span').text(triggerText[index]);
+			trigger.removeClass('active');
+			dropdown.removeClass('open');
+		// Если по любой другой ссылке, то зададим текст из этой ссылки
+		}else{
+			link.removeClass('active');
+			$(this).addClass('active');
+			$(this).closest(select).find(trigger).find('span').text(linkText);
+			trigger.removeClass('active');
+			dropdown.removeClass('open');
 		}
 	});
 }
@@ -752,12 +781,15 @@ function cardsSlider(slider) {
         settings: {
           slidesToShow: 2, // Сколько слайдов показывать на экране
           swipe: true, // Перелистывание пальцем
+          draggable: false, // Перелистывание мышью
         }
       },
       {
       breakpoint: breakXs,
         settings: {
-          slidesToShow: 1 // Сколько слайдов показывать на экране
+          slidesToShow: 1, // Сколько слайдов показывать на экране
+          swipe: true, // Перелистывание пальцем
+          draggable: false, // Перелистывание мышью
         }
       }
     ]

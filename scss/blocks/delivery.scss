@@ -11,5 +11,37 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-50%);
+		&--mobile {
+			display: none;
+		}
+	}
+	@media (max-width: $break_sm) {
+		&_link {
+			width: 140px;
+			height: 70px;
+			margin-bottom: 20px;
+		}
+		&_img {
+			&--desktop {
+				display: none;
+			}
+			&--mobile {
+				display: block;
+			}
+		}
+	}
+	@media (max-width: $break_xs) {
+		&_link {
+			width: 94px;
+			height: 60px;
+		}
+		&_img {
+			&--desktop {
+				display: block;
+			}
+			&--mobile {
+				display: none;
+			}
+		}
 	}
 }

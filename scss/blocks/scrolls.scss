@@ -17,6 +17,7 @@
 		background-color: $gray;
 	}
 	@media (max-width: $break_sm) {
+		max-height: 825px;
 		.scroll-element.scroll-y {
 	    width: 44px;
 		}
