@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Авточехлы - Главная</title>
+    <title>Авточехлы - Каталог</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -62,21 +62,16 @@
     <div class="wrapper">
       <div class="main-sidebar">
         <div class="sidebar">
-          <!-- factories-->
-          <div class="factories">
-            <h2 class="factories_title">Все фабрики чехлов на одном сайте</h2>
-            <ul class="factories_list">
-              <li class="factories_item"><a class="factories_icon" href="#"><img src="img/autopilot.png" alt="logo"></a></li>
-              <li class="factories_item"><a class="factories_icon" href="#"><img src="img/psv.png" alt="logo"></a></li>
-              <li class="factories_item"><a class="factories_icon" href="#"><img src="img/seintex.png" alt="logo"></a></li>
-              <li class="factories_item"><a class="factories_icon" href="#"><img src="img/brotkers.png" alt="logo"></a></li>
-              <li class="factories_item"><a class="factories_icon" href="#"><img src="img/avtolider.png" alt="logo"></a></li>
-              <li class="factories_item"><a class="factories_icon" href="#"><img src="img/autoslon.png" alt="logo"></a></li>
-              <li class="factories_item"><a class="factories_icon" href="#"><img src="img/dinas.png" alt="logo"></a></li>
-              <li class="factories_item"><a class="factories_icon" href="#"><img src="img/pochin.png" alt="logo"></a></li>
-            </ul>
+          <!-- sidebar-item-->
+          <div class="sidebar-item">
+            <div class="sidebar-item_item"><img class="sidebar-item_icon sidebar-item_icon--car" src="img/car.svg" alt="car">
+              <div class="sidebar-item_text">Отправка на следующий день</div>
+            </div>
+            <div class="sidebar-item_item"><img class="sidebar-item_icon sidebar-item_icon--hand" src="img/hand.svg" alt="hand">
+              <div class="sidebar-item_text">Цены производителя</div>
+            </div>
           </div>
-          <!-- /factories-->
+          <!-- /sidebar-item-->
         </div>
         <div class="main">
           <!-- filter-->
@@ -319,119 +314,398 @@
           <!-- /filter-->
         </div>
       </div>
-      <!-- image-btn-->
-      <div class="image-btn">
-        <div class="row">
-          <div class="image-btn_col"><a class="image-btn_item data-img" href="#" data-img="img/cover-eco.jpg">
-              <div class="image-btn_title">Модельные чехлы из экокожи</div></a></div>
-          <div class="image-btn_col"><a class="image-btn_item data-img" href="#" data-img="img/cover-combo.jpg">
-              <div class="image-btn_title">Модельные чехлы комбинированные</div></a></div>
+      <!-- breadcrumbs-->
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs_item"><a href="#">Чехлы на сиденья</a><span class="breadcrumbs_arrow">&rarr;</span></li>
+        <li class="breadcrumbs_item"><a href="#">Chevrolet</a><span class="breadcrumbs_arrow">&rarr;</span></li>
+        <li class="breadcrumbs_item"><a href="#">7 серия</a><span class="breadcrumbs_arrow">&rarr;</span></li>
+        <li class="breadcrumbs_item"><a href="#">VI (G1/G2)</a><span class="breadcrumbs_arrow">&rarr;</span></li>
+        <li class="breadcrumbs_item"><span>730i M Sport SE</span></li>
+      </ul>
+      <!-- /breadcrumbs-->
+      <div class="main-sidebar">
+        <div class="sidebar">
+          <div class="subtitle">Материалы</div>
+          <!-- filter-checkbox-->
+          <form class="filter-checkbox" action="#">
+            <ul class="filter-checkbox_list">
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="materials1" type="checkbox" name="materials">
+                <label class="filter-checkbox_label" for="materials1"><span class="filter-checkbox_checkbox"></span><span>Экокожа</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="materials2" type="checkbox" name="materials">
+                <label class="filter-checkbox_label" for="materials2"><span class="filter-checkbox_checkbox"></span><span>Жаккард</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="materials3" type="checkbox" name="materials">
+                <label class="filter-checkbox_label" for="materials3"><span class="filter-checkbox_checkbox"></span><span>Замша</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="materials4" type="checkbox" name="materials">
+                <label class="filter-checkbox_label" for="materials4"><span class="filter-checkbox_checkbox"></span><span>Нубук</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="materials5" type="checkbox" name="materials">
+                <label class="filter-checkbox_label" for="materials5"><span class="filter-checkbox_checkbox"></span><span>Экокожа</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="materials6" type="checkbox" name="materials">
+                <label class="filter-checkbox_label" for="materials6"><span class="filter-checkbox_checkbox"></span><span>Жаккард</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="materials7" type="checkbox" name="materials">
+                <label class="filter-checkbox_label" for="materials7"><span class="filter-checkbox_checkbox"></span><span>Замша</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="materials8" type="checkbox" name="materials">
+                <label class="filter-checkbox_label" for="materials8"><span class="filter-checkbox_checkbox"></span><span>Нубук</span></label>
+              </li>
+            </ul>
+          </form>
+          <!-- /filter-checkbox-->
+          <div class="subtitle">Цвет</div>
+          <!-- filter-color-->
+          <form class="filter-color" action="#">
+            <ul class="filter-color_list">
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color1" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--gray" for="color1"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color2" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--brown" for="color2"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color3" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--green" for="color3"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color4" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--yellow" for="color4"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color5" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--blue" for="color5"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color6" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--gray" for="color6"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color7" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--brown" for="color7"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color8" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--green" for="color8"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color9" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--yellow" for="color9"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color10" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--black" for="color10"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color11" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--gray" for="color11"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color12" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--brown" for="color12"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color13" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--green" for="color13"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color14" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--yellow" for="color14"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color15" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--blue" for="color15"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color16" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--gray" for="color16"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color17" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--brown" for="color17"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color18" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--green" for="color18"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color19" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--yellow" for="color19"></label>
+              </li>
+              <li class="filter-color_item">
+                <input class="filter-color_input" id="color20" type="checkbox" name="color">
+                <label class="filter-color_label filter-color_label--black" for="color20"></label>
+              </li>
+            </ul>
+          </form>
+          <!-- /filter-color-->
+          <div class="subtitle">Производители</div>
+          <!-- filter-checkbox-->
+          <form class="filter-checkbox" action="#">
+            <ul class="filter-checkbox_list">
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="manufacturer1" type="checkbox" name="manufacturer">
+                <label class="filter-checkbox_label" for="manufacturer1"><span class="filter-checkbox_checkbox"></span><span>Автолидер</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="manufacturer2" type="checkbox" name="manufacturer">
+                <label class="filter-checkbox_label" for="manufacturer2"><span class="filter-checkbox_checkbox"></span><span>Автолидер</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="manufacturer3" type="checkbox" name="manufacturer">
+                <label class="filter-checkbox_label" for="manufacturer3"><span class="filter-checkbox_checkbox"></span><span>Автолидер</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="manufacturer4" type="checkbox" name="manufacturer">
+                <label class="filter-checkbox_label" for="manufacturer4"><span class="filter-checkbox_checkbox"></span><span>Автолидер</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="manufacturer5" type="checkbox" name="manufacturer">
+                <label class="filter-checkbox_label" for="manufacturer5"><span class="filter-checkbox_checkbox"></span><span>Автолидер</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="manufacturer6" type="checkbox" name="manufacturer">
+                <label class="filter-checkbox_label" for="manufacturer6"><span class="filter-checkbox_checkbox"></span><span>Автолидер</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="manufacturer7" type="checkbox" name="manufacturer">
+                <label class="filter-checkbox_label" for="manufacturer7"><span class="filter-checkbox_checkbox"></span><span>Автолидер</span></label>
+              </li>
+              <li class="filter-checkbox_item">
+                <input class="filter-checkbox_input" id="manufacturer8" type="checkbox" name="manufacturer">
+                <label class="filter-checkbox_label" for="manufacturer8"><span class="filter-checkbox_checkbox"></span><span>Автолидер</span></label>
+              </li>
+            </ul>
+          </form>
+          <!-- /filter-checkbox-->
         </div>
-      </div>
-      <!-- /image-btn-->
-      <!-- cards-slider-->
-      <div class="cards-slider">
-        <div class="cards-slider_title">
-          <div class="cards-slider_controll">
-            <div class="cards-slider_prev" id="cards-slider-prev"><span class="icon-keyboard_arrow_left"></span></div>
-            <div class="cards-slider_next" id="cards-slider-next"><span class="icon-keyboard_arrow_right"></span></div>
+        <div class="main">
+          <div class="sorting">
+            <h2 class="title">Автомобильные чехлы Ауди,<br>7 серия, VI (G1/G12), 730i M Sport SE</h2>
+            <!-- sort-->
+            <form class="sort" action="#">
+              <div class="sort_item sort_item--popular">
+                <input type="radio" name="sort" id="sort_popular">
+                <label for="sort_popular">По популярности</label>
+              </div>
+              <div class="sort_item sort_item--price">
+                <input type="radio" name="sort" id="sort_price">
+                <label for="sort_price">По цене</label>
+              </div>
+            </form>
+            <!-- /sort-->
           </div>
+          <!-- cards-->
+          <div class="cards">
+            <div class="row">
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--orange"><span>На заказ 14-21 день</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--orange" type="submit">Предзаказ</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--green"><span>В наличии</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--green" type="submit">Купить</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--green"><span>В наличии</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--green" type="submit">Купить</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--orange"><span>На заказ 14-21 день</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--orange" type="submit">Предзаказ</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--green"><span>В наличии</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--green" type="submit">Купить</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--green"><span>В наличии</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--green" type="submit">Купить</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--orange"><span>На заказ 14-21 день</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--orange" type="submit">Предзаказ</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--green"><span>В наличии</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--green" type="submit">Купить</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--green"><span>В наличии</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--green" type="submit">Купить</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+            </div>
+          </div>
+          <!-- /cards-->
+          <div class="center"><a class="show-more btn btn--gray" href="#">Показать еще</a></div>
+          <!-- pagination-->
+          <div class="pagination"><a class="pagination_link" href="#">1</a><a class="pagination_link active" href="#">2</a><a class="pagination_link" href="#">3</a><a class="pagination_link" href="#">4</a><a class="pagination_link" href="#">5</a><a class="pagination_link" href="#">6</a><a class="pagination_link" href="#">7</a><a class="pagination_link" href="#">8</a><a class="pagination_link" href="#">9</a></div>
+          <!-- /pagination-->
           <h2 class="title">Вы смотрели</h2>
-        </div>
-        <div class="cards-slider_slider" id="cards-slider">
-          <div class="cards-slider_slide">
-            <!-- card-->
-            <div class="card">
-              <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
-              <div class="card_content">
-                <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
-                <div class="card_presens card_presens--orange"><span>На заказ 14-21 день</span></div>
-                <form class="card_order" action="#">
-                  <div class="card_price"><span>6 290</span> руб</div>
-                  <button class="card_btn card_btn--orange" type="submit">Предзаказ</button>
-                </form>
+          <!-- cards-->
+          <div class="cards">
+            <div class="row">
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--orange"><span>На заказ 14-21 день</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--orange" type="submit">Предзаказ</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--green"><span>В наличии</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--green" type="submit">Купить</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
+              </div>
+              <div class="cards_col">
+                <!-- card-->
+                <div class="card">
+                  <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
+                  <div class="card_content">
+                    <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
+                    <div class="card_presens card_presens--green"><span>В наличии</span></div>
+                    <form class="card_order" action="#">
+                      <div class="card_price"><span>6 290</span> руб</div>
+                      <button class="card_btn card_btn--green" type="submit">Купить</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /card-->
               </div>
             </div>
-            <!-- /card-->
           </div>
-          <div class="cards-slider_slide">
-            <!-- card-->
-            <div class="card">
-              <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
-              <div class="card_content">
-                <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
-                <div class="card_presens card_presens--green"><span>В наличии</span></div>
-                <form class="card_order" action="#">
-                  <div class="card_price"><span>6 290</span> руб</div>
-                  <button class="card_btn card_btn--green" type="submit">Купить</button>
-                </form>
-              </div>
-            </div>
-            <!-- /card-->
-          </div>
-          <div class="cards-slider_slide">
-            <!-- card-->
-            <div class="card">
-              <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
-              <div class="card_content">
-                <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
-                <div class="card_presens card_presens--green"><span>В наличии</span></div>
-                <form class="card_order" action="#">
-                  <div class="card_price"><span>6 290</span> руб</div>
-                  <button class="card_btn card_btn--green" type="submit">Купить</button>
-                </form>
-              </div>
-            </div>
-            <!-- /card-->
-          </div>
-          <div class="cards-slider_slide">
-            <!-- card-->
-            <div class="card">
-              <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
-              <div class="card_content">
-                <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
-                <div class="card_presens card_presens--green"><span>В наличии</span></div>
-                <form class="card_order" action="#">
-                  <div class="card_price"><span>6 290</span> руб</div>
-                  <button class="card_btn card_btn--green" type="submit">Купить</button>
-                </form>
-              </div>
-            </div>
-            <!-- /card-->
-          </div>
-          <div class="cards-slider_slide">
-            <!-- card-->
-            <div class="card">
-              <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
-              <div class="card_content">
-                <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
-                <div class="card_presens card_presens--green"><span>В наличии</span></div>
-                <form class="card_order" action="#">
-                  <div class="card_price"><span>6 290</span> руб</div>
-                  <button class="card_btn card_btn--green" type="submit">Купить</button>
-                </form>
-              </div>
-            </div>
-            <!-- /card-->
-          </div>
-          <div class="cards-slider_slide">
-            <!-- card-->
-            <div class="card">
-              <div class="card_img img-responsive"><a href="#"><img src="img/catalog/eco3.jpg" alt="cover"></a></div>
-              <div class="card_content">
-                <p class="card_text js-match-height">Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825</p>
-                <div class="card_presens card_presens--green"><span>В наличии</span></div>
-                <form class="card_order" action="#">
-                  <div class="card_price"><span>6 290</span> руб</div>
-                  <button class="card_btn card_btn--green" type="submit">Купить</button>
-                </form>
-              </div>
-            </div>
-            <!-- /card-->
-          </div>
+          <!-- /cards-->
         </div>
       </div>
-      <!-- /cards-slider-->
       <div class="main-sidebar">
         <div class="sidebar mobile-hide--md">
           <div class="sideb">

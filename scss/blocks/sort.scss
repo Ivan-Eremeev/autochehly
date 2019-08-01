@@ -1,0 +1,50 @@
+.sorting {
+	.subtitle {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 70px;
+	}
+}
+.sort {
+	display: inline-block;
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+	&_item {
+		float: left;
+		label {
+			display: block;
+			padding: 10px 20px;
+			border: 1px solid $border;
+			background-color: #fff;
+			transition: .15s;
+			cursor: pointer;
+			user-select: none;
+			&:hover {
+				background-color: $gray;
+			}
+		}
+		&--popular {
+			label {
+				border-radius: 5px 0 0 5px;
+			}
+		}
+		&--price {
+			label {
+				border-left: none;
+				border-radius: 0 5px 5px 0;
+			}
+		}
+		input {
+			display: none;
+			&:checked {
+				+ label {
+					color: $red;
+				}
+			}
+		}
+	}
+}

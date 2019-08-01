@@ -1,0 +1,482 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Каталог
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		.main-sidebar
+
+			.sidebar
+
+				// sidebar-item
+				.sidebar-item
+					.sidebar-item_item
+						img(src="img/car.svg", alt="car").sidebar-item_icon.sidebar-item_icon--car
+						.sidebar-item_text Отправка на следующий день
+					.sidebar-item_item
+						img(src="img/hand.svg", alt="hand").sidebar-item_icon.sidebar-item_icon--hand
+						.sidebar-item_text Цены производителя
+				// /sidebar-item
+
+			.main
+
+				include blocks/filter.jade
+
+		// breadcrumbs
+		ul.breadcrumbs
+			li.breadcrumbs_item
+				a(href="#") Чехлы на сиденья
+				span.breadcrumbs_arrow &rarr;
+			li.breadcrumbs_item
+				a(href="#") Chevrolet
+				span.breadcrumbs_arrow &rarr;
+			li.breadcrumbs_item
+				a(href="#") 7 серия
+				span.breadcrumbs_arrow &rarr;
+			li.breadcrumbs_item
+				a(href="#") VI (G1/G2)
+				span.breadcrumbs_arrow &rarr;
+			li.breadcrumbs_item
+				span 730i M Sport SE
+		// /breadcrumbs
+
+		.main-sidebar
+
+			.sidebar
+
+				.subtitle Материалы
+
+				// filter-checkbox
+				form(action="#").filter-checkbox
+					ul.filter-checkbox_list
+						li.filter-checkbox_item
+							input#materials1(type="checkbox", name="materials").filter-checkbox_input
+							label(for="materials1").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Экокожа
+						li.filter-checkbox_item
+							input#materials2(type="checkbox", name="materials").filter-checkbox_input
+							label(for="materials2").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Жаккард
+						li.filter-checkbox_item
+							input#materials3(type="checkbox", name="materials").filter-checkbox_input
+							label(for="materials3").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Замша
+						li.filter-checkbox_item
+							input#materials4(type="checkbox", name="materials").filter-checkbox_input
+							label(for="materials4").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Нубук
+						li.filter-checkbox_item
+							input#materials5(type="checkbox", name="materials").filter-checkbox_input
+							label(for="materials5").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Экокожа
+						li.filter-checkbox_item
+							input#materials6(type="checkbox", name="materials").filter-checkbox_input
+							label(for="materials6").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Жаккард
+						li.filter-checkbox_item
+							input#materials7(type="checkbox", name="materials").filter-checkbox_input
+							label(for="materials7").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Замша
+						li.filter-checkbox_item
+							input#materials8(type="checkbox", name="materials").filter-checkbox_input
+							label(for="materials8").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Нубук
+				// /filter-checkbox
+
+				.subtitle Цвет
+
+				// filter-color
+				form(action="#").filter-color
+					ul.filter-color_list
+						li.filter-color_item
+							input#color1(type="checkbox", name="color").filter-color_input
+							label(for="color1").filter-color_label.filter-color_label--gray
+						li.filter-color_item
+							input#color2(type="checkbox", name="color").filter-color_input
+							label(for="color2").filter-color_label.filter-color_label--brown
+						li.filter-color_item
+							input#color3(type="checkbox", name="color").filter-color_input
+							label(for="color3").filter-color_label.filter-color_label--green
+						li.filter-color_item
+							input#color4(type="checkbox", name="color").filter-color_input
+							label(for="color4").filter-color_label.filter-color_label--yellow
+						li.filter-color_item
+							input#color5(type="checkbox", name="color").filter-color_input
+							label(for="color5").filter-color_label.filter-color_label--blue
+						li.filter-color_item
+							input#color6(type="checkbox", name="color").filter-color_input
+							label(for="color6").filter-color_label.filter-color_label--gray
+						li.filter-color_item
+							input#color7(type="checkbox", name="color").filter-color_input
+							label(for="color7").filter-color_label.filter-color_label--brown
+						li.filter-color_item
+							input#color8(type="checkbox", name="color").filter-color_input
+							label(for="color8").filter-color_label.filter-color_label--green
+						li.filter-color_item
+							input#color9(type="checkbox", name="color").filter-color_input
+							label(for="color9").filter-color_label.filter-color_label--yellow
+						li.filter-color_item
+							input#color10(type="checkbox", name="color").filter-color_input
+							label(for="color10").filter-color_label.filter-color_label--black
+						li.filter-color_item
+							input#color11(type="checkbox", name="color").filter-color_input
+							label(for="color11").filter-color_label.filter-color_label--gray
+						li.filter-color_item
+							input#color12(type="checkbox", name="color").filter-color_input
+							label(for="color12").filter-color_label.filter-color_label--brown
+						li.filter-color_item
+							input#color13(type="checkbox", name="color").filter-color_input
+							label(for="color13").filter-color_label.filter-color_label--green
+						li.filter-color_item
+							input#color14(type="checkbox", name="color").filter-color_input
+							label(for="color14").filter-color_label.filter-color_label--yellow
+						li.filter-color_item
+							input#color15(type="checkbox", name="color").filter-color_input
+							label(for="color15").filter-color_label.filter-color_label--blue
+						li.filter-color_item
+							input#color16(type="checkbox", name="color").filter-color_input
+							label(for="color16").filter-color_label.filter-color_label--gray
+						li.filter-color_item
+							input#color17(type="checkbox", name="color").filter-color_input
+							label(for="color17").filter-color_label.filter-color_label--brown
+						li.filter-color_item
+							input#color18(type="checkbox", name="color").filter-color_input
+							label(for="color18").filter-color_label.filter-color_label--green
+						li.filter-color_item
+							input#color19(type="checkbox", name="color").filter-color_input
+							label(for="color19").filter-color_label.filter-color_label--yellow
+						li.filter-color_item
+							input#color20(type="checkbox", name="color").filter-color_input
+							label(for="color20").filter-color_label.filter-color_label--black
+				// /filter-color
+
+				.subtitle Производители
+
+				// filter-checkbox
+				form(action="#").filter-checkbox
+					ul.filter-checkbox_list
+						li.filter-checkbox_item
+							input#manufacturer1(type="checkbox", name="manufacturer").filter-checkbox_input
+							label(for="manufacturer1").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Автолидер
+						li.filter-checkbox_item
+							input#manufacturer2(type="checkbox", name="manufacturer").filter-checkbox_input
+							label(for="manufacturer2").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Автолидер
+						li.filter-checkbox_item
+							input#manufacturer3(type="checkbox", name="manufacturer").filter-checkbox_input
+							label(for="manufacturer3").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Автолидер
+						li.filter-checkbox_item
+							input#manufacturer4(type="checkbox", name="manufacturer").filter-checkbox_input
+							label(for="manufacturer4").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Автолидер
+						li.filter-checkbox_item
+							input#manufacturer5(type="checkbox", name="manufacturer").filter-checkbox_input
+							label(for="manufacturer5").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Автолидер
+						li.filter-checkbox_item
+							input#manufacturer6(type="checkbox", name="manufacturer").filter-checkbox_input
+							label(for="manufacturer6").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Автолидер
+						li.filter-checkbox_item
+							input#manufacturer7(type="checkbox", name="manufacturer").filter-checkbox_input
+							label(for="manufacturer7").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Автолидер
+						li.filter-checkbox_item
+							input#manufacturer8(type="checkbox", name="manufacturer").filter-checkbox_input
+							label(for="manufacturer8").filter-checkbox_label
+								span.filter-checkbox_checkbox
+								span Автолидер
+				// /filter-checkbox
+
+			.main
+
+				.sorting
+					h2.title Автомобильные чехлы Ауди,<br>7 серия, VI (G1/G12), 730i M Sport SE
+
+					// sort
+					form(action="#").sort
+						.sort_item.sort_item--popular
+							input(type="radio" name="sort")#sort_popular
+							label(for="sort_popular") По популярности
+						.sort_item.sort_item--price
+							input(type="radio" name="sort")#sort_price
+							label(for="sort_price") По цене
+					// /sort
+		
+				// cards
+				.cards
+					.row
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--orange
+										span На заказ 14-21 день
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--orange Предзаказ
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--green
+										span В наличии
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--green Купить
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--green
+										span В наличии
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--green Купить
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--orange
+										span На заказ 14-21 день
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--orange Предзаказ
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--green
+										span В наличии
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--green Купить
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--green
+										span В наличии
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--green Купить
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--orange
+										span На заказ 14-21 день
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--orange Предзаказ
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--green
+										span В наличии
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--green Купить
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--green
+										span В наличии
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--green Купить
+							// /card
+
+				// /cards
+				
+				.center
+					a(href="#").show-more.btn.btn--gray Показать еще
+
+				// pagination
+				.pagination
+					a(href="#").pagination_link 1
+					a(href="#").pagination_link.active 2
+					a(href="#").pagination_link 3
+					a(href="#").pagination_link 4
+					a(href="#").pagination_link 5
+					a(href="#").pagination_link 6
+					a(href="#").pagination_link 7
+					a(href="#").pagination_link 8
+					a(href="#").pagination_link 9
+				// /pagination
+				
+				h2.title Вы смотрели
+
+				// cards
+				.cards
+					.row
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--orange
+										span На заказ 14-21 день
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--orange Предзаказ
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--green
+										span В наличии
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--green Купить
+							// /card
+
+						.cards_col
+							// card
+							.card
+								.card_img.img-responsive
+									a(href="#")
+										img(src="img/catalog/eco3.jpg", alt="cover")
+								.card_content
+									p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+									.card_presens.card_presens--green
+										span В наличии
+									form(action="#").card_order
+										.card_price
+											span 6 290
+											|  руб
+										button(type="submit").card_btn.card_btn--green Купить
+							// /card
+
+				// /cards
+
+		include blocks/bottom-blocks.jade
+
+	include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/slick.min.js")
+	script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	//- script(src="js/jquery.vide.min.js")
+	script(src="js/jquery.scrollbar.min.js")
+	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
+	script(src="js/jquery.formstyler.min.js")
+	script(src="js/script.js")

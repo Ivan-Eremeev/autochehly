@@ -1,0 +1,21 @@
+.pagination {
+	text-align: center;
+	margin: 20px 0 30px;
+	&_link {
+		display: inline-block;
+		width: 42px;
+		height: 42px;
+		padding-top: 8px;
+		border-radius: 5px;
+		font-size: 18px;
+		color: $black;
+		text-align: center;
+		&:hover {
+			background-color: $gray;
+		}
+		&.active {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+}

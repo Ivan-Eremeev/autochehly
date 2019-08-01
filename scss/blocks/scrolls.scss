@@ -17,7 +17,12 @@
 		background-color: $gray;
 	}
 	@media (max-width: $break_sm) {
-		max-height: 825px;
+		&--h360 {
+			max-height: none;
+		}
+		&--generation {
+			max-height: none;
+		}
 		.scroll-element.scroll-y {
 	    width: 44px;
 		}

@@ -1,0 +1,5 @@
+.cards {
+	&_col {
+		@include col(4);
+	}
+}

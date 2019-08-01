@@ -4,9 +4,10 @@
 	&_item {
 		display: inline-block;
 		width: 33%;
-		padding: 0 40px 0 67px;
+		padding: 0 40px 0 60px;
 		line-height: 1.25;
 		position: relative;
+		vertical-align: top;
 		&:not(:last-child) {
 			&:after {
 				content: "\e905";
@@ -23,9 +24,8 @@
 	}
 	&_img {
 		position: absolute;
-		top: 50%;
-		left: 0;
-		transform: translate(0,-50%);
+		top: 10px;
+		left: 0px;
 		stroke: $red;
 	}
 	&_text {

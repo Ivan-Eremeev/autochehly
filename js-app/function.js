@@ -662,14 +662,14 @@ function dropdown() {
 		if ($(this).hasClass('dropdown_link--reset')) {
 			var index = $(this).closest(select).find(trigger).data('index');
 			link.removeClass('active');
-			$(this).closest(select).find(trigger).find('span').text(triggerText[index]);
+			$(this).closest(select).find(trigger).removeClass('select').find('span').text(triggerText[index]);
 			trigger.removeClass('active');
 			dropdown.removeClass('open');
 		// Если по любой другой ссылке, то зададим текст из этой ссылки
 		}else{
 			link.removeClass('active');
 			$(this).addClass('active');
-			$(this).closest(select).find(trigger).find('span').text(linkText);
+			$(this).closest(select).find(trigger).addClass('select').find('span').text(linkText);
 			trigger.removeClass('active');
 			dropdown.removeClass('open');
 		}

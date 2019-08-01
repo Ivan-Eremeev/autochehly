@@ -1,0 +1,27 @@
+.sidebar-item {
+	max-width: 200px;
+	padding: 10px 0 0 10px;
+	font-size: 12px;
+	&_item {
+		padding: 10px 0 10px 60px;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	&_icon {
+		stroke: $red;
+		fill: $red;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
+		&--car {
+			width: 38px;
+		}
+		&--hand {
+
+		}
+	}
+	&_text {
+
+	}
+}
