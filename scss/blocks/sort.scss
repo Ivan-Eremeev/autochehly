@@ -1,12 +1,18 @@
 .sorting {
-	.subtitle {
-		display: inline-block;
+	padding-right: 30px;
+	.title {
+		margin-right: 350px;
 		vertical-align: middle;
-		margin-right: 70px;
+	}
+	@media (max-width: $break_md) {
+		.title {
+
+		}
 	}
 }
 .sort {
-	display: inline-block;
+	float: right;
+	width: 283px;
 	&:after {
 		content: '';
 		display: table;
@@ -46,5 +52,12 @@
 				}
 			}
 		}
+	}
+	@media (max-width: $break_md) {
+		float: none;
+		margin-bottom: 50px;
+	}
+	@media (max-width: $break_xs) {
+		margin-bottom: 30px;
 	}
 }

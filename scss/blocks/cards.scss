@@ -1,5 +1,7 @@
 .cards {
 	&_col {
 		@include col(4);
+		@include col-sm(6);
+		@include col-xs(12);
 	}
 }

@@ -45,11 +45,21 @@ block content
 				span 730i M Sport SE
 		// /breadcrumbs
 
+		.title.mobile-visible Выберите автомобиль
+
+		a(href="#").filters-btn.mobile-visible--md
+			img(src="img/filter.svg", alt="filter").filters-btn_img
+			| Фильтры
+
 		.main-sidebar
 
-			.sidebar
+			.sidebar.sidebar--filters#filters
 
-				.subtitle Материалы
+				.title.mobile-visible--md Фильтры
+
+				#close-filters.close
+
+				h2.subtitle Материалы
 
 				// filter-checkbox
 				form(action="#").filter-checkbox
@@ -96,7 +106,7 @@ block content
 								span Нубук
 				// /filter-checkbox
 
-				.subtitle Цвет
+				h2.subtitle Цвет
 
 				// filter-color
 				form(action="#").filter-color
@@ -163,7 +173,7 @@ block content
 							label(for="color20").filter-color_label.filter-color_label--black
 				// /filter-color
 
-				.subtitle Производители
+				h2.subtitle Производители
 
 				// filter-checkbox
 				form(action="#").filter-checkbox
@@ -210,10 +220,12 @@ block content
 								span Автолидер
 				// /filter-checkbox
 
+				button(type="submit").btn.btn--red.btn--filter.mobile-visible--md Показать
+				button.btn.btn--clear.mobile-visible--md Очистить
+
 			.main
 
 				.sorting
-					h2.title Автомобильные чехлы Ауди,<br>7 серия, VI (G1/G12), 730i M Sport SE
 
 					// sort
 					form(action="#").sort
@@ -224,6 +236,8 @@ block content
 							input(type="radio" name="sort")#sort_price
 							label(for="sort_price") По цене
 					// /sort
+
+					h1.title.mobile-hide--md Автомобильные чехлы Ауди, 7 серия, VI (G1/G12), 730i M Sport SE
 		
 				// cards
 				.cards
@@ -297,7 +311,7 @@ block content
 										button(type="submit").card_btn.card_btn--orange Предзаказ
 							// /card
 
-						.cards_col
+						.cards_col.mobile-hide
 							// card
 							.card
 								.card_img.img-responsive
@@ -314,7 +328,7 @@ block content
 										button(type="submit").card_btn.card_btn--green Купить
 							// /card
 
-						.cards_col
+						.cards_col.mobile-hide
 							// card
 							.card
 								.card_img.img-responsive
@@ -331,7 +345,7 @@ block content
 										button(type="submit").card_btn.card_btn--green Купить
 							// /card
 
-						.cards_col
+						.cards_col.mobile-hide
 							// card
 							.card
 								.card_img.img-responsive
@@ -348,7 +362,7 @@ block content
 										button(type="submit").card_btn.card_btn--orange Предзаказ
 							// /card
 
-						.cards_col
+						.cards_col.mobile-hide
 							// card
 							.card
 								.card_img.img-responsive
@@ -365,7 +379,7 @@ block content
 										button(type="submit").card_btn.card_btn--green Купить
 							// /card
 
-						.cards_col
+						.cards_col.mobile-hide
 							// card
 							.card
 								.card_img.img-responsive
@@ -440,7 +454,7 @@ block content
 										button(type="submit").card_btn.card_btn--green Купить
 							// /card
 
-						.cards_col
+						.cards_col.mobile-hide
 							// card
 							.card
 								.card_img.img-responsive

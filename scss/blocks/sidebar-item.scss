@@ -24,4 +24,7 @@
 	&_text {
 
 	}
+	@media (max-width: $break_md) {
+		display: none;
+	}
 }

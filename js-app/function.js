@@ -674,4 +674,24 @@ function dropdown() {
 			dropdown.removeClass('open');
 		}
 	});
-}
+};
+
+function filtersBtn() {
+	var btn = $('.filters-btn'),
+			filters = $('#filters'),
+			close = $('#close-filters')
+	btn.click(function() {
+		if (!btn.hasClass('active')) {
+			btn.addClass('active');
+			filters.addClass('open');
+		}else {
+			btn.removeClass('active');
+			filters.removeClass('open');
+		}
+	});
+	close.click(function() {
+		btn.removeClass('active');
+		filters.removeClass('open');
+	});
+};
+filtersBtn();

@@ -674,7 +674,27 @@ function dropdown() {
 			dropdown.removeClass('open');
 		}
 	});
-}
+};
+
+function filtersBtn() {
+	var btn = $('.filters-btn'),
+			filters = $('#filters'),
+			close = $('#close-filters')
+	btn.click(function() {
+		if (!btn.hasClass('active')) {
+			btn.addClass('active');
+			filters.addClass('open');
+		}else {
+			btn.removeClass('active');
+			filters.removeClass('open');
+		}
+	});
+	close.click(function() {
+		btn.removeClass('active');
+		filters.removeClass('open');
+	});
+};
+filtersBtn();
 function slider(slider,sliderFor) {
   slider.slick({
     slidesToShow: 1, // Сколько слайдов показывать на экране

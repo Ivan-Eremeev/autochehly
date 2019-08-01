@@ -6,6 +6,9 @@
 	}
 	&_item {
 		margin-bottom: 20px;
+		padding-left: 30px;
+		position: relative;
+		vertical-align: top;
 	}
 	&_input {
 		display: none;
@@ -24,11 +27,13 @@
 		display: inline-block;
 		width: 20px;
 		height: 20px;
-		margin-right: 15px;
 		border: 1px solid $border;
 		border-radius: 3px;
 		position: relative;
 		vertical-align: middle;
+		position: absolute;
+		top: 3px;
+		left: 0;
 		&:after {
 			content: '';
 			display: block;
@@ -51,6 +56,59 @@
 					background-color: #c8c8c8;
 				}
 			}
+		}
+	}
+	@media (max-width: $break_md) {
+		&_item {
+			display: inline-block;
+			width: 49%;
+		}
+	}
+	@media (max-width: $break_sm) {
+		font-size: 30px;
+		&_item {
+			display: inline-block;
+			padding-left: 50px;
+		}
+		&_checkbox {
+			width: 32px;
+			height: 32px;
+			border-radius: 5px;
+			top: 5px;
+			&:after {
+				width: 20px;
+				height: 20px;
+				top: 5px;
+				left: 5px;
+				border-radius: 5px;
+			}
+		}
+		&_label {
+			margin-right: 30px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		margin-bottom: 30px;
+		font-size: 18px;
+		&_item {
+			width: 100%;
+			padding-left: 30px;
+		}
+		&_checkbox {
+			width: 20px;
+			height:20px;
+			border-radius: 3px;
+			top: 3px;
+			&:after {
+				width: 12px;
+				height: 12px;
+				top: 3px;
+				left: 3px;
+				border-radius: 2px;
+			}
+		}
+		&_label {
+			margin-right: 15px;
 		}
 	}
 }

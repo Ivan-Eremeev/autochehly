@@ -95,6 +95,13 @@ body {
 	margin-bottom: 20px;
 	font-size: 30px;
 	font-weight: 400;
+	@media (max-width: $break_sm) {
+		font-weight: 600;
+		margin-bottom: 50px;
+	}
+	@media (max-width: $break_xs) {
+		margin-bottom: 20px;
+	}
 }
 .text {
 	p {
@@ -145,6 +152,43 @@ body {
 		// 	border-color: $grayD;
 		// }
 	}
+	&--filter {
+		margin-bottom: 80px;
+	}
+	&--clear {
+		margin-bottom: 80px;
+	}
+	@media (max-width: $break_sm) {
+		&--filter {
+			width: 100%;
+			height: 112px;
+			font-size: 30px;
+			margin-bottom: 45px;
+			border-radius: 10px;
+		}
+		&--clear {
+			width: 100%;
+			height: 112px;
+			background-color: #fff;
+			border: 1px solid $border;
+			color: $black;
+			font-size: 30px;
+			margin-bottom: 45px;
+			border-radius: 10px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		&--filter {
+			height: 70px;
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		&--clear {
+			height: 70px;
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+	}
 }
 .show-more {
 	padding-top: 5px;
@@ -152,4 +196,51 @@ body {
 	margin-bottom: 30px;
 	font-size: 18px;
 	color: $black;
+	@media (max-width: $break_sm) {
+		height: 77px;
+		padding-top: 14px;
+		margin-bottom: 80px;
+		border-radius: 10px;
+		background-color: #fff;
+		border-color: $border;
+		color: $red;
+		font-size: 30px;
+		width: 100%;
+	}
+	@media (max-width: $break_xs) {
+		height: 40px;
+		padding-top: 5px;
+		margin-bottom: 30px;
+		border-radius: 5px;
+		font-size: 18px;
+	}
+}
+.close {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 5px;
+	right: 0px;
+	cursor: pointer;
+	&:after, &:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: $black;
+		position: absolute;
+		top: 13px;
+	}
+	&:after {
+		transform: rotate(45deg);
+	}
+	&:before {
+		transform: rotate(-45deg);
+	}
+	@media (max-width: $break_sm) {
+		top: 10px;
+	}
+	@media (max-width: $break_xs) {
+		top: 18px;
+	}
 }
