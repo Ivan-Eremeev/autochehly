@@ -1,0 +1,30 @@
+.share {
+	span {
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 3px;
+	}
+	&_item {
+		display: inline-block;
+		margin-left: 15px;
+		margin-bottom: 10px;
+		svg {
+			width: 30px;
+			height: 30px;
+		}
+		img {
+			width: 30px;
+			height: 30px;
+		}
+		&--mail {
+			width: 30px;
+			height: 30px;
+			padding-left: 5px;
+			border-radius: 50%;
+			background-color: $red;
+			svg {
+				width: 20px;
+			}
+		}
+	}
+}

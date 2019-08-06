@@ -49,7 +49,7 @@ $(document).ready(function () {
 	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
 
 	// Табы
-	// tabs($('#tabs'));
+	tabs($('#tabs'));
 
 	// Аккордеон
 	// accordeon($('#accordeon'));
@@ -59,6 +59,9 @@ $(document).ready(function () {
 
 	// Выпадайки Dropdown
 	dropdown();
+
+	// Открытие/закрытие фильтра с фирмами и цветами на мобилке
+	filtersBtn();
 
 	// Autosize Изменение высоты текстового поля при добавлении контента
 	// autosize($('textarea'));
@@ -121,6 +124,15 @@ $(document).ready(function () {
 
 	// Инициализация стилизуемого скроллбара
 	$('.js-scrollbar').scrollbar();
+
+	// Инициализация слайдера с карточками товаров
+	cardsSlider($('#cards-slider'));
+	
+	// Инициализация слайдера на странице товара
+	itemSlider($('#item-images_slider1'), $('#item-images_slider2'));
+
+	// Добавить убрать количество товара
+	inputCount();
 
 	// jQuery Form Styler| Стилизация элементов форм
 	// $('.filter select').styler();
@@ -263,23 +275,23 @@ function myMenu(menu) {
 // };
 
 // // Табы
-// function tabs(tabs) {
-// 	var trigger = tabs.find('#tabs_triggers').children(),
-// 			content = tabs.find('#tabs_content').children(),
-// 			time = 300;
-// 	content.filter('.hide').css({
-// 		display: 'none'});
-// 	trigger.click(function() {
-// 		var $this = $(this),
-// 				index = $this.index();
-// 		if (!$this.hasClass('active')) {
-// 			trigger.removeClass('active');
-// 			$this.addClass('active');
-// 			content.hide();
-// 			content.eq(index).fadeIn(time);
-// 		}
-// 	});
-// };
+function tabs(tabs) {
+	var trigger = tabs.find('#tabs_triggers').children(),
+			content = tabs.find('#tabs_content').children(),
+			time = 300;
+	content.filter('.hide').css({
+		display: 'none'});
+	trigger.click(function() {
+		var $this = $(this),
+				index = $this.index();
+		if (!$this.hasClass('active')) {
+			trigger.removeClass('active');
+			$this.addClass('active');
+			content.hide();
+			content.eq(index).fadeIn(time);
+		}
+	});
+};
 
 // Аккордеон
 // function accordeon(accordeon, mobile) {
@@ -657,17 +669,28 @@ function dropdown() {
 	});
 	// Клик по ссылке в выпадайке
 	link.click(function() {
-		var linkText = $(this).text();
+		var linkText = $(this).text(),
+				linkImgSrc = $(this).find('img').attr('src');
 		// Если клик по .dropdown_link--reset то зададим изначальный текст селекту
 		if ($(this).hasClass('dropdown_link--reset')) {
-			var index = $(this).closest(select).find(trigger).data('index');
-			link.removeClass('active');
+			var index = $(this).closest(select).find(trigger).data('index'),
+					inputs = $(this).closest(select).find('input');
+			$(this).closest(select).find(link).removeClass('active');
+			inputs.prop('checked', false);
 			$(this).closest(select).find(trigger).removeClass('select').find('span').text(triggerText[index]);
 			trigger.removeClass('active');
 			dropdown.removeClass('open');
-		// Если по любой другой ссылке, то зададим текст из этой ссылки
-		}else{
-			link.removeClass('active');
+		}// Если по .item-dropdown_label--colors, то достаем из него урл картинки и ставим в trigger
+		else if ($(this).hasClass('item-dropdown_label--colors')) {
+			$(this).closest(select).find(link).removeClass('active');
+			$(this).addClass('active');
+			$(this).closest(select).find(trigger).find('img').attr('src', linkImgSrc);
+			console.log('true');
+			trigger.removeClass('active');
+			dropdown.removeClass('open');
+		}// Если по любой другой ссылке, то зададим текст из этой ссылки
+		else{
+			$(this).closest(select).find(link).removeClass('active');
 			$(this).addClass('active');
 			$(this).closest(select).find(trigger).addClass('select').find('span').text(linkText);
 			trigger.removeClass('active');
@@ -676,6 +699,7 @@ function dropdown() {
 	});
 };
 
+// Открытие/закрытие фильтра с фирмами и цветами на мобилке
 function filtersBtn() {
 	var btn = $('.filters-btn'),
 			filters = $('#filters'),
@@ -694,4 +718,25 @@ function filtersBtn() {
 		filters.removeClass('open');
 	});
 };
-filtersBtn();
+
+// Добавить убрать количество товара
+function inputCount() {
+	var count = $('.count'),
+			minus = $('.count-minus'),
+			result = $('.count-result'),
+			input = result.find('input'),
+			plus = $('.count-plus');
+			val = parseInt(input.val());
+	minus.click(function() {
+		if (val > 1) {
+			val --;
+			input.val(val);
+		}
+	});
+	plus.click(function() {
+		if (val < 999) {
+			val ++;
+			input.val(val);
+		}
+	});
+};

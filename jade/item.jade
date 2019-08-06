@@ -1,0 +1,622 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Страница товара
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		.main-sidebar
+
+			.sidebar.sidebar--w500
+
+				.sideb.mb-20
+
+					// breadcrumbs
+					ul.breadcrumbs
+						li.breadcrumbs_item
+							a(href="#") Чехлы на сиденья
+							span.breadcrumbs_arrow &rarr;
+						li.breadcrumbs_item
+							a(href="#") Chevrolet
+							span.breadcrumbs_arrow &rarr;
+						li.breadcrumbs_item
+							a(href="#") 7 серия
+							span.breadcrumbs_arrow &rarr;
+						li.breadcrumbs_item
+							a(href="#") VI (G1/G2)
+							span.breadcrumbs_arrow &rarr;
+						li.breadcrumbs_item
+							span 730i M Sport SE
+					// /breadcrumbs
+
+					h1.title.title--exb Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019седан, хэтчбек фокс CH03-0203-EC27
+
+					.item-images_slider-mob.mobile-visible--md
+						#item-images_slider-mob
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+
+					// item-form
+					form(action="#").item-form
+
+						.clearfix
+
+							.item-form_materials
+								.item-form_text Материал для середины седенья
+								.item-form_select.js-dropdown-wrapper
+									.item-form_trigger.js-drop-trigger 
+										span Экокожа
+										.item-form_arrow.icon-keyboard_arrow_down
+									.item-dropdown.item-dropdown--full.js-dropdown
+										.item-dropdown_item
+											input#item-materials1(type="radio", name="item-materials")
+											label(for="item-materials1").item-dropdown_label.js-drop_link Флок
+										.item-dropdown_item
+											input#item-materials2(type="radio", name="item-materials")
+											label(for="item-materials2").item-dropdown_label.js-drop_link Жаккард
+										.item-dropdown_item
+											input#item-materials3(type="radio", name="item-materials")
+											label(for="item-materials3").item-dropdown_label.js-drop_link Алькантара
+										.item-dropdown_item
+											input#item-materials4(type="radio", name="item-materials")
+											label(for="item-materials4").item-dropdown_label.js-drop_link Велюр
+										.item-dropdown_item
+											input#item-materials5(type="radio", name="item-materials")
+											label(for="item-materials5").item-dropdown_label.js-drop_link Креп
+										.item-dropdown_item
+											input#item-materials6(type="radio", name="item-materials")
+											label(for="item-materials6").item-dropdown_label.js-drop_link Экокожа
+										.item-dropdown_item
+											input#item-materials7(type="radio", name="item-materials")
+											label(for="item-materials7").item-dropdown_label.js-drop_link Экокожа с ромбом
+										.item-dropdown_item
+											input#item-materials8(type="radio", name="item-materials")
+											label(for="item-materials8").item-dropdown_label.js-drop_link Алькантара с ромбом
+										.item-dropdown_item
+											input#item-materials9(type="radio", name="item-materials")
+											label(for="item-materials9").item-dropdown_label.js-drop_link Брезент
+										.item-dropdown_item
+											input#item-materials10(type="radio", name="item-materials")
+											label(for="item-materials10").item-dropdown_label.js-drop_link Лен
+
+							.item-form_colors
+								.item-form_text Цвет
+								.item-form_select.js-dropdown-wrapper
+									.item-form_trigger.item-form_trigger--colors.js-drop-trigger 
+										img(src="img/colors/color1.jpg", alt="color")
+									.item-dropdown.item-dropdown--full.js-dropdown
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors1(type="radio", name="item-colors" checked)
+											label(for="item-colors1").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color1.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors2(type="radio", name="item-colors")
+											label(for="item-colors2").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color2.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors3(type="radio", name="item-colors")
+											label(for="item-colors3").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color3.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors4(type="radio", name="item-colors")
+											label(for="item-colors4").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color4.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors5(type="radio", name="item-colors")
+											label(for="item-colors5").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color5.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors6(type="radio", name="item-colors")
+											label(for="item-colors6").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color6.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors7(type="radio", name="item-colors")
+											label(for="item-colors7").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color1.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors8(type="radio", name="item-colors")
+											label(for="item-colors8").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color2.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors9(type="radio", name="item-colors")
+											label(for="item-colors9").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color3.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors10(type="radio", name="item-colors")
+											label(for="item-colors10").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color4.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors11(type="radio", name="item-colors")
+											label(for="item-colors11").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color5.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors12(type="radio", name="item-colors")
+											label(for="item-colors12").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color6.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors13(type="radio", name="item-colors")
+											label(for="item-colors13").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color1.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors14(type="radio", name="item-colors")
+											label(for="item-colors14").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color2.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors15(type="radio", name="item-colors")
+											label(for="item-colors15").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color3.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors16(type="radio", name="item-colors")
+											label(for="item-colors16").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color4.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors17(type="radio", name="item-colors")
+											label(for="item-colors17").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color5.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors18(type="radio", name="item-colors")
+											label(for="item-colors18").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color6.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors10(type="radio", name="item-colors")
+											label(for="item-colors10").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color1.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors20(type="radio", name="item-colors")
+											label(for="item-colors20").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color2.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors21(type="radio", name="item-colors")
+											label(for="item-colors21").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color3.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors22(type="radio", name="item-colors")
+											label(for="item-colors22").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color4.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors23(type="radio", name="item-colors")
+											label(for="item-colors23").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color5.jpg", alt="color")
+										.item-dropdown_item.item-dropdown_item--colors
+											input#item-colors24(type="radio", name="item-colors")
+											label(for="item-colors24").item-dropdown_label.item-dropdown_label--colors.js-drop_link
+												img(src="img/colors/color6.jpg", alt="color")
+
+						.clearfix
+
+							.item-form_price
+								span 6 290
+								|  руб
+
+							// item-count
+							.count.item-count
+								.item-count_controll.item-count_controll--minus.count-minus &ndash;
+								.item-count_result.count-result
+									input(type="text", name="item-count" value="1" readonly)
+								.item-count_controll.item-count_controll--plus.count-plus +
+							// /item-count
+
+						.item-form_text Цена за комплект
+
+						.clearfix
+
+							button(type="submit").btn.btn--green Купить
+
+							.item-form_text В наличии более 2-х комплектов
+
+					// /item-form
+
+				h3.subtitle2 Доставка по Москве (в пределах МКАД)
+				.text.text--big.mb-20
+					p
+						span Курьером — 300 Р
+						span В пункт выдачи — 300 Р
+
+				h3.subtitle2 Москва, карта пунктов выдачи заказов
+
+				.mb-20
+					iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" width="100%" height="260" frameborder="1" allowfullscreen="true")
+
+				h3.subtitle2 Гарантия
+
+				.text.text--big.mb-20
+					p Возврат и обмен товара в течение 10-ти дней
+
+				// share
+				.share
+					span Поделиться:
+					a(href="#").share_item
+						img(src="img/whatsapp.svg", alt="whatsapp")
+					a(href="#").share_item
+						img(src="img/telegram.svg", alt="telegram")
+					a(href="#").share_item
+						img(src="img/viber.svg", alt="viber")
+					a(href="#").share_item
+						img(src="img/insta.png", alt="insta")
+					a(href="#").share_item
+						img(src="img/vk.svg", alt="whatsapp")
+					a(href="#").share_item.share_item--mail
+						img(src="img/mail.svg", alt="whatsapp")
+				// /share
+
+			.main.main--mr550
+
+				// item-images
+				.item-images.mobile-hide--md
+
+					.item-images_slider1
+						#item-images_slider1
+							.item-images_dot
+								.item-images_img-dot.img-responsive
+									img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_dot
+								.item-images_img-dot.img-responsive
+									img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_dot
+								.item-images_img-dot.img-responsive
+									img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_dot
+								.item-images_img-dot.img-responsive
+									img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_dot
+								.item-images_img-dot.img-responsive
+									img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_dot
+								.item-images_img-dot.img-responsive
+									img(src="img/catalog/eco3.jpg", alt="cover")
+
+					.item-images_slider2
+						#item-images_slider2
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+							.item-images_slide
+								img(src="img/catalog/eco3.jpg", alt="cover")
+
+				// /item-images
+
+				// item-tabs
+				#tabs.item-tabs
+					
+					ul#tabs_triggers.item-tabs_triggers
+						li.item-tabs_trigger.active Характеристики
+						li.item-tabs_trigger Установка
+						li.item-tabs_trigger Фотографии
+						li.item-tabs_trigger Материал
+						li.item-tabs_trigger Производитель
+
+					#tabs_content.item-tabs_content
+
+						div
+							h2.title Характеристики чехлов
+							ul.item-tabs_list
+								li.item-tabs_item
+									.item-tabs_val 128146
+									.item-tabs_name Артикул
+								li.item-tabs_item
+									.item-tabs_val Жаккард
+									.item-tabs_name Материал 
+								li.item-tabs_item
+									.item-tabs_val Серый
+									.item-tabs_name Цвет 
+								li.item-tabs_item
+									.item-tabs_val ВК
+									.item-tabs_name Производитель
+								li.item-tabs_item
+									.item-tabs_val темно-серый
+									.item-tabs_name Цвет середины
+								li.item-tabs_item
+									.item-tabs_val темно-серый
+									.item-tabs_name Цвет боковины
+								li.item-tabs_item
+									.item-tabs_val темно-серый
+									.item-tabs_name Цвет спинки 
+								li.item-tabs_item
+									.item-tabs_val Жаккард
+									.item-tabs_name Материал середина
+								li.item-tabs_item
+									.item-tabs_val Жаккард
+									.item-tabs_name Материал боковины
+								li.item-tabs_item
+									.item-tabs_val Жаккард
+									.item-tabs_name Материал спинки
+								li.item-tabs_item
+									.item-tabs_val 0,6 мм
+									.item-tabs_name Толщина материал
+							ul.item-tabs_list
+								li.item-tabs_item
+									.item-tabs_val 128146
+									.item-tabs_name Артикул
+								li.item-tabs_item
+									.item-tabs_val Жаккард
+									.item-tabs_name Материал 
+								li.item-tabs_item
+									.item-tabs_val Серый
+									.item-tabs_name Цвет 
+								li.item-tabs_item
+									.item-tabs_val ВК
+									.item-tabs_name Производитель
+								li.item-tabs_item
+									.item-tabs_val темно-серый
+									.item-tabs_name Цвет середины
+								li.item-tabs_item
+									.item-tabs_val темно-серый
+									.item-tabs_name Цвет боковины
+								li.item-tabs_item
+									.item-tabs_val темно-серый
+									.item-tabs_name Цвет спинки 
+								li.item-tabs_item
+									.item-tabs_val Жаккард
+									.item-tabs_name Материал середина
+								li.item-tabs_item
+									.item-tabs_val Жаккард
+									.item-tabs_name Материал боковины
+								li.item-tabs_item
+									.item-tabs_val Жаккард
+									.item-tabs_name Материал спинки
+								li.item-tabs_item
+									.item-tabs_val 0,6 мм
+									.item-tabs_name Толщина материал
+
+						div.hide
+							h2.title Установка
+							.row
+								.item-tabs_install
+									a(href="#").item-tabs_img.img-responsive
+										img(src="#", alt="install")
+									a(href="#").item-tabs_link Иструкция по установке чехлов
+								.item-tabs_install
+									a(href="#").item-tabs_img.img-responsive
+										img(src="#", alt="install")
+									a(href="#").item-tabs_link Иструкция по установке с подшивкой
+
+						div.hide
+							h2.title Фотографии
+							.row
+								.item-tabs_photo
+									a(href="#").item-tabs_img.item-tabs_img--middle.img-responsive
+										img(src="#", alt="photo")
+								.item-tabs_photo
+									a(href="#").item-tabs_img.item-tabs_img--big.img-responsive
+										img(src="#", alt="photo")
+								.item-tabs_photo
+									a(href="#").item-tabs_img.item-tabs_img--middle.img-responsive
+										img(src="#", alt="photo")
+
+						div.hide
+							h2.title Боковины и спинки сидений — экокожа
+							.item-tabs_text
+								p Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.
+							h2.title Центральная часть сидений — экокожа
+							.item-tabs_text
+								p Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.
+
+						div.hide
+							h2.title Компания «Автолидер»
+							.item-tabs_text
+								p Компания Автолидер являемся одним из крупнейших в России производителей модельных чехлов для сидений автомобилей.
+								p Автолидер производит только модельные чехлы, то есть чехлы предназначеныдля конкретной модели автомобиля, с учётом особенностей кузова, сидений, и функционала салона.
+								p В первую очередь с автомобильных кресел снимаются необходимые замеры. Измеряются сиденья, спинки, подголовники, подлокотники, вырезы для подушек и ремней безопасности, всевозможные технологические отверстия, индивидуальные для каждого производителя, каждой модели и комплектации. 
+								p Затем, после переноса полученных измерений на бумагу и добавления с каждой стороны припусков на шов, получаются необходимые шаблоны для пошива авточехлов.
+				// /item-tabs
+
+				h2.title Применимость
+
+				.dropdown_row.mb
+					.dropdown_col.dropdown_col--big-text
+						.filter_generation-link
+							.filter_generation-img.img-responsive
+								img(src="img/car-generation/audi1.jpg", alt="audi")
+							span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+					.dropdown_col.dropdown_col--big-text
+						.filter_generation-link
+							.filter_generation-img.img-responsive
+								img(src="img/car-generation/audi2.jpg", alt="audi")
+							span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+					.dropdown_col.dropdown_col--big-text
+						.filter_generation-link
+							.filter_generation-img.img-responsive
+								img(src="img/car-generation/audi3.jpg", alt="audi")
+							span.filter_generation-text Audi VI (G11/G12) 7 серия 730i M Sport SE
+
+		// cards-slider
+		.cards-slider
+
+			.cards-slider_title
+				.cards-slider_controll
+					#cards-slider-prev.cards-slider_prev
+						span.icon-keyboard_arrow_left
+					#cards-slider-next.cards-slider_next
+						span.icon-keyboard_arrow_right
+				h2.title Похожие товары
+
+			#cards-slider.cards-slider_slider
+	
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--orange
+								span На заказ 14-21 день
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--orange Предзаказ
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards-slider_slide
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+		// /cards-slider
+
+		h2.title Вы смотрели
+
+		// cards
+		.cards
+			.row
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--orange
+								span На заказ 14-21 день
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--orange Предзаказ
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+		// /cards
+
+		include blocks/bottom-blocks.jade
+
+	include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/slick.min.js")
+	script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	//- script(src="js/jquery.vide.min.js")
+	script(src="js/jquery.scrollbar.min.js")
+	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
+	script(src="js/jquery.formstyler.min.js")
+	script(src="js/script.js")

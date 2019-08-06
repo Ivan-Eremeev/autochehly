@@ -13,7 +13,7 @@ $offset: 30px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
 // Брэйкпоинты
 $break_xl: 1400px;
-$break_lg: 1200px;
+$break_lg: 1260px;
 $break_md: 1050px;
 $break_sm: 769px;
 $break_xs: 500px;
@@ -76,3 +76,8 @@ $border: #ddd;
 @import 'blocks/pagination';
 @import 'blocks/filter-checkbox';
 @import 'blocks/filter-color';
+@import 'blocks/item-images';
+@import 'blocks/item-form';
+@import 'blocks/item-count';
+@import 'blocks/share';
+@import 'blocks/item-tabs';

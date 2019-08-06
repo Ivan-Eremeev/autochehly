@@ -215,15 +215,24 @@
 	&_list {
 		padding: 10px 20px 10px 14px;
 		border-radius: 5px;
-		box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 	}
 	&_item {
 		margin-bottom: 18px;
+		vertical-align: top;
+		input {
+			display: none;
+		}
+		&--inline {
+			display: inline-block;
+			width: 49%;
+		}
 	}
 	&_link {
 		color: $black;
 		transition: .05s;
 		position: relative;
+		cursor: pointer;
+		user-select: none;
 		&:hover {
 			color: $red;
 			.dropdown_reset {
@@ -280,6 +289,12 @@
 		padding-left: 10px;
 		padding-bottom: 10px;
 		font-size: 12px;
+		input {
+			display: none;
+		}
+		&--big-text {
+			font-size: 16px;
+		}
 	}
 	@media (max-width: $break_sm) {
 		&--maw {

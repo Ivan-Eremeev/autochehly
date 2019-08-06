@@ -36,17 +36,6 @@
             </nav>
           </div><a class="logo logo--desktop" href="main.html"><img src="img/logo.svg" alt="logo"></a>
           <div class="location-wrapper"><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a></div>
-          <div class="location-dropdown">
-            <form class="location-dropdown_block" action="#">
-              <div class="clearfix">
-                <div class="location-dropdown_close"></div>
-                <div class="location-dropdown_text">Город доставки: <span>Санкт-Петербург</span></div>
-                <input class="location-dropdown_input" type="text" placeholder="Город или населенный пункт">
-              </div>
-              <button class="btn btn--green" type="submit">Выбрать</button>
-              <button class="btn btn--gray" type="submit">Изменить</button>
-            </form>
-          </div>
         </div>
         <div class="header_right">
           <div class="call"><a href="tel:88006005429"><img class="call_img mobile-hide" src="img/call.svg" alt="call"><img class="call_img mobile-visible" src="img/call-mob.svg" alt="call"></a>
@@ -84,16 +73,47 @@
                 <div class="dropdown dropdown--maw js-dropdown">
                   <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--h360">
                     <ul class="dropdown_list">
-                      <li class="dropdown_item dropdown_item"><a class="dropdown_link js-drop_link dropdown_link--reset" href="#">Любая<span class="dropdown_reset"></span></a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Audi</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">BMW</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Chevrolet</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Citroen</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Daewoo</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Ford</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Audi</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">BMW</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Chevrolet</a></li>
+                      <li class="dropdown_item">
+                        <div class="dropdown_link js-drop_link dropdown_link--reset">Любая
+                          <div class="dropdown_reset"></div>
+                        </div>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand1" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand1">Audi</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand2" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand2">BMW</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand3" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand3">Chevrolet</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand4" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand4">Citroen</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand5" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand5">Daewoo</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand6" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand6">Ford</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand7" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand7">Audi</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand8" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand8">BMW</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="brand9" type="radio" name="brand">
+                        <label class="dropdown_link js-drop_link" for="brand9">Chevrolet</label>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -105,15 +125,43 @@
                 <div class="dropdown dropdown--maw js-dropdown">
                   <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--h360">
                     <ul class="dropdown_list">
-                      <li class="dropdown_item dropdown_item"><a class="dropdown_link js-drop_link dropdown_link--reset" href="#">Любая<span class="dropdown_reset"></span></a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">3 серия </a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">4 серия</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">5 серия</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">6 серия</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">7 серия</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Х1</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Х2</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Х</a></li>
+                      <li class="dropdown_item">
+                        <div class="dropdown_link js-drop_link dropdown_link--reset">Любая
+                          <div class="dropdown_reset"></div>
+                        </div>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="series1" type="radio" name="series">
+                        <label class="dropdown_link js-drop_link" for="series1">3 серия </label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="series2" type="radio" name="series">
+                        <label class="dropdown_link js-drop_link" for="series2">4 серия</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="series3" type="radio" name="series">
+                        <label class="dropdown_link js-drop_link" for="series3">5 серия</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="series4" type="radio" name="series">
+                        <label class="dropdown_link js-drop_link" for="series4">6 серия</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="series5" type="radio" name="series">
+                        <label class="dropdown_link js-drop_link" for="series5">7 серия</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="series6" type="radio" name="series">
+                        <label class="dropdown_link js-drop_link" for="series6">Х1</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="series7" type="radio" name="series">
+                        <label class="dropdown_link js-drop_link" for="series7">Х2</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="series8" type="radio" name="series">
+                        <label class="dropdown_link js-drop_link" for="series8">Х</label>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -126,24 +174,60 @@
                   <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--generation">
                     <ul class="dropdown_list">
                       <div class="dropdown_row">
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
-                        <div class="dropdown_col"><a class="filter_generation-link js-drop_link" href="#">
-                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span></a></div>
+                        <div class="dropdown_col">
+                          <input id="generation1" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation1">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
+                        <div class="dropdown_col">
+                          <input id="generation2" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation2">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
+                        <div class="dropdown_col">
+                          <input id="generation3" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation3">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
+                        <div class="dropdown_col">
+                          <input id="generation4" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation4">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
+                        <div class="dropdown_col">
+                          <input id="generation5" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation5">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
+                        <div class="dropdown_col">
+                          <input id="generation6" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation6">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
+                        <div class="dropdown_col">
+                          <input id="generation7" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation7">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
+                        <div class="dropdown_col">
+                          <input id="generation8" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation8">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi2.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
+                        <div class="dropdown_col">
+                          <input id="generation9" type="radio" name="generation">
+                          <label class="filter_generation-link js-drop_link" for="generation9">
+                            <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi3.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
+                          </label>
+                        </div>
                       </div>
                     </ul>
                   </div>
@@ -156,9 +240,19 @@
                 <div class="dropdown js-dropdown">
                   <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--h360">
                     <ul class="dropdown_list">
-                      <li class="dropdown_item dropdown_item"><a class="dropdown_link js-drop_link dropdown_link--reset" href="#">Любая<span class="dropdown_reset"></span></a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Задняя спинка 40 на 60, сиденье единое. (С AIR-Bag и БЕЗ AIR-Bag перед сиденья)</a></li>
-                      <li class="dropdown_item"><a class="dropdown_link js-drop_link" href="#">Задние спинка и сиденье единые. ( с AIR-Bag и БЕЗ AIR-Bag перед сиденья)</a></li>
+                      <li class="dropdown_item">
+                        <div class="dropdown_link js-drop_link dropdown_link--reset">Любая
+                          <div class="dropdown_reset"></div>
+                        </div>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="set2" type="radio" name="set">
+                        <label class="dropdown_link js-drop_link" for="set2">Задняя спинка 40 на 60, сиденье единое. (С AIR-Bag и БЕЗ AIR-Bag перед сиденья)</label>
+                      </li>
+                      <li class="dropdown_item">
+                        <input id="set3" type="radio" name="set">
+                        <label class="dropdown_link js-drop_link" for="set3">Задние спинка и сиденье единые. ( с AIR-Bag и БЕЗ AIR-Bag перед сиденья)</label>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -839,9 +933,9 @@
               </div>
               <div class="social">
                 <ul class="social_list">
-                  <li class="social_item"><a class="social_link" href="#"><img class="social_icon social_icon--desktop" src="img/whatsapp.png" alt="whatsapp"><img class="social_icon social_icon--mobile" src="img/whatsapp-mob.png" alt="whatsapp"></a></li>
-                  <li class="social_item"><a class="social_link" href="#"><img class="social_icon social_icon--desktop" src="img/viber.png" alt="viber"><img class="social_icon social_icon--mobile" src="img/viber-mob.png" alt="viber"></a></li>
-                  <li class="social_item"><a class="social_link" href="#"><img class="social_icon social_icon--desktop" src="img/telegram.png" alt="telegram"><img class="social_icon social_icon--mobile" src="img/telegram-mob.png" alt="telegram"></a></li>
+                  <li class="social_item"><a class="social_link" href="#"><img class="social_icon" src="img/whatsapp.svg" alt="whatsapp"></a></li>
+                  <li class="social_item"><a class="social_link" href="#"><img class="social_icon" src="img/viber.svg" alt="viber"></a></li>
+                  <li class="social_item"><a class="social_link" href="#"><img class="social_icon" src="img/telegram.svg" alt="telegram"></a></li>
                 </ul>
               </div>
             </div>

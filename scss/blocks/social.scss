@@ -10,7 +10,10 @@
 		}
 	}
 	&_link {
-
+		svg {
+			width: 38px;
+			height: 38px;
+		}
 	}
 	&_icon {
 		&--mobile {
@@ -18,22 +21,18 @@
 		}
 	}
 	@media (max-width: $break_sm) {
-		&_icon {
-			&--mobile {
-				display: block;
-			}
-			&--desktop {
-				display: none;
+		&_link {
+			svg {
+				width: 62px;
+				height: 62px;
 			}
 		}
 	}
 	@media (max-width: $break_xs) {
-		&_icon {
-			&--mobile {
-				display: none;
-			}
-			&--desktop {
-				display: block;
+		&_link {
+			svg {
+				width: 38px;
+				height: 38px;
 			}
 		}
 	}

@@ -1,0 +1,98 @@
+.item-tabs {
+	margin-bottom: 70px;
+	&_triggers {
+		margin-bottom: 50px;
+		border: 1px solid $border;
+		border-radius: 5px;
+		text-align: center;
+	}
+	&_trigger {
+		display: inline-block;
+		padding: 10px;
+		cursor: pointer;
+		user-select: none;
+		font-weight: 600;
+		&:not(:last-child) {
+			border-right: 1px solid $border;
+		}
+		&:hover {
+			color: $red;
+		}
+		&.active {
+
+		}
+	}
+	&_content {
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
+	}
+	&_list {
+		float: left;
+		width: 50%;
+		padding-right: 50px;
+	}
+	&_item {
+		margin-bottom: 10px;
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
+	}
+	&_name {
+		color: $grayD;
+	}
+	&_val {
+		float: right;
+	}
+	&_install {
+		@include col(6);
+	}
+	&_img {
+		display: block;
+		margin-bottom: 20px;
+		background-color: $gray;
+		&:after {
+			padding-top: 60%;
+		}
+		&--middle {
+			&:after {
+				padding-top: 80%;
+			}
+		}
+		&--big {
+			&:after {
+				padding-top: 120%;
+			}
+		}
+	}
+	&_link {
+		color: $black;
+		border-bottom: 1px solid $black;
+	}
+	&_photo {
+		@include col(4);
+	}
+	&_text {
+		&:not(:last-child) {
+			margin-bottom: 50px;	
+		}
+		p {
+			margin-bottom: 20px;
+		}
+	}
+	@media (max-width: $break_lg) {
+		&_trigger {
+			width: 100%;
+			&:not(:last-child) {
+				border-right: none;
+				border-bottom: 	1px solid $border;
+			}
+		}
+	}
+}

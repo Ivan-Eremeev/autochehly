@@ -1,0 +1,58 @@
+.item-count {
+	float: left;
+	padding-top: 13px;
+	font-size: 18px;
+	color: $grayD;
+	vertical-align: bottom;
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+	&_controll {
+		float: left;
+		padding: 8px 10px;
+		font-size: 21px;
+		cursor: pointer;
+		user-select: none;
+		&:hover {
+			color: $red;
+		}
+		&--minus {
+
+		}
+		&--plus {
+
+		}
+	}
+	&_result {
+		float: left;
+		input {
+			width: 35px;
+			border: none;
+			padding: 12px 2px;
+			font-weight: 900;
+			color: $grayD;
+			text-align: center;
+			user-select: none;
+		}
+	}
+	@media (max-width: $break_sm) {
+		float: right;
+		padding-top: 40px;
+		&_controll {
+			padding: 2px 20px;
+			font-size: 40px;
+			&--plus {
+				margin-top: 3px;
+			}
+		}
+		&_result {
+			input {
+				font-size: 30px;
+				font-weight: 600;
+			}
+		}
+	}
+}

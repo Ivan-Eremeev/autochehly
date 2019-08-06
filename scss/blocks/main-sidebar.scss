@@ -12,24 +12,37 @@
 	&--maw-780 {
 		max-width: 780px;
 	}
+	&--mr550 {
+		margin-right: 550px;
+	}
 	@media (max-width: $break_md) {
 		margin-right: 0;
 		&--maw-780 {
 			max-width: none;
+		}
+		&--mr550 {
+			margin-right: 0;
 		}
 	}
 }
 .sidebar {
 	float: right;
 	width: 250px;
+	&--w500 {
+		width: 500px;
+	}
 	@media (max-width: $break_md) {
 		width: 100%;
+		float: none;
 		&--filters {
 			display: none;
 			position: relative;
 			&.open {
 				display: block;
 			}
+		}
+		&--w500 {
+			width: 100%;
 		}
 	}
 }
@@ -38,6 +51,8 @@
 	border: 1px solid $border;
 	border-radius: 5px;
 	@media (max-width: $break_md) {
+		padding: 0;
 		margin-bottom: 30px;
+		border: none;
 	}
 }

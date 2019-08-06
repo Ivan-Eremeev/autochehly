@@ -49,7 +49,7 @@ $(document).ready(function () {
 	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
 
 	// Табы
-	// tabs($('#tabs'));
+	tabs($('#tabs'));
 
 	// Аккордеон
 	// accordeon($('#accordeon'));
@@ -59,6 +59,9 @@ $(document).ready(function () {
 
 	// Выпадайки Dropdown
 	dropdown();
+
+	// Открытие/закрытие фильтра с фирмами и цветами на мобилке
+	filtersBtn();
 
 	// Autosize Изменение высоты текстового поля при добавлении контента
 	// autosize($('textarea'));
@@ -121,6 +124,15 @@ $(document).ready(function () {
 
 	// Инициализация стилизуемого скроллбара
 	$('.js-scrollbar').scrollbar();
+
+	// Инициализация слайдера с карточками товаров
+	cardsSlider($('#cards-slider'));
+	
+	// Инициализация слайдера на странице товара
+	itemSlider($('#item-images_slider1'), $('#item-images_slider2'));
+
+	// Добавить убрать количество товара
+	inputCount();
 
 	// jQuery Form Styler| Стилизация элементов форм
 	// $('.filter select').styler();
@@ -263,23 +275,23 @@ function myMenu(menu) {
 // };
 
 // // Табы
-// function tabs(tabs) {
-// 	var trigger = tabs.find('#tabs_triggers').children(),
-// 			content = tabs.find('#tabs_content').children(),
-// 			time = 300;
-// 	content.filter('.hide').css({
-// 		display: 'none'});
-// 	trigger.click(function() {
-// 		var $this = $(this),
-// 				index = $this.index();
-// 		if (!$this.hasClass('active')) {
-// 			trigger.removeClass('active');
-// 			$this.addClass('active');
-// 			content.hide();
-// 			content.eq(index).fadeIn(time);
-// 		}
-// 	});
-// };
+function tabs(tabs) {
+	var trigger = tabs.find('#tabs_triggers').children(),
+			content = tabs.find('#tabs_content').children(),
+			time = 300;
+	content.filter('.hide').css({
+		display: 'none'});
+	trigger.click(function() {
+		var $this = $(this),
+				index = $this.index();
+		if (!$this.hasClass('active')) {
+			trigger.removeClass('active');
+			$this.addClass('active');
+			content.hide();
+			content.eq(index).fadeIn(time);
+		}
+	});
+};
 
 // Аккордеон
 // function accordeon(accordeon, mobile) {
@@ -657,17 +669,28 @@ function dropdown() {
 	});
 	// Клик по ссылке в выпадайке
 	link.click(function() {
-		var linkText = $(this).text();
+		var linkText = $(this).text(),
+				linkImgSrc = $(this).find('img').attr('src');
 		// Если клик по .dropdown_link--reset то зададим изначальный текст селекту
 		if ($(this).hasClass('dropdown_link--reset')) {
-			var index = $(this).closest(select).find(trigger).data('index');
-			link.removeClass('active');
+			var index = $(this).closest(select).find(trigger).data('index'),
+					inputs = $(this).closest(select).find('input');
+			$(this).closest(select).find(link).removeClass('active');
+			inputs.prop('checked', false);
 			$(this).closest(select).find(trigger).removeClass('select').find('span').text(triggerText[index]);
 			trigger.removeClass('active');
 			dropdown.removeClass('open');
-		// Если по любой другой ссылке, то зададим текст из этой ссылки
-		}else{
-			link.removeClass('active');
+		}// Если по .item-dropdown_label--colors, то достаем из него урл картинки и ставим в trigger
+		else if ($(this).hasClass('item-dropdown_label--colors')) {
+			$(this).closest(select).find(link).removeClass('active');
+			$(this).addClass('active');
+			$(this).closest(select).find(trigger).find('img').attr('src', linkImgSrc);
+			console.log('true');
+			trigger.removeClass('active');
+			dropdown.removeClass('open');
+		}// Если по любой другой ссылке, то зададим текст из этой ссылки
+		else{
+			$(this).closest(select).find(link).removeClass('active');
 			$(this).addClass('active');
 			$(this).closest(select).find(trigger).addClass('select').find('span').text(linkText);
 			trigger.removeClass('active');
@@ -676,6 +699,7 @@ function dropdown() {
 	});
 };
 
+// Открытие/закрытие фильтра с фирмами и цветами на мобилке
 function filtersBtn() {
 	var btn = $('.filters-btn'),
 			filters = $('#filters'),
@@ -694,7 +718,28 @@ function filtersBtn() {
 		filters.removeClass('open');
 	});
 };
-filtersBtn();
+
+// Добавить убрать количество товара
+function inputCount() {
+	var count = $('.count'),
+			minus = $('.count-minus'),
+			result = $('.count-result'),
+			input = result.find('input'),
+			plus = $('.count-plus');
+			val = parseInt(input.val());
+	minus.click(function() {
+		if (val > 1) {
+			val --;
+			input.val(val);
+		}
+	});
+	plus.click(function() {
+		if (val < 999) {
+			val ++;
+			input.val(val);
+		}
+	});
+};
 function slider(slider,sliderFor) {
   slider.slick({
     slidesToShow: 1, // Сколько слайдов показывать на экране
@@ -773,26 +818,13 @@ function addDotsInPagination(sliderB, sliderPagination) {
 
 // $('.your-slider').slick('unslick'); // Уничтожить слайдер
 
-
-
-
 function cardsSlider(slider) {
   slider.slick({
     slidesToShow: 4, // Сколько слайдов показывать на экране
     slidesToScroll: 2, // Сколько слайдов пролистывать за раз
     dots: false, // Пагинация
     arrows: false, // Стрелки
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // centerMode: false, // Задает класс .slick-center слайду в центре
-    // focusOnSelect: true, // Выбрать слайд кликом
     infinite: true, // Зацикленное пролистывание
-    // vertical: false, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
     swipe: false, // Перелистывание пальцем
     draggable: false, // Перелистывание мышью
     responsive: [ // Адаптация
@@ -813,7 +845,6 @@ function cardsSlider(slider) {
         }
       }
     ]
-    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
   });
 
   // Кастомные кнопки "вперед" "назад"
@@ -825,6 +856,96 @@ function cardsSlider(slider) {
   });
 };
 
-cardsSlider($('#cards-slider'));
+function itemSlider(slider, sliderFor) {
+  slider.slick({
+    slidesToShow: 4, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    asNavFor: sliderFor, // Связь со слайдерами
+    dots: false, // Пагинация
+    arrows: true, // Стрелки
+    prevArrow: '<div class="item-images_controll item-images_prev"><span class="icon-keyboard_arrow_up"></span></div>',
+    nextArrow: '<div class="item-images_controll item-images_next"><span class="icon-keyboard_arrow_down"></span></div>',
+    // speed: 500, // Скорость перехода слайдов
+    // autoplay: false, // Автопрокрутка
+    // autoplaySpeed: 2000, // Скорость автопрокрутки
+    // centerMode: false, // Задает класс .slick-center слайду в центре
+    focusOnSelect: true, // Выбрать слайд кликом
+    infinite: true, // Зацикленное пролистывание
+    vertical: true, // Вертикальный слайдер
+    // rtl: false, // Слайды листаются справа налево
+    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
+    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+    // customPaging: function(slider, i) { 
+    //   return '<div class="item_dot"><div class="item-images_img-dot"><img src="' + $(slider.$slides[i]).find('img').attr('src') + '" alt="cover" /></div></div>';
+    // },
+    // responsive: [ // Адаптация
+    //   {
+    //   breakpoint: 992,
+    //     settings: {
+    //       arrows: false,
+    //     }
+    //   },
+    //   {
+    //   breakpoint: 720,
+    //     settings: {
+    //       arrows: false,
+    //     }
+    //   }
+    // ]
+    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
+  });
+
+  sliderFor.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+    asNavFor: slider // Связь со слайдерами
+  });
+
+};
+
+function itemSliderMob(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: true, // Пагинация
+    arrows: false, // Стрелки
+    // speed: 500, // Скорость перехода слайдов
+    // autoplay: false, // Автопрокрутка
+    // autoplaySpeed: 2000, // Скорость автопрокрутки
+    // centerMode: false, // Задает класс .slick-center слайду в центре
+    // focusOnSelect: true, // Выбрать слайд кликом
+    infinite: true, // Зацикленное пролистывание
+    // vertical: true, // Вертикальный слайдер
+    // rtl: false, // Слайды листаются справа налево
+    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
+    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+    // customPaging: function(slider, i) { 
+    //   return '<div class="item_dot"><div class="item-images_img-dot"><img src="' + $(slider.$slides[i]).find('img').attr('src') + '" alt="cover" /></div></div>';
+    // },
+    // responsive: [ // Адаптация
+    //   {
+    //   breakpoint: 992,
+    //     settings: {
+    //       arrows: false,
+    //     }
+    //   },
+    //   {
+    //   breakpoint: 720,
+    //     settings: {
+    //       arrows: false,
+    //     }
+    //   }
+    // ]
+    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
+  });
+
+};
+
+itemSliderMob($('#item-images_slider-mob'));
 
 //# sourceMappingURL=script.js.map

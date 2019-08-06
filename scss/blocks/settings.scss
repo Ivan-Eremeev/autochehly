@@ -7,6 +7,9 @@ a {
 	transition: .15s;
 	text-decoration: none;
 }
+svg {
+	max-width: 100%;
+}
 button {
 	font-family: "Open-Sans";
 	outline: none;
@@ -67,6 +70,15 @@ body {
 		padding-top: 56.25%;
 	}
 }
+.mb {
+	margin-bottom: 70px;
+	@media (max-width: $break_sm) {
+		margin-bottom: 30px;
+	}
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
 .clearfix {
 	position: relative;
 	&:after {
@@ -83,6 +95,10 @@ body {
 	margin-bottom: 30px;
 	font-size: 30px;
 	font-weight: 700;
+	line-height: 1.15;
+	&--exb {
+		font-weight: 900;
+	}
 	@media (max-width: $break_sm) {
 		font-size: 40px;
 	}
@@ -103,6 +119,11 @@ body {
 		margin-bottom: 20px;
 	}
 }
+.subtitle2 {
+	margin-bottom: 10px;
+	font-size: 17px;
+	font-weight: 700;
+}
 .text {
 	p {
 		margin-bottom: 20px;
@@ -114,6 +135,18 @@ body {
 		&:hover {
 			border-color: $red;
 		}
+	}
+	&--big {
+		font-size: 17px;
+		p {
+			margin-bottom: 10px;
+		}
+	}
+	.bold {
+		font-weight: 700;
+	}
+	span {
+		margin-right: 20px;
 	}
 }
 .slick-slide {
