@@ -1,4 +1,5 @@
 .share {
+	margin-bottom: 30px;
 	span {
 		display: inline-block;
 		vertical-align: top;
@@ -24,6 +25,37 @@
 			background-color: $red;
 			svg {
 				width: 20px;
+			}
+		}
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		margin-bottom: 50px;
+		span {
+			display: block;
+			font-size: 28px;
+			padding-top: 0;
+			margin-bottom: 30px;
+		}
+		&_item {
+			margin-bottom: 20px;
+			&:not(:first-child) {
+				margin-left: 50px;
+			}
+			svg {
+				width: 63px;
+				height: 63px;
+			}
+			img {
+				width: 63px;
+				height: 63px;
+			}
+			&--mail {
+				width: 63px;
+				height: 63px;
+				padding-left: 12px;
+				svg {
+					width: 40px;
+				}
 			}
 		}
 	}

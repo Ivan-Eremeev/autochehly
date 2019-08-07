@@ -123,35 +123,9 @@ function itemSlider(slider, sliderFor) {
     arrows: true, // Стрелки
     prevArrow: '<div class="item-images_controll item-images_prev"><span class="icon-keyboard_arrow_up"></span></div>',
     nextArrow: '<div class="item-images_controll item-images_next"><span class="icon-keyboard_arrow_down"></span></div>',
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // centerMode: false, // Задает класс .slick-center слайду в центре
     focusOnSelect: true, // Выбрать слайд кликом
     infinite: true, // Зацикленное пролистывание
     vertical: true, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-    // customPaging: function(slider, i) { 
-    //   return '<div class="item_dot"><div class="item-images_img-dot"><img src="' + $(slider.$slides[i]).find('img').attr('src') + '" alt="cover" /></div></div>';
-    // },
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
-    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
   });
 
   sliderFor.slick({
@@ -160,48 +134,16 @@ function itemSlider(slider, sliderFor) {
     dots: false, // Пагинация
     arrows: false, // Стрелки
     fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-    asNavFor: slider // Связь со слайдерами
+    asNavFor: slider, // Связь со слайдерами
+    responsive: [ // Адаптация
+      {
+      breakpoint: breakMd,
+        settings: {
+          dots:true,
+          fade: false
+        }
+      }
+    ]
   });
 
 };
-
-function itemSliderMob(slider) {
-  slider.slick({
-    slidesToShow: 1, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    dots: true, // Пагинация
-    arrows: false, // Стрелки
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // centerMode: false, // Задает класс .slick-center слайду в центре
-    // focusOnSelect: true, // Выбрать слайд кликом
-    infinite: true, // Зацикленное пролистывание
-    // vertical: true, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-    // customPaging: function(slider, i) { 
-    //   return '<div class="item_dot"><div class="item-images_img-dot"><img src="' + $(slider.$slides[i]).find('img').attr('src') + '" alt="cover" /></div></div>';
-    // },
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
-    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
-  });
-
-};
-
-itemSliderMob($('#item-images_slider-mob'));

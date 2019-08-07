@@ -21,7 +21,7 @@
 
 // Брэйкпоинты js
 var	breakXl = 1400,
-		breakLg = 1200,
+		breakLg = 1260,
 		breakMd = 1050,
 		breakSm = 769,
 		breakXs = 500;
@@ -49,7 +49,7 @@ $(document).ready(function () {
 	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
 
 	// Табы
-	tabs($('#tabs'));
+	// tabs($('#tabs'));
 
 	// Аккордеон
 	// accordeon($('#accordeon'));
@@ -133,6 +133,15 @@ $(document).ready(function () {
 
 	// Добавить убрать количество товара
 	inputCount();
+
+	// Переместить блок в другое место, взависимости от ширины экрана
+	movement($('.item-images'), $('#moveItem'), breakMd);
+
+	// Блок с табами на странице товара
+	itemTabs();
+
+	// Простая выпадайка
+	easyDropdown($('#item-map-open'), $('.item-map_dropdown'));
 
 	// jQuery Form Styler| Стилизация элементов форм
 	// $('.filter select').styler();
@@ -275,23 +284,23 @@ function myMenu(menu) {
 // };
 
 // // Табы
-function tabs(tabs) {
-	var trigger = tabs.find('#tabs_triggers').children(),
-			content = tabs.find('#tabs_content').children(),
-			time = 300;
-	content.filter('.hide').css({
-		display: 'none'});
-	trigger.click(function() {
-		var $this = $(this),
-				index = $this.index();
-		if (!$this.hasClass('active')) {
-			trigger.removeClass('active');
-			$this.addClass('active');
-			content.hide();
-			content.eq(index).fadeIn(time);
-		}
-	});
-};
+// function tabs(tabs) {
+// 	var trigger = tabs.find('#tabs_triggers').children(),
+// 			content = tabs.find('#tabs_content').children(),
+// 			time = 300;
+// 	content.filter('.hide').css({
+// 		display: 'none'});
+// 	trigger.click(function() {
+// 		var $this = $(this),
+// 				index = $this.index();
+// 		if (!$this.hasClass('active')) {
+// 			trigger.removeClass('active');
+// 			$this.addClass('active');
+// 			content.hide();
+// 			content.eq(index).fadeIn(time);
+// 		}
+// 	});
+// };
 
 // Аккордеон
 // function accordeon(accordeon, mobile) {
@@ -737,6 +746,81 @@ function inputCount() {
 		if (val < 999) {
 			val ++;
 			input.val(val);
+		}
+	});
+};
+
+// Переместить блок в другое место, взависимости от ширины экрана
+function movement(block, moveTo, mediaBreak) {
+	var prevBlock = $('<div id="moveBack"></div>');
+			block.before(prevBlock);
+	function move() {
+		if ($(window).width() < mediaBreak) {
+			moveTo.after(block);
+		}else {
+			prevBlock.after(block);
+		}
+	}
+	move();
+	$(window).resize(function() {
+		move();
+	});
+};
+
+// Блок с табами на странице товара
+function itemTabs() {
+	var block = $('#item-tabs'),
+			triggersWrap = $('.item-tabs_triggers'),
+			triggers = block.find('.item-tabs_trigger'),
+			dropdowns = block.find('.item-tabs_dropdown');
+	triggers.each(function(index, el) {
+		$(this).attr('data-index', index);
+	});
+	var firstTrigger = $('.item-tabs_trigger[data-index=0]');
+	function blockHeight() {
+		if (($(window).width() >= breakLg)) {
+			var triggersHeight = triggersWrap.outerHeight(),
+					dropHeight = $('.item-tabs_dropdown.open').outerHeight();
+			block.height(triggersHeight + dropHeight);
+		}
+	};
+	blockHeight();
+	triggers.click(function() {
+		if (!$(this).hasClass('active')) {
+			triggers.removeClass('active');
+			dropdowns.removeClass('open');
+			$(this).addClass('active');
+			$(this).next(dropdowns).addClass('open');
+		}else {
+			if ($(window).width() < breakLg) {
+				triggers.removeClass('active');
+				dropdowns.removeClass('open');
+			}
+		}
+		blockHeight();
+	});
+	$(window).resize(function() {
+		if (($(window).width() >= breakLg)) {
+			triggers.removeClass('active');
+			dropdowns.removeClass('open');
+			firstTrigger.addClass('active')
+			.next(dropdowns).addClass('open');
+			blockHeight();
+		}else {
+			block.removeAttr('style');
+		}
+	});
+};
+
+// Простая выпадайка
+function easyDropdown(link, drop) {
+	link.click(function() {
+		if (!link.hasClass('active')) {
+			$(this).addClass('active');
+			drop.addClass('open');
+		}else {
+			link.removeClass('active');
+			drop.removeClass('open');
 		}
 	});
 };

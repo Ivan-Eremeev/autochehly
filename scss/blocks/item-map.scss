@@ -1,0 +1,28 @@
+.item-map {
+	position: relative;
+	iframe {
+		width: 100%;
+		height: 260px;
+	}
+	@media (max-width: $break_sm) {
+		&_dropdown {
+			display: none;
+			width: 100%;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			&.open {
+				display: block;
+			}
+		}
+		iframe {
+			height: 460px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		iframe {
+			height: 200px;
+		}
+	}
+}

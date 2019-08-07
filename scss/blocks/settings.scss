@@ -78,6 +78,9 @@ body {
 }
 .mb-20 {
 	margin-bottom: 20px;
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		margin-bottom: 50px;
+	}
 }
 .clearfix {
 	position: relative;
@@ -123,6 +126,17 @@ body {
 	margin-bottom: 10px;
 	font-size: 17px;
 	font-weight: 700;
+	a {
+		padding-bottom: 2px;
+		color: $red;
+		border-bottom: 1px solid $border;
+		&:hover {
+			border-color: $red;
+		}
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs) {
+		font-size: 30px;
+	}
 }
 .text {
 	p {
@@ -147,6 +161,19 @@ body {
 	}
 	span {
 		margin-right: 20px;
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		font-size: 30px;
+	}
+	@media (max-width: $break_xs) {
+		&--big {
+			span {
+				display: block;
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
 	}
 }
 .slick-slide {

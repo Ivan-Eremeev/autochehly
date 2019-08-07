@@ -12,16 +12,17 @@
 	&--maw-780 {
 		max-width: 780px;
 	}
-	&--mr550 {
-		margin-right: 550px;
+	&--overflow {
+		overflow: hidden;
+		padding-right: 25px;
 	}
 	@media (max-width: $break_md) {
 		margin-right: 0;
 		&--maw-780 {
 			max-width: none;
 		}
-		&--mr550 {
-			margin-right: 0;
+		&--overflow {
+			padding-right: 0;
 		}
 	}
 }

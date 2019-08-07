@@ -5,6 +5,8 @@
 		@include col-xs(12);
 		&--four-col {
 			@include col(3);
+			@include col-sm(6);
+			@include col-xs(12);
 		}
 	}
 }

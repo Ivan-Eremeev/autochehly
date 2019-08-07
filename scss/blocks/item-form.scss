@@ -73,7 +73,7 @@
 		max-width: 240px;
 		font-size: 18px;
 	}
-	@media (max-width: $break_sm) {
+	@media (max-width: $break_sm) and (min-width: $break_xs) {
 		&_text {
 			font-size: 22px;
 			margin-bottom: 30px;
@@ -115,12 +115,19 @@
 		}
 		.btn {
 			float: none;
+			display: block;
 			max-width: 480px;
 			height: 92px;
 			margin-bottom: 30px;
 			border-radius: 10px;
 			font-size: 30px;
 			font-weight: 900;
+		}
+	}
+	@media (max-width: $break_xs) {
+		.btn {
+			float: none;
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -193,7 +200,7 @@
 			height: 27px;
 		}
 	}
-	@media (max-width: $break_sm) {
+	@media (max-width: $break_sm) and (min-width: $break_xs) {
 		font-size: 26px;
 		&_item {
 			&--colors {
@@ -207,12 +214,14 @@
 			}
 		}
 		&_label {
-			width: 87px;
-			height: 56px;
-			padding: 8px;
-			img {
-				width: 68px;
-				height: 39px;
+			&--colors {
+				width: 87px;
+				height: 56px;
+				padding: 8px;
+				img {
+					width: 68px;
+					height: 39px;
+				}
 			}
 		}
 	}

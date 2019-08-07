@@ -33,22 +33,7 @@ block content
 							span 730i M Sport SE
 					// /breadcrumbs
 
-					h1.title.title--exb Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019седан, хэтчбек фокс CH03-0203-EC27
-
-					.item-images_slider-mob.mobile-visible--md
-						#item-images_slider-mob
-							.item-images_slide
-								img(src="img/catalog/eco3.jpg", alt="cover")
-							.item-images_slide
-								img(src="img/catalog/eco3.jpg", alt="cover")
-							.item-images_slide
-								img(src="img/catalog/eco3.jpg", alt="cover")
-							.item-images_slide
-								img(src="img/catalog/eco3.jpg", alt="cover")
-							.item-images_slide
-								img(src="img/catalog/eco3.jpg", alt="cover")
-							.item-images_slide
-								img(src="img/catalog/eco3.jpg", alt="cover")
+					h1#moveItem.title.title--exb Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019седан, хэтчбек фокс CH03-0203-EC27
 
 					// item-form
 					form(action="#").item-form
@@ -224,12 +209,27 @@ block content
 				.text.text--big.mb-20
 					p
 						span Курьером — 300 Р
-						span В пункт выдачи — 300 Р
+						span В 
+							a(href="#") пункт выдачи 
+							| — 300 Р
 
-				h3.subtitle2 Москва, карта пунктов выдачи заказов
+				// item-map
+				.item-map
 
-				.mb-20
-					iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" width="100%" height="260" frameborder="1" allowfullscreen="true")
+					.subtitle2.mobile-visible Установка в 
+						a(href="#")#item-map-open сервисном центре
+						|  в Москве
+
+					.item-map_dropdown
+
+						h3.subtitle2 Москва, карта пунктов выдачи заказов
+
+						iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" frameborder="1" allowfullscreen="true")
+				// /item-map
+
+				.text.mb-20.mobile-visible
+					p Без подшивки к сидениям — от 1500 Р (2 часа)
+					p С подшивкой к сидениям — от 2500 Р (3-4 часа)
 
 				h3.subtitle2 Гарантия
 
@@ -253,12 +253,12 @@ block content
 						img(src="img/mail.svg", alt="whatsapp")
 				// /share
 
-			.main.main--mr550
+			.main.main--overflow
 
 				// item-images
-				.item-images.mobile-hide--md
+				.item-images
 
-					.item-images_slider1
+					.item-images_slider1.mobile-hide--md
 						#item-images_slider1
 							.item-images_dot
 								.item-images_img-dot.img-responsive
@@ -297,133 +297,145 @@ block content
 				// /item-images
 
 				// item-tabs
-				#tabs.item-tabs
-					
-					ul#tabs_triggers.item-tabs_triggers
-						li.item-tabs_trigger.active Характеристики
-						li.item-tabs_trigger Установка
-						li.item-tabs_trigger Фотографии
-						li.item-tabs_trigger Материал
-						li.item-tabs_trigger Производитель
+				#item-tabs.item-tabs
+							
+					ul.item-tabs_triggers
+						li.item-tabs_triggers-item
+							a(href="#").item-tabs_trigger.active Характеристики
 
-					#tabs_content.item-tabs_content
+							ul.item-tabs_dropdown.open
+								li
+									h2.title Характеристики чехлов
+									ul.item-tabs_list
+										li.item-tabs_item
+											span.item-tabs_name Артикул
+											span.item-tabs_val 128146
+										li.item-tabs_item
+											span.item-tabs_name Материал 
+											span.item-tabs_val Жаккард
+										li.item-tabs_item
+											span.item-tabs_name Цвет 
+											span.item-tabs_val Серый
+										li.item-tabs_item
+											span.item-tabs_name Производитель
+											span.item-tabs_val ВК
+										li.item-tabs_item
+											span.item-tabs_name Цвет середины
+											span.item-tabs_val темно-серый
+										li.item-tabs_item
+											span.item-tabs_name Цвет боковины
+											span.item-tabs_val темно-серый
+										li.item-tabs_item
+											span.item-tabs_name Цвет спинки 
+											span.item-tabs_val темно-серый
+										li.item-tabs_item
+											span.item-tabs_name Материал середина
+											span.item-tabs_val Жаккард
+										li.item-tabs_item
+											span.item-tabs_name Материал боковины
+											span.item-tabs_val Жаккард
+										li.item-tabs_item
+											span.item-tabs_name Материал спинки
+											span.item-tabs_val Жаккард
+										li.item-tabs_item
+											span.item-tabs_name Толщина материал
+											span.item-tabs_val 0,6 мм
+									ul.item-tabs_list
+										li.item-tabs_item
+											span.item-tabs_name Артикул
+											span.item-tabs_val 128146
+										li.item-tabs_item
+											span.item-tabs_name Материал 
+											span.item-tabs_val Жаккард
+										li.item-tabs_item
+											span.item-tabs_name Цвет 
+											span.item-tabs_val Серый
+										li.item-tabs_item
+											span.item-tabs_name Производитель
+											span.item-tabs_val ВК
+										li.item-tabs_item
+											span.item-tabs_name Цвет середины
+											span.item-tabs_val темно-серый
+										li.item-tabs_item
+											span.item-tabs_name Цвет боковины
+											span.item-tabs_val темно-серый
+										li.item-tabs_item
+											span.item-tabs_name Цвет спинки 
+											span.item-tabs_val темно-серый
+										li.item-tabs_item
+											span.item-tabs_name Материал середина
+											span.item-tabs_val Жаккард
+										li.item-tabs_item
+											span.item-tabs_name Материал боковины
+											span.item-tabs_val Жаккард
+										li.item-tabs_item
+											span.item-tabs_name Материал спинки
+											span.item-tabs_val Жаккард
+										li.item-tabs_item
+											span.item-tabs_name Толщина материал
+											span.item-tabs_val 0,6 мм
 
-						div
-							h2.title Характеристики чехлов
-							ul.item-tabs_list
-								li.item-tabs_item
-									.item-tabs_val 128146
-									.item-tabs_name Артикул
-								li.item-tabs_item
-									.item-tabs_val Жаккард
-									.item-tabs_name Материал 
-								li.item-tabs_item
-									.item-tabs_val Серый
-									.item-tabs_name Цвет 
-								li.item-tabs_item
-									.item-tabs_val ВК
-									.item-tabs_name Производитель
-								li.item-tabs_item
-									.item-tabs_val темно-серый
-									.item-tabs_name Цвет середины
-								li.item-tabs_item
-									.item-tabs_val темно-серый
-									.item-tabs_name Цвет боковины
-								li.item-tabs_item
-									.item-tabs_val темно-серый
-									.item-tabs_name Цвет спинки 
-								li.item-tabs_item
-									.item-tabs_val Жаккард
-									.item-tabs_name Материал середина
-								li.item-tabs_item
-									.item-tabs_val Жаккард
-									.item-tabs_name Материал боковины
-								li.item-tabs_item
-									.item-tabs_val Жаккард
-									.item-tabs_name Материал спинки
-								li.item-tabs_item
-									.item-tabs_val 0,6 мм
-									.item-tabs_name Толщина материал
-							ul.item-tabs_list
-								li.item-tabs_item
-									.item-tabs_val 128146
-									.item-tabs_name Артикул
-								li.item-tabs_item
-									.item-tabs_val Жаккард
-									.item-tabs_name Материал 
-								li.item-tabs_item
-									.item-tabs_val Серый
-									.item-tabs_name Цвет 
-								li.item-tabs_item
-									.item-tabs_val ВК
-									.item-tabs_name Производитель
-								li.item-tabs_item
-									.item-tabs_val темно-серый
-									.item-tabs_name Цвет середины
-								li.item-tabs_item
-									.item-tabs_val темно-серый
-									.item-tabs_name Цвет боковины
-								li.item-tabs_item
-									.item-tabs_val темно-серый
-									.item-tabs_name Цвет спинки 
-								li.item-tabs_item
-									.item-tabs_val Жаккард
-									.item-tabs_name Материал середина
-								li.item-tabs_item
-									.item-tabs_val Жаккард
-									.item-tabs_name Материал боковины
-								li.item-tabs_item
-									.item-tabs_val Жаккард
-									.item-tabs_name Материал спинки
-								li.item-tabs_item
-									.item-tabs_val 0,6 мм
-									.item-tabs_name Толщина материал
+						li.item-tabs_triggers-item
+							a(href="#").item-tabs_trigger Установка
 
-						div.hide
-							h2.title Установка
-							.row
-								.item-tabs_install
-									a(href="#").item-tabs_img.img-responsive
-										img(src="#", alt="install")
-									a(href="#").item-tabs_link Иструкция по установке чехлов
-								.item-tabs_install
-									a(href="#").item-tabs_img.img-responsive
-										img(src="#", alt="install")
-									a(href="#").item-tabs_link Иструкция по установке с подшивкой
+							ul.item-tabs_dropdown
+								li
+									h2.title Установка
+									.row
+										.item-tabs_install
+											a(href="#").item-tabs_img.img-responsive
+												img(src="#", alt="install")
+											a(href="#").item-tabs_link Иструкция по установке чехлов
+										.item-tabs_install
+											a(href="#").item-tabs_img.img-responsive
+												img(src="#", alt="install")
+											a(href="#").item-tabs_link Иструкция по установке с подшивкой
 
-						div.hide
-							h2.title Фотографии
-							.row
-								.item-tabs_photo
-									a(href="#").item-tabs_img.item-tabs_img--middle.img-responsive
-										img(src="#", alt="photo")
-								.item-tabs_photo
-									a(href="#").item-tabs_img.item-tabs_img--big.img-responsive
-										img(src="#", alt="photo")
-								.item-tabs_photo
-									a(href="#").item-tabs_img.item-tabs_img--middle.img-responsive
-										img(src="#", alt="photo")
+						li.item-tabs_triggers-item
+							a(href="#").item-tabs_trigger Фотографии
 
-						div.hide
-							h2.title Боковины и спинки сидений — экокожа
-							.item-tabs_text
-								p Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.
-							h2.title Центральная часть сидений — экокожа
-							.item-tabs_text
-								p Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.
+							ul.item-tabs_dropdown
+								li
+									h2.title Фотографии
+									.row
+										.item-tabs_photo
+											a(href="#").item-tabs_img.item-tabs_img--middle.img-responsive
+												img(src="#", alt="photo")
+										.item-tabs_photo
+											a(href="#").item-tabs_img.item-tabs_img--big.img-responsive
+												img(src="#", alt="photo")
+										.item-tabs_photo
+											a(href="#").item-tabs_img.item-tabs_img--middle.img-responsive
+												img(src="#", alt="photo")
 
-						div.hide
-							h2.title Компания «Автолидер»
-							.item-tabs_text
-								p Компания Автолидер являемся одним из крупнейших в России производителей модельных чехлов для сидений автомобилей.
-								p Автолидер производит только модельные чехлы, то есть чехлы предназначеныдля конкретной модели автомобиля, с учётом особенностей кузова, сидений, и функционала салона.
-								p В первую очередь с автомобильных кресел снимаются необходимые замеры. Измеряются сиденья, спинки, подголовники, подлокотники, вырезы для подушек и ремней безопасности, всевозможные технологические отверстия, индивидуальные для каждого производителя, каждой модели и комплектации. 
-								p Затем, после переноса полученных измерений на бумагу и добавления с каждой стороны припусков на шов, получаются необходимые шаблоны для пошива авточехлов.
+						li.item-tabs_triggers-item
+							a(href="#").item-tabs_trigger Материал
+
+							ul.item-tabs_dropdown
+								li
+									h2.item-tabs_title Боковины и спинки сидений — экокожа
+									.item-tabs_text
+										p Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.
+									h2.item-tabs_title Центральная часть сидений — экокожа
+									.item-tabs_text
+										p Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.
+
+						li.item-tabs_triggers-item
+							a(href="#").item-tabs_trigger Производитель
+
+							ul.item-tabs_dropdown
+								li
+									h2.item-tabs_title Компания «Автолидер»
+									.item-tabs_text
+										p Компания Автолидер являемся одним из крупнейших в России производителей модельных чехлов для сидений автомобилей.
+										p Автолидер производит только модельные чехлы, то есть чехлы предназначеныдля конкретной модели автомобиля, с учётом особенностей кузова, сидений, и функционала салона.
+										p В первую очередь с автомобильных кресел снимаются необходимые замеры. Измеряются сиденья, спинки, подголовники, подлокотники, вырезы для подушек и ремней безопасности, всевозможные технологические отверстия, индивидуальные для каждого производителя, каждой модели и комплектации. 
+										p Затем, после переноса полученных измерений на бумагу и добавления с каждой стороны припусков на шов, получаются необходимые шаблоны для пошива авточехлов.
 				// /item-tabs
 
-				h2.title Применимость
+				h2.title.mobile-hide Применимость
 
-				.dropdown_row.mb
+				.dropdown_row.mb.mobile-hide
 					.dropdown_col.dropdown_col--big-text
 						.filter_generation-link
 							.filter_generation-img.img-responsive

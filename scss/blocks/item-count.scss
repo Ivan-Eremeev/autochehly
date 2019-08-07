@@ -38,7 +38,7 @@
 			user-select: none;
 		}
 	}
-	@media (max-width: $break_sm) {
+	@media (max-width: $break_sm) and (min-width: $break_xs) {
 		float: right;
 		padding-top: 40px;
 		&_controll {
@@ -50,6 +50,7 @@
 		}
 		&_result {
 			input {
+				width: 55px;
 				font-size: 30px;
 				font-weight: 600;
 			}

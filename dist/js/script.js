@@ -21,7 +21,7 @@
 
 // Брэйкпоинты js
 var	breakXl = 1400,
-		breakLg = 1200,
+		breakLg = 1260,
 		breakMd = 1050,
 		breakSm = 769,
 		breakXs = 500;
@@ -49,7 +49,7 @@ $(document).ready(function () {
 	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
 
 	// Табы
-	tabs($('#tabs'));
+	// tabs($('#tabs'));
 
 	// Аккордеон
 	// accordeon($('#accordeon'));
@@ -133,6 +133,15 @@ $(document).ready(function () {
 
 	// Добавить убрать количество товара
 	inputCount();
+
+	// Переместить блок в другое место, взависимости от ширины экрана
+	movement($('.item-images'), $('#moveItem'), breakMd);
+
+	// Блок с табами на странице товара
+	itemTabs();
+
+	// Простая выпадайка
+	easyDropdown($('#item-map-open'), $('.item-map_dropdown'));
 
 	// jQuery Form Styler| Стилизация элементов форм
 	// $('.filter select').styler();
@@ -275,23 +284,23 @@ function myMenu(menu) {
 // };
 
 // // Табы
-function tabs(tabs) {
-	var trigger = tabs.find('#tabs_triggers').children(),
-			content = tabs.find('#tabs_content').children(),
-			time = 300;
-	content.filter('.hide').css({
-		display: 'none'});
-	trigger.click(function() {
-		var $this = $(this),
-				index = $this.index();
-		if (!$this.hasClass('active')) {
-			trigger.removeClass('active');
-			$this.addClass('active');
-			content.hide();
-			content.eq(index).fadeIn(time);
-		}
-	});
-};
+// function tabs(tabs) {
+// 	var trigger = tabs.find('#tabs_triggers').children(),
+// 			content = tabs.find('#tabs_content').children(),
+// 			time = 300;
+// 	content.filter('.hide').css({
+// 		display: 'none'});
+// 	trigger.click(function() {
+// 		var $this = $(this),
+// 				index = $this.index();
+// 		if (!$this.hasClass('active')) {
+// 			trigger.removeClass('active');
+// 			$this.addClass('active');
+// 			content.hide();
+// 			content.eq(index).fadeIn(time);
+// 		}
+// 	});
+// };
 
 // Аккордеон
 // function accordeon(accordeon, mobile) {
@@ -740,6 +749,81 @@ function inputCount() {
 		}
 	});
 };
+
+// Переместить блок в другое место, взависимости от ширины экрана
+function movement(block, moveTo, mediaBreak) {
+	var prevBlock = $('<div id="moveBack"></div>');
+			block.before(prevBlock);
+	function move() {
+		if ($(window).width() < mediaBreak) {
+			moveTo.after(block);
+		}else {
+			prevBlock.after(block);
+		}
+	}
+	move();
+	$(window).resize(function() {
+		move();
+	});
+};
+
+// Блок с табами на странице товара
+function itemTabs() {
+	var block = $('#item-tabs'),
+			triggersWrap = $('.item-tabs_triggers'),
+			triggers = block.find('.item-tabs_trigger'),
+			dropdowns = block.find('.item-tabs_dropdown');
+	triggers.each(function(index, el) {
+		$(this).attr('data-index', index);
+	});
+	var firstTrigger = $('.item-tabs_trigger[data-index=0]');
+	function blockHeight() {
+		if (($(window).width() >= breakLg)) {
+			var triggersHeight = triggersWrap.outerHeight(),
+					dropHeight = $('.item-tabs_dropdown.open').outerHeight();
+			block.height(triggersHeight + dropHeight);
+		}
+	};
+	blockHeight();
+	triggers.click(function() {
+		if (!$(this).hasClass('active')) {
+			triggers.removeClass('active');
+			dropdowns.removeClass('open');
+			$(this).addClass('active');
+			$(this).next(dropdowns).addClass('open');
+		}else {
+			if ($(window).width() < breakLg) {
+				triggers.removeClass('active');
+				dropdowns.removeClass('open');
+			}
+		}
+		blockHeight();
+	});
+	$(window).resize(function() {
+		if (($(window).width() >= breakLg)) {
+			triggers.removeClass('active');
+			dropdowns.removeClass('open');
+			firstTrigger.addClass('active')
+			.next(dropdowns).addClass('open');
+			blockHeight();
+		}else {
+			block.removeAttr('style');
+		}
+	});
+};
+
+// Простая выпадайка
+function easyDropdown(link, drop) {
+	link.click(function() {
+		if (!link.hasClass('active')) {
+			$(this).addClass('active');
+			drop.addClass('open');
+		}else {
+			link.removeClass('active');
+			drop.removeClass('open');
+		}
+	});
+};
 function slider(slider,sliderFor) {
   slider.slick({
     slidesToShow: 1, // Сколько слайдов показывать на экране
@@ -865,35 +949,9 @@ function itemSlider(slider, sliderFor) {
     arrows: true, // Стрелки
     prevArrow: '<div class="item-images_controll item-images_prev"><span class="icon-keyboard_arrow_up"></span></div>',
     nextArrow: '<div class="item-images_controll item-images_next"><span class="icon-keyboard_arrow_down"></span></div>',
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // centerMode: false, // Задает класс .slick-center слайду в центре
     focusOnSelect: true, // Выбрать слайд кликом
     infinite: true, // Зацикленное пролистывание
     vertical: true, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-    // customPaging: function(slider, i) { 
-    //   return '<div class="item_dot"><div class="item-images_img-dot"><img src="' + $(slider.$slides[i]).find('img').attr('src') + '" alt="cover" /></div></div>';
-    // },
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
-    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
   });
 
   sliderFor.slick({
@@ -902,50 +960,18 @@ function itemSlider(slider, sliderFor) {
     dots: false, // Пагинация
     arrows: false, // Стрелки
     fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-    asNavFor: slider // Связь со слайдерами
+    asNavFor: slider, // Связь со слайдерами
+    responsive: [ // Адаптация
+      {
+      breakpoint: breakMd,
+        settings: {
+          dots:true,
+          fade: false
+        }
+      }
+    ]
   });
 
 };
-
-function itemSliderMob(slider) {
-  slider.slick({
-    slidesToShow: 1, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    dots: true, // Пагинация
-    arrows: false, // Стрелки
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // centerMode: false, // Задает класс .slick-center слайду в центре
-    // focusOnSelect: true, // Выбрать слайд кликом
-    infinite: true, // Зацикленное пролистывание
-    // vertical: true, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-    // customPaging: function(slider, i) { 
-    //   return '<div class="item_dot"><div class="item-images_img-dot"><img src="' + $(slider.$slides[i]).find('img').attr('src') + '" alt="cover" /></div></div>';
-    // },
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
-    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
-  });
-
-};
-
-itemSliderMob($('#item-images_slider-mob'));
 
 //# sourceMappingURL=script.js.map

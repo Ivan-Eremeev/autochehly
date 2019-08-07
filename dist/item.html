@@ -61,17 +61,7 @@
               <li class="breadcrumbs_item"><span>730i M Sport SE</span></li>
             </ul>
             <!-- /breadcrumbs-->
-            <h1 class="title title--exb">Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019седан, хэтчбек фокс CH03-0203-EC27</h1>
-            <div class="item-images_slider-mob mobile-visible--md">
-              <div id="item-images_slider-mob">
-                <div class="item-images_slide"><img src="img/catalog/eco3.jpg" alt="cover"></div>
-                <div class="item-images_slide"><img src="img/catalog/eco3.jpg" alt="cover"></div>
-                <div class="item-images_slide"><img src="img/catalog/eco3.jpg" alt="cover"></div>
-                <div class="item-images_slide"><img src="img/catalog/eco3.jpg" alt="cover"></div>
-                <div class="item-images_slide"><img src="img/catalog/eco3.jpg" alt="cover"></div>
-                <div class="item-images_slide"><img src="img/catalog/eco3.jpg" alt="cover"></div>
-              </div>
-            </div>
+            <h1 class="title title--exb" id="moveItem">Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019седан, хэтчбек фокс CH03-0203-EC27</h1>
             <!-- item-form-->
             <form class="item-form" action="#">
               <div class="clearfix">
@@ -252,11 +242,20 @@
           </div>
           <h3 class="subtitle2">Доставка по Москве (в пределах МКАД)</h3>
           <div class="text text--big mb-20">
-            <p><span>Курьером — 300 Р</span><span>В пункт выдачи — 300 Р</span></p>
+            <p><span>Курьером — 300 Р</span><span>В <a href="#">пункт выдачи </a>— 300 Р</span></p>
           </div>
-          <h3 class="subtitle2">Москва, карта пунктов выдачи заказов</h3>
-          <div class="mb-20">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&amp;z=12" width="100%" height="260" frameborder="1" allowfullscreen="true"></iframe>
+          <!-- item-map-->
+          <div class="item-map">
+            <div class="subtitle2 mobile-visible">Установка в <a href="#" id="item-map-open">сервисном центре</a> в Москве</div>
+            <div class="item-map_dropdown">
+              <h3 class="subtitle2">Москва, карта пунктов выдачи заказов</h3>
+              <iframe src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&amp;z=12" frameborder="1" allowfullscreen="true"></iframe>
+            </div>
+          </div>
+          <!-- /item-map-->
+          <div class="text mb-20 mobile-visible">
+            <p>Без подшивки к сидениям — от 1500 Р (2 часа)</p>
+            <p>С подшивкой к сидениям — от 2500 Р (3-4 часа)</p>
           </div>
           <h3 class="subtitle2">Гарантия</h3>
           <div class="text text--big mb-20">
@@ -266,10 +265,10 @@
           <div class="share"><span>Поделиться:</span><a class="share_item" href="#"><img src="img/whatsapp.svg" alt="whatsapp"></a><a class="share_item" href="#"><img src="img/telegram.svg" alt="telegram"></a><a class="share_item" href="#"><img src="img/viber.svg" alt="viber"></a><a class="share_item" href="#"><img src="img/insta.png" alt="insta"></a><a class="share_item" href="#"><img src="img/vk.svg" alt="whatsapp"></a><a class="share_item share_item--mail" href="#"><img src="img/mail.svg" alt="whatsapp"></a></div>
           <!-- /share-->
         </div>
-        <div class="main main--mr550">
+        <div class="main main--overflow">
           <!-- item-images-->
-          <div class="item-images mobile-hide--md">
-            <div class="item-images_slider1">
+          <div class="item-images">
+            <div class="item-images_slider1 mobile-hide--md">
               <div id="item-images_slider1">
                 <div class="item-images_dot">
                   <div class="item-images_img-dot img-responsive"><img src="img/catalog/eco3.jpg" alt="cover"></div>
@@ -304,149 +303,96 @@
           </div>
           <!-- /item-images-->
           <!-- item-tabs-->
-          <div class="item-tabs" id="tabs">
-            <ul class="item-tabs_triggers" id="tabs_triggers">
-              <li class="item-tabs_trigger active">Характеристики</li>
-              <li class="item-tabs_trigger">Установка</li>
-              <li class="item-tabs_trigger">Фотографии</li>
-              <li class="item-tabs_trigger">Материал</li>
-              <li class="item-tabs_trigger">Производитель</li>
+          <div class="item-tabs" id="item-tabs">
+            <ul class="item-tabs_triggers">
+              <li class="item-tabs_triggers-item"><a class="item-tabs_trigger active" href="#">Характеристики</a>
+                <ul class="item-tabs_dropdown open">
+                  <li>
+                    <h2 class="title">Характеристики чехлов</h2>
+                    <ul class="item-tabs_list">
+                      <li class="item-tabs_item"><span class="item-tabs_name">Артикул</span><span class="item-tabs_val">128146</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Материал </span><span class="item-tabs_val">Жаккард</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Цвет </span><span class="item-tabs_val">Серый</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Производитель</span><span class="item-tabs_val">ВК</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Цвет середины</span><span class="item-tabs_val">темно-серый</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Цвет боковины</span><span class="item-tabs_val">темно-серый</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Цвет спинки </span><span class="item-tabs_val">темно-серый</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Материал середина</span><span class="item-tabs_val">Жаккард</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Материал боковины</span><span class="item-tabs_val">Жаккард</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Материал спинки</span><span class="item-tabs_val">Жаккард</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Толщина материал</span><span class="item-tabs_val">0,6 мм</span></li>
+                    </ul>
+                    <ul class="item-tabs_list">
+                      <li class="item-tabs_item"><span class="item-tabs_name">Артикул</span><span class="item-tabs_val">128146</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Материал </span><span class="item-tabs_val">Жаккард</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Цвет </span><span class="item-tabs_val">Серый</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Производитель</span><span class="item-tabs_val">ВК</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Цвет середины</span><span class="item-tabs_val">темно-серый</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Цвет боковины</span><span class="item-tabs_val">темно-серый</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Цвет спинки </span><span class="item-tabs_val">темно-серый</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Материал середина</span><span class="item-tabs_val">Жаккард</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Материал боковины</span><span class="item-tabs_val">Жаккард</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Материал спинки</span><span class="item-tabs_val">Жаккард</span></li>
+                      <li class="item-tabs_item"><span class="item-tabs_name">Толщина материал</span><span class="item-tabs_val">0,6 мм</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="item-tabs_triggers-item"><a class="item-tabs_trigger" href="#">Установка</a>
+                <ul class="item-tabs_dropdown">
+                  <li>
+                    <h2 class="title">Установка</h2>
+                    <div class="row">
+                      <div class="item-tabs_install"><a class="item-tabs_img img-responsive" href="#"><img src="#" alt="install"></a><a class="item-tabs_link" href="#">Иструкция по установке чехлов</a></div>
+                      <div class="item-tabs_install"><a class="item-tabs_img img-responsive" href="#"><img src="#" alt="install"></a><a class="item-tabs_link" href="#">Иструкция по установке с подшивкой</a></div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="item-tabs_triggers-item"><a class="item-tabs_trigger" href="#">Фотографии</a>
+                <ul class="item-tabs_dropdown">
+                  <li>
+                    <h2 class="title">Фотографии</h2>
+                    <div class="row">
+                      <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
+                      <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--big img-responsive" href="#"><img src="#" alt="photo"></a></div>
+                      <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="item-tabs_triggers-item"><a class="item-tabs_trigger" href="#">Материал</a>
+                <ul class="item-tabs_dropdown">
+                  <li>
+                    <h2 class="item-tabs_title">Боковины и спинки сидений — экокожа</h2>
+                    <div class="item-tabs_text">
+                      <p>Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.</p>
+                    </div>
+                    <h2 class="item-tabs_title">Центральная часть сидений — экокожа</h2>
+                    <div class="item-tabs_text">
+                      <p>Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="item-tabs_triggers-item"><a class="item-tabs_trigger" href="#">Производитель</a>
+                <ul class="item-tabs_dropdown">
+                  <li>
+                    <h2 class="item-tabs_title">Компания «Автолидер»</h2>
+                    <div class="item-tabs_text">
+                      <p>Компания Автолидер являемся одним из крупнейших в России производителей модельных чехлов для сидений автомобилей.</p>
+                      <p>Автолидер производит только модельные чехлы, то есть чехлы предназначеныдля конкретной модели автомобиля, с учётом особенностей кузова, сидений, и функционала салона.</p>
+                      <p>В первую очередь с автомобильных кресел снимаются необходимые замеры. Измеряются сиденья, спинки, подголовники, подлокотники, вырезы для подушек и ремней безопасности, всевозможные технологические отверстия, индивидуальные для каждого производителя, каждой модели и комплектации. </p>
+                      <p>Затем, после переноса полученных измерений на бумагу и добавления с каждой стороны припусков на шов, получаются необходимые шаблоны для пошива авточехлов.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
             </ul>
-            <div class="item-tabs_content" id="tabs_content">
-              <div>
-                <h2 class="title">Характеристики чехлов</h2>
-                <ul class="item-tabs_list">
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">128146</div>
-                    <div class="item-tabs_name">Артикул</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Жаккард</div>
-                    <div class="item-tabs_name">Материал </div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Серый</div>
-                    <div class="item-tabs_name">Цвет </div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">ВК</div>
-                    <div class="item-tabs_name">Производитель</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">темно-серый</div>
-                    <div class="item-tabs_name">Цвет середины</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">темно-серый</div>
-                    <div class="item-tabs_name">Цвет боковины</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">темно-серый</div>
-                    <div class="item-tabs_name">Цвет спинки </div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Жаккард</div>
-                    <div class="item-tabs_name">Материал середина</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Жаккард</div>
-                    <div class="item-tabs_name">Материал боковины</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Жаккард</div>
-                    <div class="item-tabs_name">Материал спинки</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">0,6 мм</div>
-                    <div class="item-tabs_name">Толщина материал</div>
-                  </li>
-                </ul>
-                <ul class="item-tabs_list">
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">128146</div>
-                    <div class="item-tabs_name">Артикул</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Жаккард</div>
-                    <div class="item-tabs_name">Материал </div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Серый</div>
-                    <div class="item-tabs_name">Цвет </div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">ВК</div>
-                    <div class="item-tabs_name">Производитель</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">темно-серый</div>
-                    <div class="item-tabs_name">Цвет середины</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">темно-серый</div>
-                    <div class="item-tabs_name">Цвет боковины</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">темно-серый</div>
-                    <div class="item-tabs_name">Цвет спинки </div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Жаккард</div>
-                    <div class="item-tabs_name">Материал середина</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Жаккард</div>
-                    <div class="item-tabs_name">Материал боковины</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">Жаккард</div>
-                    <div class="item-tabs_name">Материал спинки</div>
-                  </li>
-                  <li class="item-tabs_item">
-                    <div class="item-tabs_val">0,6 мм</div>
-                    <div class="item-tabs_name">Толщина материал</div>
-                  </li>
-                </ul>
-              </div>
-              <div class="hide">
-                <h2 class="title">Установка</h2>
-                <div class="row">
-                  <div class="item-tabs_install"><a class="item-tabs_img img-responsive" href="#"><img src="#" alt="install"></a><a class="item-tabs_link" href="#">Иструкция по установке чехлов</a></div>
-                  <div class="item-tabs_install"><a class="item-tabs_img img-responsive" href="#"><img src="#" alt="install"></a><a class="item-tabs_link" href="#">Иструкция по установке с подшивкой</a></div>
-                </div>
-              </div>
-              <div class="hide">
-                <h2 class="title">Фотографии</h2>
-                <div class="row">
-                  <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
-                  <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--big img-responsive" href="#"><img src="#" alt="photo"></a></div>
-                  <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
-                </div>
-              </div>
-              <div class="hide">
-                <h2 class="title">Боковины и спинки сидений — экокожа</h2>
-                <div class="item-tabs_text">
-                  <p>Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.</p>
-                </div>
-                <h2 class="title">Центральная часть сидений — экокожа</h2>
-                <div class="item-tabs_text">
-                  <p>Искусственная кожа, подкладка на хлопковой основе, верхняя часть полиуретан. Самый практичный материал для автомобильных салонов. Очень удобен в уходе, легко протирается влажной тряпкой, дышит, отлично подходит при грязных условий эксплуатации, домашние животные, дети, загородные поездки, коммерческое использование.</p>
-                </div>
-              </div>
-              <div class="hide">
-                <h2 class="title">Компания «Автолидер»</h2>
-                <div class="item-tabs_text">
-                  <p>Компания Автолидер являемся одним из крупнейших в России производителей модельных чехлов для сидений автомобилей.</p>
-                  <p>Автолидер производит только модельные чехлы, то есть чехлы предназначеныдля конкретной модели автомобиля, с учётом особенностей кузова, сидений, и функционала салона.</p>
-                  <p>В первую очередь с автомобильных кресел снимаются необходимые замеры. Измеряются сиденья, спинки, подголовники, подлокотники, вырезы для подушек и ремней безопасности, всевозможные технологические отверстия, индивидуальные для каждого производителя, каждой модели и комплектации. </p>
-                  <p>Затем, после переноса полученных измерений на бумагу и добавления с каждой стороны припусков на шов, получаются необходимые шаблоны для пошива авточехлов.</p>
-                </div>
-              </div>
-            </div>
           </div>
           <!-- /item-tabs-->
-          <h2 class="title">Применимость</h2>
-          <div class="dropdown_row mb">
+          <h2 class="title mobile-hide">Применимость</h2>
+          <div class="dropdown_row mb mobile-hide">
             <div class="dropdown_col dropdown_col--big-text">
               <div class="filter_generation-link">
                 <div class="filter_generation-img img-responsive"><img src="img/car-generation/audi1.jpg" alt="audi"></div><span class="filter_generation-text">Audi VI (G11/G12) 7 серия 730i M Sport SE</span>
