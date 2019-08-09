@@ -1,0 +1,22 @@
+.contacts-map {
+	margin-bottom: 140px;
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		padding-top: 43%;
+	}
+	&_map {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	@media (max-width: $break_sm) {
+		margin-bottom: 40px;
+		&:after {
+			padding-top: 80%;
+		}
+	}
+}

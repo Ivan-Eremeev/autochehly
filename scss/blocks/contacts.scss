@@ -1,0 +1,59 @@
+.contacts {
+	margin-top: 80px;
+	margin-bottom: 70px;
+	.title {
+		margin-bottom: 40px;
+	}
+	&_title {
+		margin-bottom: 18px;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	&_text {
+		font-size: 18px;
+		p {
+			margin-bottom: 18px;
+			&.contacts_mb40 {
+				margin-bottom: 40px;
+			}
+		}
+		.bold {
+			font-weight: 700;
+		}
+		span {
+			color: $grayD;
+		}
+	}
+	&_tel {
+		color: $black;
+		font-weight: 700;
+	}
+	&_mail {
+		color: $red;
+		border-bottom: 1px solid $border;
+		&:hover {
+			border-color: $red;
+		}
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		margin-bottom: 50px;
+		&_title {
+			margin-bottom: 45px;
+			font-size: 30px;
+		}
+		&_text {
+			font-size: 26px;
+			p {
+				margin-bottom: 4px;
+				&.contacts_mb40 {
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+	@media (max-width: $break_xs) {
+		.title {
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -13,7 +13,7 @@ block content
 
 			.sidebar.sidebar--w500
 
-				.sideb.mb-20
+				.sideb.mb-40
 
 					// breadcrumbs
 					ul.breadcrumbs
@@ -205,13 +205,15 @@ block content
 
 					// /item-form
 
-				h3.subtitle2 Доставка по Москве (в пределах МКАД)
-				.text.text--big.mb-20
-					p
-						span Курьером — 300 Р
-						span В 
-							a(href="#") пункт выдачи 
-							| — 300 Р
+				.pl-20.mb-40
+
+					h3.subtitle2 Доставка по Москве (в пределах МКАД)
+					.text.text--big
+						p
+							span Курьером — 300 Р
+							span В 
+								a(href="#") пункт выдачи 
+								| — 300 Р
 
 				// item-map
 				.item-map
@@ -220,9 +222,9 @@ block content
 						a(href="#")#item-map-open сервисном центре
 						|  в Москве
 
-					.item-map_dropdown
+					.item-map_dropdown.mb-40
 
-						h3.subtitle2 Москва, карта пунктов выдачи заказов
+						h3.subtitle2.pl-20 Москва, карта пунктов выдачи заказов
 
 						iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" frameborder="1" allowfullscreen="true")
 				// /item-map
@@ -231,27 +233,29 @@ block content
 					p Без подшивки к сидениям — от 1500 Р (2 часа)
 					p С подшивкой к сидениям — от 2500 Р (3-4 часа)
 
-				h3.subtitle2 Гарантия
+				.pl-20
 
-				.text.text--big.mb-20
-					p Возврат и обмен товара в течение 10-ти дней
+					h3.subtitle2 Гарантия
 
-				// share
-				.share
-					span Поделиться:
-					a(href="#").share_item
-						img(src="img/whatsapp.svg", alt="whatsapp")
-					a(href="#").share_item
-						img(src="img/telegram.svg", alt="telegram")
-					a(href="#").share_item
-						img(src="img/viber.svg", alt="viber")
-					a(href="#").share_item
-						img(src="img/insta.png", alt="insta")
-					a(href="#").share_item
-						img(src="img/vk.svg", alt="whatsapp")
-					a(href="#").share_item.share_item--mail
-						img(src="img/mail.svg", alt="whatsapp")
-				// /share
+					.text.text--big.mb-40
+						p Возврат и обмен товара в течение 10-ти дней
+
+					// share
+					.share
+						span Поделиться:
+						a(href="#").share_item
+							img(src="img/whatsapp.svg", alt="whatsapp")
+						a(href="#").share_item
+							img(src="img/telegram.svg", alt="telegram")
+						a(href="#").share_item
+							img(src="img/viber.svg", alt="viber")
+						a(href="#").share_item
+							img(src="img/insta.png", alt="insta")
+						a(href="#").share_item
+							img(src="img/vk.svg", alt="whatsapp")
+						a(href="#").share_item.share_item--mail
+							img(src="img/mail.svg", alt="whatsapp")
+					// /share
 
 			.main.main--overflow
 

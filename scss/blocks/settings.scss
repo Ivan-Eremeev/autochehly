@@ -304,3 +304,12 @@ body {
 		top: 18px;
 	}
 }
+.pl-20 {
+	padding-left: 20px;
+	@media (max-width: $break_md) {
+		padding-left: 0;
+	}
+}
+.mb-40 {
+	margin-bottom: 40px;
+}

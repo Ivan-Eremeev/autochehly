@@ -54,6 +54,9 @@
 	}
 	&_body {
 		padding-bottom: 18px;
+		.hide {
+			display: none;
+		}
 	}
 	&_content {
 		

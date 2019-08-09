@@ -1,7 +1,7 @@
 extends blocks/base.jade
 
 block title 
-	title Авточехлы - Контакты
+	title Авточехлы - Оплата
 
 block content
 
@@ -26,38 +26,40 @@ block content
 			.main
 				
 				include blocks/filter.jade
-		
-		// contacts
-		.contacts
 
-			h1.title Контактная информация
+		// payment
+		.payment
 
-			.contacts_title Адрес и телефон:
+			h1.title Способы оплаты
 
-			.contacts_text
-				p Москва, Шоссе Фрезер, д. 15Г, стр. 1
-				p.contacts_mb40
-					a(href="tel:88006005429").contacts_tel 8 800 600-54-29
-					span , ежедневно с 9 до 21
-				p
-					a(href="mailto:info@chekhly.ru").contacts_mail info@chekhly.ru
-		// /contacts
+			h2.payment_title Наличными при получении заказа
 
-		// contacts-map
-		.contacts-map
-			.contacts-map_map
-				iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" width="100%" height="100%" frameborder="1" allowfullscreen="true")
-		// /contacts-map
+			.payment_text
+				p Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки 
 
-		// requisites
-		.requisites
-			.title Реквизиты
-			.requisites_text
-				p Реквизиты реквизиты реквизиты реквизиты реквизиты реквизиты реквизиты реквизиты реквизиты 
-				p реквизиты реквизиты реквизиты реквизиты реквизиты 
-				p реквизиты реквизиты реквизиты
-				p реквизиты реквизиты реквизиты реквизиты реквизиты 
-		// /requisites
+			h2.payment_title.payment_title--big Банковской картой на сайте
+
+			.payment_text
+				p Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки Кратко для каких типов доставки 
+		// /payment
+
+		.payment_cards
+
+			.payment_left
+				ul.pay_cards
+					li.pay_card
+						img(src="img/visa.png", alt="visa-logo").pay_card-img.pay_card-img--desktop
+						img(src="img/visa-mob.png", alt="visa-logo").pay_card-img.pay_card-img--mobile
+					li.pay_card
+						img(src="img/mastercard.svg", alt="mastercard-logo").pay_card-img.pay_card-img--svg
+					li.pay_card
+						img(src="img/maestro.png", alt="maestro-logo").pay_card-img.pay_card-img--desktop
+						img(src="img/maestro-mob.png", alt="maestro-logo").pay_card-img.pay_card-img--mobile
+					li.pay_sberbank
+						img(src="img/sberbank.svg", alt="sbarbank-logo").pay_sberbank-logo
+
+			.payment_right
+				p Кратко об онлайн-оплате (через Сбербанк, какие карты) Кратко об онлайн-оплате (через Сбербанк, какие карты) Кратко об онлайн-оплате (через Сбербанк, какие карты) Кратко об онлайн-оплате
 
 		.title Вы смотрели
 

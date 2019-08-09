@@ -1,0 +1,86 @@
+.payment {
+	margin-top: 80px;
+	.title {
+		margin-bottom: 50px;
+	}
+	&_title {
+		margin-bottom: 25px;
+		font-size: 18px;
+	}
+	&_text {
+		max-width: 674px;
+		padding: 30px 25px;
+		margin-bottom: 57px;
+		border: 1px solid $border;
+		border-radius: 5px;
+		line-height: 1.8;
+	}
+	&_cards {
+		max-width: 674px;
+		margin-bottom: 122px;
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
+	}
+	&_left {
+		float: left;
+		width: 220px;
+	}
+	&_right {
+		padding-left: 39px;
+		line-height: 1.8;
+		overflow: hidden;
+	}
+	@media (max-width: $break_sm) {
+		margin-top: 70px;
+		.title {
+			margin-bottom: 30px;
+		}
+		&_text {
+			max-width: none;
+			background-color: $gray;
+		}
+		&_cards {
+			max-width: none;
+			margin-bottom: 75px;
+		}
+		&_left {
+			width: 100%;
+			margin-bottom: 17px;
+			float: none;
+			text-align: center;
+		}
+		&_right {
+			padding: 45px 30px;
+			background-color: $gray;
+			border-radius: 10px;
+			overflow: visible;
+		}
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		&_title {
+			margin-bottom: 40px;
+			font-size: 26px;
+			&--big {
+				font-size: 40px;
+			}
+		}
+		&_text {
+			padding: 45px 30px;
+			font-size: 26px;
+			border: none;
+			border-radius: 10px;
+		}
+		&_right {
+			font-size: 26px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		&_left {
+			margin-bottom: 40px;
+		}
+	}
+}
