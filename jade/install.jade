@@ -1,0 +1,197 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Установка
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		.main-sidebar.mobile-hide
+
+			.sidebar
+
+				// sidebar-item
+				.sidebar-item
+					.sidebar-item_item
+						img(src="img/car.svg", alt="car").sidebar-item_icon.sidebar-item_icon--car
+						.sidebar-item_text Отправка на следующий день
+					.sidebar-item_item
+						img(src="img/hand.svg", alt="hand").sidebar-item_icon.sidebar-item_icon--hand
+						.sidebar-item_text Цены производителя
+				// /sidebar-item
+
+			.main
+				
+				include blocks/filter.jade
+	
+		// install
+		.install.install--mb.mobile-hide
+
+			h1.title Установка чехлов в сервисных центрах
+
+			.text
+				p Установить чехлы можно как в любом нашем 
+					a(href="#") сервисном центре
+					|  в Москве, так и с выездом к вам.
+
+			.row
+				.install_col
+					a(href="#").install_item.js-match-height
+						img(src="img/house.svg", alt="house").install_img.install_img--house
+						.install_content
+							.install_text Установка в сервисном центре
+							.install_price 1000 Руб
+				.install_col
+					a(href="#").install_item.js-match-height.install_item--2
+						img(src="img/seat.svg", alt="seat").install_img.install_img--seat
+						.install_content
+							.install_text Установка с подшивкой к сиденьям
+							.install_price 4500 Руб
+				.install_col
+					a(href="#").install_item.js-match-height
+						img(src="img/car.svg", alt="car").install_img.install_img--car
+						.install_content
+							.install_text Установка с выездом
+							.install_price 1500 Руб
+				.install_col
+					a(href="#").install_item.js-match-height
+						img(src="img/car-end-seat.svg", alt="car-end-seat").install_img.install_img--car-end-seat
+						.install_content
+							.install_text Установка с подшивкой к сиденьям с выездом
+							.install_price 5500 Руб
+		// /install
+
+		// .install-mob
+		.install-mob
+
+			.title Установка чехлов в сервисных центрах
+
+			.text
+				p Установить чехлы можно как в любом нашем сервисном центре в Москве, так и с выездом к вам.
+
+			.title Стоимость установки чехлов
+
+			.install-mob_row
+				.install-mob_col.active В сервисном центре
+					span 1000 Руб
+				.install-mob_col С выездом
+					span 1500 Руб
+
+			.title Стоимость установки чехлов с подшивкой к сиденьям
+
+			.install-mob_row
+				.install-mob_col.active В сервисном центре
+					span 4500 Руб
+				.install-mob_col С выездом
+					span 5500 Руб
+		// /.install-mob
+
+		.title Центры установки чехлов в Москве
+
+		// contacts-map
+		.contacts-map
+			.contacts-map_map
+				iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" width="100%" height="100%" frameborder="1" allowfullscreen="true")
+		// /contacts-map
+
+		.title Вы смотрели
+
+		// cards
+		.cards
+
+			.row
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--orange
+								span На заказ 14-21 день
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--orange Предзаказ
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+		// /cards
+
+		include blocks/bottom-blocks.jade
+
+	include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/slick.min.js")
+	script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	//- script(src="js/jquery.vide.min.js")
+	script(src="js/jquery.scrollbar.min.js")
+	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
+	script(src="js/jquery.formstyler.min.js")
+	script(src="js/script.js")

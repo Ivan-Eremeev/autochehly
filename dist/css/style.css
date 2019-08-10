@@ -2325,6 +2325,7 @@ body {
 
 .filter {
   padding: 18px 18px 0;
+  margin-bottom: 60px;
   -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
@@ -2517,6 +2518,7 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none;
     padding: 0;
+    margin-bottom: 0;
   }
   .filter_body {
     display: none;
@@ -2817,7 +2819,7 @@ body {
 }
 
 .image-btn {
-  padding: 64px 0 88px;
+  margin-bottom: 120px;
 }
 
 .image-btn_col {
@@ -2852,6 +2854,7 @@ body {
 @media (max-width: 769px) {
   .image-btn {
     padding: 10px 0;
+    margin-bottom: 0;
   }
   .image-btn_item {
     margin-bottom: 35px;
@@ -3106,6 +3109,14 @@ body {
     width: auto;
     height: auto;
   }
+}
+
+.install {
+  max-width: 780px;
+}
+
+.install--mb {
+  margin-bottom: 100px;
 }
 
 .install .text {
@@ -5121,5 +5132,69 @@ body {
 @media (max-width: 500px) {
   .payment_left {
     margin-bottom: 40px;
+  }
+}
+
+.install-mob {
+  display: none;
+  margin-top: 70px;
+}
+
+.install-mob .text {
+  margin-bottom: 60px;
+}
+
+.install-mob_row {
+  margin-bottom: 80px;
+  border: 1px solid #e11f1f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.install-mob_row:after {
+  content: '';
+  display: table;
+  clear: both;
+  width: 100%;
+}
+
+.install-mob_col {
+  float: left;
+  padding: 25px;
+  width: 50%;
+  font-size: 26px;
+  text-align: center;
+}
+
+.install-mob_col span {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.install-mob_col.active {
+  background-color: #e11f1f;
+  color: #fff;
+}
+
+@media (max-width: 769px) {
+  .install-mob {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .install-mob .text {
+    margin-bottom: 30px;
+  }
+  .install-mob_row {
+    margin-bottom: 30px;
+  }
+  .install-mob_col {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .install-mob_col span {
+    font-size: 20px;
   }
 }

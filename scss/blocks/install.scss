@@ -1,4 +1,8 @@
 .install {
+	max-width: 780px;
+	&--mb {
+		margin-bottom: 100px;
+	}
 	.text {
 		padding: 15px 0 25px;
 	}

@@ -1,5 +1,5 @@
 .image-btn {
-	padding: 64px 0 88px;
+	margin-bottom: 120px;
 	&_col {
 		@include col(6);
 		@include col-sm(12);
@@ -21,6 +21,7 @@
 	}
 	@media (max-width: $break_sm) {
 		padding: 10px 0;
+		margin-bottom: 0;
 		&_item {
 			margin-bottom: 35px;
 		}

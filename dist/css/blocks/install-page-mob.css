@@ -1,0 +1,11 @@
+.install-mob_row:after {
+  content: '';
+  display: table;
+  clear: both;
+  width: 100%;
+}
+
+.install-mob_col {
+  float: left;
+  width: 50%;
+}
