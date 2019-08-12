@@ -1,0 +1,179 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Установка
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		.main-sidebar.mobile-hide
+
+			.sidebar
+
+				// sidebar-item
+				.sidebar-item
+					.sidebar-item_item
+						img(src="img/car.svg", alt="car").sidebar-item_icon.sidebar-item_icon--car
+						.sidebar-item_text Отправка на следующий день
+					.sidebar-item_item
+						img(src="img/hand.svg", alt="hand").sidebar-item_icon.sidebar-item_icon--hand
+						.sidebar-item_text Цены производителя
+				// /sidebar-item
+
+			.main
+				
+				include blocks/filter.jade
+
+		// delivery
+		.delivery
+			h1.title Доставка чехлов
+			.delivery_row
+				.delivery_col
+					p.delivery_text Стоимость доставки зависит от способа оплаты заказа.
+					.delivery_buttons.delivery_buttons--half
+						a(href="#").delivery_btn.js-match-height Наличными при получении
+						a(href="#").delivery_btn.js-match-height Банковской картой на сайте
+			
+			.delivery_row
+
+				.delivery_col
+					p.delivery_text.delivery_text--big-mobile Стоимость и сроки доставки
+					.delivery_buttons
+						a(href="#").delivery_btn.delivery_btn--span.js-match-height В пункт выдачи
+							span 345 Р  - 1 день
+						a(href="#").delivery_btn.delivery_btn--span.js-match-height Почтой РФ
+							span 345 Р  - 1 день
+						a(href="#").delivery_btn.delivery_btn--span.js-match-height Курьером
+							span 345 Р  - 1 день
+
+				.delivery_col
+					p.delivery_text.delivery_text--big-mobile Транспортные компании
+					// transport-company
+					.transport-company
+						a(href="#").transport-company_link
+							img(src="img/dpd.jpg", alt="dpd").transport-company_img.transport-company_img--desktop
+							img(src="img/dpd-mob.jpg", alt="dpd").transport-company_img.transport-company_img--mobile
+						a(href="#").transport-company_link
+							img(src="img/boxberry.jpg", alt="dpd").transport-company_img.transport-company_img--desktop
+							img(src="img/boxberry-mob.jpg", alt="dpd").transport-company_img.transport-company_img--mobile
+						a(href="#").transport-company_link
+							img(src="img/iml.jpg", alt="dpd").transport-company_img.transport-company_img--desktop
+							img(src="img/iml-mob.jpg", alt="dpd").transport-company_img.transport-company_img--mobile
+						a(href="#").transport-company_link
+							img(src="img/pec.jpg", alt="dpd").transport-company_img.transport-company_img--desktop
+							img(src="img/pec-mob.jpg", alt="dpd").transport-company_img.transport-company_img--mobile
+						a(href="#").transport-company_link
+							img(src="img/cdek.jpg", alt="dpd").transport-company_img.transport-company_img--desktop
+							img(src="img/cdek-mob.jpg", alt="dpd").transport-company_img.transport-company_img--mobile
+					// /transport-company
+		// /delivery
+
+		.title Пункты выдачи в Москве
+
+		// contacts-map
+		.contacts-map
+			.contacts-map_map
+				iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" width="100%" height="100%" frameborder="1" allowfullscreen="true")
+		// /contacts-map
+
+		.title Вы смотрели
+
+		// cards
+		.cards
+
+			.row
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--orange
+								span На заказ 14-21 день
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--orange Предзаказ
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+		// /cards
+
+		include blocks/bottom-blocks.jade
+
+	include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/slick.min.js")
+	script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	//- script(src="js/jquery.vide.min.js")
+	script(src="js/jquery.scrollbar.min.js")
+	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
+	script(src="js/jquery.formstyler.min.js")
+	script(src="js/script.js")

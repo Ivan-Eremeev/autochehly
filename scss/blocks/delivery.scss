@@ -1,46 +1,75 @@
 .delivery {
-	&_link {
-		width: 94px;
-		height: 60px;
-		display: inline-block;
-		margin: 2px;
-		position: relative;
+	margin-bottom: 60px;
+	.title {
+		margin-bottom: 20px;
 	}
-	&_img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		&--mobile {
-			display: none;
+	&_text {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	&_buttons {
+		margin-bottom: 70px;
+		border: 1px solid $border;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	&_btn {
+		display: block;
+		float: left;
+		width: 50%;
+		padding: 15px 10px;
+		font-size: 18px;
+		color: $black;
+		text-align: center;
+		&:hover {
+			background-color: $red;
+			color: #fff;
 		}
+		span {
+			display: block;
+			font-size: 12px;
+		}
+		&--span {
+			float: left;
+			width: 33.33%;
+			padding: 6px 10px;
+		}
+		&:not(:last-child) {
+			border-right: 1px solid $border;
+		}
+		&:last-child {
+			float: right;
+		}
+	}
+	&_row {
+		@include row();
+	}
+	&_col {
+		@include col(6);
+		@include col-sm(12);
 	}
 	@media (max-width: $break_sm) {
-		&_link {
-			width: 140px;
-			height: 70px;
-			margin-bottom: 20px;
-		}
-		&_img {
-			&--desktop {
-				display: none;
-			}
-			&--mobile {
-				display: block;
-			}
-		}
+		margin-top: 70px;
 	}
-	@media (max-width: $break_xs) {
-		&_link {
-			width: 94px;
-			height: 60px;
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		.title {
+			margin-bottom: 30px;
 		}
-		&_img {
-			&--desktop {
-				display: block;
+		&_text {
+			margin-bottom: 50px;
+			font-size: 26px;
+			&--big-mobile {
+				font-size: 40px;
+				font-weight: 700;
 			}
-			&--mobile {
-				display: none;
+		}
+		&_buttons {
+			border-radius: 10px;
+		}
+		&_btn {
+			font-size: 30px;
+			span {
+				font-size: 18px;
 			}
 		}
 	}
