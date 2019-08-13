@@ -1437,11 +1437,23 @@ input, select {
 
 @media screen and (max-width: 769px) {
   .wrapper {
-    padding-left: 15px;
+    padding-left: 35px;
   }
 }
 
 @media screen and (max-width: 769px) {
+  .wrapper {
+    padding-right: 35px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding-left: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .wrapper {
     padding-right: 15px;
   }
@@ -2910,7 +2922,7 @@ body {
 }
 
 .card {
-  max-width: 400px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 0 40px 0;
@@ -5308,5 +5320,140 @@ body {
   }
   .delivery_btn span {
     font-size: 18px;
+  }
+}
+
+.buy {
+  max-width: 930px;
+  margin-bottom: 63px;
+}
+
+.buy .title {
+  margin-bottom: 50px;
+}
+
+.buy .text {
+  margin-bottom: 30px;
+}
+
+.buy_select {
+  display: inline-block;
+  margin-bottom: 55px;
+  padding: 3px 0 1px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.buy_link {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  padding-top: 3px;
+  margin: 0 2px 2px 2px;
+  color: #111010;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.buy_link:hover, .buy_link.active {
+  border-color: #e11f1f;
+  color: #e11f1f;
+}
+
+.buy_body {
+  overflow: hidden;
+}
+
+.buy_scroll {
+  max-height: 620px;
+  overflow-y: auto;
+  padding-right: 30px;
+  margin-right: -30px;
+}
+
+.buy .row {
+  position: relative;
+}
+
+.buy_list-title {
+  margin-bottom: 17px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #e11f1f;
+  text-transform: uppercase;
+}
+
+.buy_list {
+  width: 16.66667%;
+  margin-bottom: 56px;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 1050px) {
+  .buy_list {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .buy_list {
+    width: 50%;
+  }
+}
+
+.buy_item {
+  margin-bottom: 18px;
+}
+
+.buy_city {
+  font-size: 15px;
+  color: #111010;
+}
+
+.buy_city:hover {
+  color: #e11f1f;
+}
+
+@media (max-width: 769px) {
+  .buy {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 769px) and (min-width: 501px) {
+  .buy .title {
+    margin-bottom: 30px;
+  }
+  .buy .text {
+    font-size: 26px;
+    margin-bottom: 90px;
+  }
+  .buy_scroll {
+    max-height: 1140px;
+  }
+  .buy_select {
+    padding: 20px 20px 15px;
+    margin-bottom: 45px;
+  }
+  .buy_list-title {
+    margin-bottom: 35px;
+  }
+  .buy_item {
+    margin-bottom: 40px;
+  }
+  .buy_link {
+    width: 40px;
+    height: 40px;
+    margin: 0 3px 5px;
+    font-size: 22px;
+  }
+  .buy_list-title {
+    font-size: 62px;
+  }
+  .buy_city {
+    font-size: 30px;
   }
 }

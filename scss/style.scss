@@ -10,7 +10,8 @@ $columns: 12; // Колличество колонок
 $max-width: 1260px; // Максимальная ширина контейнера
 $gutter: 30px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
-$offset-sm: 15px; // Поля контейнера на мобилке
+$offset-sm: 35px; // Поля контейнера на мобилке
+$offset-xs: 15px; // Поля контейнера на мобилке
 // Брэйкпоинты
 $break_xl: 1400px;
 $break_lg: 1260px;
@@ -88,3 +89,4 @@ $border: #ddd;
 @import 'blocks/payment';
 @import 'blocks/install-mob';
 @import 'blocks/delivery';
+@import 'blocks/buy';

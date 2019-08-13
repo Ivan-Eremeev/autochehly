@@ -1,0 +1,492 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Где купить
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		.main-sidebar.mobile-hide
+
+			.sidebar
+
+				// sidebar-item
+				.sidebar-item
+					.sidebar-item_item
+						img(src="img/car.svg", alt="car").sidebar-item_icon.sidebar-item_icon--car
+						.sidebar-item_text Отправка на следующий день
+					.sidebar-item_item
+						img(src="img/hand.svg", alt="hand").sidebar-item_icon.sidebar-item_icon--hand
+						.sidebar-item_text Цены производителя
+				// /sidebar-item
+
+			.main
+				
+				include blocks/filter.jade
+
+		// buy
+		.buy
+
+			.title Где купить
+
+			.text
+				p География доставки не ограничивается указанным списком городов, для наших клиентов есть доставка в любой населенный пункт РФ. Точные сроки и стоимость указывается в корзине при оформлении заказа.
+
+			#buySelect.buy_select
+				a(href="#cityList1").buy_link.active а
+				a(href="#cityList2").buy_link б
+				a(href="#cityList3").buy_link в
+				a(href="#cityList4").buy_link г
+				a(href="#cityList5").buy_link д
+				a(href="#cityList6").buy_link е
+				a(href="#cityList7").buy_link ж
+				a(href="#cityList8").buy_link з
+				a(href="#cityList9").buy_link и
+				a(href="#cityList10").buy_link к
+				a(href="#cityList11").buy_link л
+				a(href="#cityList12").buy_link м
+				a(href="#cityList13").buy_link н
+				a(href="#cityList14").buy_link о
+				a(href="#cityList15").buy_link п
+				a(href="#cityList16").buy_link р
+				a(href="#cityList17").buy_link с
+				a(href="#cityList18").buy_link т
+				a(href="#cityList19").buy_link у
+				a(href="#cityList20").buy_link ф
+				a(href="#cityList21").buy_link х
+				a(href="#cityList22").buy_link ц
+				a(href="#cityList23").buy_link ч
+				a(href="#cityList24").buy_link э
+				a(href="#cityList25").buy_link ю
+				a(href="#cityList26").buy_link я
+
+			.buy_body
+
+				.buy_scroll
+
+					.row
+
+						ul.buy_list.js-match-height#cityList1
+							li.buy_list-title а
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList2
+							li.buy_list-title б
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+
+						ul.buy_list.js-match-height#cityList3
+							li.buy_list-title в
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList4
+							li.buy_list-title г
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList5
+							li.buy_list-title д
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList6
+							li.buy_list-title е
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList7
+							li.buy_list-title ж
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList8
+							li.buy_list-title з
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList9
+							li.buy_list-title и
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList10
+							li.buy_list-title к
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList11
+							li.buy_list-title л
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList12
+							li.buy_list-title м
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList13
+							li.buy_list-title н
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+						
+						ul.buy_list.js-match-height#cityList14
+							li.buy_list-title о
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList15
+							li.buy_list-title п
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+
+						ul.buy_list.js-match-height#cityList16
+							li.buy_list-title р
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList17
+							li.buy_list-title с
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList18
+							li.buy_list-title т
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList19
+							li.buy_list-title у
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList20
+							li.buy_list-title ф
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList21
+							li.buy_list-title х
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList22
+							li.buy_list-title ц
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList23
+							li.buy_list-title ч
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList24
+							li.buy_list-title э
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList25
+							li.buy_list-title ю
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+
+						ul.buy_list.js-match-height#cityList26
+							li.buy_list-title я
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+							li.buy_item
+								a(href="#").buy_city Астрахань
+							li.buy_item
+								a(href="#").buy_city Архангельск
+							li.buy_item
+								a(href="#").buy_city Апатиты
+		// /buy
+
+		.title Вы смотрели
+
+		// cards
+		.cards
+
+			.row
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--orange
+								span На заказ 14-21 день
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--orange Предзаказ
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+				.cards_col.cards_col--four-col
+					// card
+					.card
+						.card_img.img-responsive
+							a(href="#")
+								img(src="img/catalog/eco3.jpg", alt="cover")
+						.card_content
+							p.card_text.js-match-height Модельные чехлы Audi A3 Sd/Hb 2012 - Жаккард Seintex 86825
+							.card_presens.card_presens--green
+								span В наличии
+							form(action="#").card_order
+								.card_price
+									span 6 290
+									|  руб
+								button(type="submit").card_btn.card_btn--green Купить
+					// /card
+
+		// /cards
+
+		include blocks/bottom-blocks.jade
+
+	include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/slick.min.js")
+	script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	//- script(src="js/jquery.vide.min.js")
+	script(src="js/jquery.scrollbar.min.js")
+	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
+	script(src="js/jquery.formstyler.min.js")
+	script(src="js/script.js")

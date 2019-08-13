@@ -42,6 +42,9 @@ $(document).ready(function () {
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
 	// menuScroll($('#menu'));
 
+	// Скролл в блоке выбора городов
+	cityScroll($('#buySelect'));
+
 	// Stiky menu // Липкое меню. При прокрутке добавляем класс stiky.
 	// stikyMenu($('#header'));
 
@@ -251,11 +254,26 @@ function myMenu(menu) {
 // 				time = 500;
 // 		if ($(scroll_el).length != 0) {
 // 		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, time);
+// 			menuItem.removeClass('active')
 // 			$(this).addClass('active');
 // 		}
 // 		return false;
 // 	});
 // };
+
+// Скролл в блоке выбора городов
+function cityScroll(menuItem) {
+	menuItem.find('a[href^="#"]').click( function(e){
+		e.preventDefault();
+		var scroll_el = $(this).attr('href'),
+				time = 500,
+				blockScroll = $('.buy_scroll');
+		console.log($(scroll_el).position().top);
+		blockScroll.animate({ scrollTop: $(scroll_el).position().top }, time);
+		menuItem.find('a[href^="#"]').removeClass('active');
+		$(this).addClass('active');
+	});
+};
 
 // // Stiky menu // Липкое меню.
 // function stikyMenu(header) {

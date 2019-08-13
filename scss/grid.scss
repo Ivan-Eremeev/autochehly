@@ -49,6 +49,8 @@ $break_xs: 500px;
 	margin-right: auto;
 	@include sm(padding-left, $offset-sm);
 	@include sm(padding-right, $offset-sm);
+	@include xs(padding-left, $offset-xs);
+	@include xs(padding-right, $offset-xs);
 }
 @mixin clearfix() {
 	&:after {
