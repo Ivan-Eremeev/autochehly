@@ -12,6 +12,15 @@
 		border: 1px solid $border;
 		border-radius: 5px;
 		overflow: hidden;
+		input {
+			display: none;
+			&:checked {
+				+ label {
+					background-color: $gray;
+					color: $black;
+				}
+			}
+		}
 	}
 	&_btn {
 		display: block;
@@ -21,6 +30,7 @@
 		font-size: 18px;
 		color: $black;
 		text-align: center;
+		transition: .15s;
 		&:hover {
 			background-color: $red;
 			color: #fff;
@@ -50,6 +60,24 @@
 	}
 	@media (max-width: $break_sm) {
 		margin-top: 70px;
+		&_buttons {
+			input {
+				&:checked {
+					+ label {
+						background-color: $red;
+						color: #fff;
+					}
+				}
+			}
+			&--border-red-mob {
+				border-color: $red;
+				.delivery_btn {
+					&:not(:last-child) {
+						border-color: $red;
+					}
+				}
+			}
+		}
 	}
 	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
 		.title {

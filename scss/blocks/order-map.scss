@@ -1,0 +1,211 @@
+.order-map {
+	background-color: rgba(234,236,240,.8);
+	.title {
+		padding: 40px 70px 40px 43px;
+		margin: 0;
+	}
+	&_body {
+		width: 100%;
+		max-width: 1200px;
+	}
+	&_content {
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+		background-color: #fff;
+		border-radius: 5px;
+	}
+	&_map {
+		height: 520px;
+		overflow: hidden;
+	}
+	&_float-right {
+		float: right;
+	}
+	&_scroll {
+		width: 330px;
+		height: 520px;
+		> .scroll-element.scroll-y {
+			width: 17px;
+		}
+	}
+	&_list {
+		padding: 0 60px 0 34px;
+	}
+	&_item {
+		padding-bottom: 20px;
+		border-bottom: 1px solid $border;
+		margin-bottom: 20px;
+	}
+	&_top {
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
+	}
+	&_img {
+		float: left;
+		width: 100px;
+		height: 60px;
+		position: relative;
+		overflow: hidden;
+		svg {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(0,-50%);
+		}
+		&--boxberry {
+
+		}
+		&--dpd {
+			svg {
+				width: 80px;
+			}
+		}
+		&--pek {
+			svg {
+				width: 80px;
+			}
+		}
+		&--iml {
+			svg {
+				width: 80px;
+			}
+		}
+		&--cdek {
+			svg {
+				width: 80px;
+			}
+		}
+	}
+	&_btn {
+		float: right;
+		height: 30px;
+		padding-top: 3px;
+		margin-top: 14px;
+		font-weight: 400;
+		color: $black;
+		&:hover {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+	&_bottom {
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
+	}
+	&_left {
+		width: 50%;
+	}
+	&_right {
+		float: right;
+	}
+	&_text {
+		font-size: 14px;
+		color: $grayD;
+	}
+	&_price {
+
+	}
+	&_close {
+		top: 48px;
+		right: 45px;
+		background-color: transparent;
+		&:after, &:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $black;
+			position: absolute;
+			top: 9px;
+			left: 0px;
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
+	}
+	@media (max-width: $break_sm) {
+		background-color: #fff;
+		&_body {
+			padding: 10px 15px;
+		}
+		&_content {
+			box-shadow: none;
+		}
+		&_list {
+			padding: 0 30px 0 0px;
+		}
+		.title {
+			padding: 40px 30px 40px 0;
+		}
+		&_map {
+			height: 560px;
+		}
+		&_float-right {
+			float: none;
+			padding-top: 30px;
+		}
+		&_scroll {
+			width: 100%;
+		}
+		&_close {
+			right: 0px;
+		}
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		&_body {
+			padding: 10px 35px;
+		}
+		&_float-right {
+			padding-top: 60px;
+		}
+		&_scroll {
+			> .scroll-element.scroll-y {
+				width: 44px;
+			}
+		}
+		&_list {
+			padding: 0 60px 0 0px;
+		}
+		&_img {
+			width: 150px;
+			height: 100px;
+			svg {
+				width: 150px;
+				height: 100%;
+			}
+		}
+		&_right {
+			font-size: 30px;
+		}
+		&_text {
+			font-size: 30px;
+		}
+		&_btn {
+			width: 100%;
+			max-width: 186px;
+			height: 55px;
+			padding-top: 4px;
+			border-radius: 10px;
+			font-size: 30px;
+			text-align: center;
+		}
+		&_close {
+			width: 40px;
+			height: 40px;
+			&:after, &:before {
+				top: 20px;
+				height: 3px;
+			}
+		}
+	}
+}

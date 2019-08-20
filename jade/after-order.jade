@@ -1,0 +1,83 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Оформление заказа
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		// order
+		.order#calc
+
+			h1.title Оформление заказа
+
+			.order_lot Номер заказа: 
+				span 2Y2-al-0107
+
+			.order_top
+
+				.order_left
+					.order_img.img-responsive
+						img(src="img/catalog/eco3.jpg", alt="cover")
+					p.order_text Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019 седан, хэтчбек фокс CH03-0203-EC27
+
+				.order_right.count
+
+					.order_price-one
+						.order_num-one
+							span#one-price 6290
+							|  руб
+						.order_num-description Цена за комплект
+
+					// item-count
+					.item-count
+						.item-count_controll.item-count_controll--minus#calc-minus &ndash;
+						.item-count_result
+							input(type="text", name="item-count" value="1" readonly)#calc-result
+						.item-count_controll.item-count_controll--plus#calc-plus +
+
+						#reset.order_reset
+					// /item-count
+
+					.order_price-result
+						.order_num
+							span.js-all-price
+							|  руб
+
+			.order_address 
+				.order_address-mob.mobile-visible Доставка: 
+				.order_address-price
+					span 345
+					|  руб
+				p
+					span.mobile-hide Доставка: 
+					span ПВЗ 5, Москва, проспект Вернадского, д 1
+
+			.order_body.order_body--float-left
+
+				.order_grayblock
+					p Заказ передается на отправку после оплаты доставки.
+					p Стоимость товара оплачивается при получении заказа.
+
+				button(type="submit").order_btn Оплатить доставку 
+					span 345
+					|  руб
+
+			.order_ovh
+				.order_ovh-text.mobile-visible Обработку платежей осуществляет ПАО Сбербанк
+				ul.pay_cards
+					li.pay_card.pay_card--big
+						img(src="img/visa.svg", alt="visa-logo").pay_card-img
+					li.pay_card.pay_card--big
+						img(src="img/mastercard.svg", alt="mastercard-logo").pay_card-img
+					li.pay_card.pay_card--big
+						img(src="img/maestro.svg", alt="maestro-logo").pay_card-img
+					li.pay_sberbank
+						img(src="img/sberbank.svg", alt="sbarbank-logo").pay_sberbank-logo
+
+		// /order
+
+	include blocks/footer.jade

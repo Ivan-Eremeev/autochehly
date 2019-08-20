@@ -1,0 +1,550 @@
+.order {
+	margin-top: 70px;
+	margin-bottom: 40px;
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+	.title {
+
+	}
+	&_top {
+		margin-bottom: 50px;
+		overflow: hidden;
+		font-size: 18px;
+	}
+	&_left {
+		float: left;
+		overflow: hidden;
+	}
+	&_right {
+		float: left;
+		overflow: hidden;
+		padding-top: 20px;
+	}
+	&_img {
+		float: left;
+		width: 130px;
+		margin-right: 20px;
+		&:after {
+			padding-top: 100%;
+		}
+	}
+	&_text {
+		float: left;
+		max-width: 250px;
+		margin-right: 66px;
+	}
+	.item-count {
+		padding-top: 5px;
+	}
+	&_price-one {
+		float: left;
+		margin-right: 30px;
+	}
+	&_num-one {
+		span {
+			font-size: 30px;
+		}
+	}
+	&_num-description {
+		font-size: 15px;
+	}
+	&_price-result {
+		float: left;
+		margin-left: 30px;
+	}
+	&_num {
+		font-weight: bold;
+		span {
+			width: 100px;
+			font-size: 30px;
+		}
+	}
+	&_input {
+		display: none;
+	}
+	&_grayblock {
+		padding: 20px;
+		margin-bottom: 50px;
+		background-color: $gray;
+		border-radius: 5px;
+		font-size: 18px;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+	&_body {
+		max-width: 600px;
+		&--float-left {
+			float: left;
+		}
+	}
+	&_title {
+		margin-bottom: 15px;
+		font-size: 30px;
+	}
+	&_field {
+		height: 55px;
+		margin-bottom: 50px;
+		border: 1px solid $border;
+		border-radius: 5px;
+		position: relative;
+		vertical-align: top;
+		overflow: hidden;
+		input {
+			height: 100%;
+			width: 100%;
+			padding: 0 20px;
+			border: none;
+			font-size: 18px;
+		}
+		textarea {
+			display: block;
+			width: 100%;
+			min-height: 124px;
+			padding: 30px 20px 20px;
+			border: none;
+			resize: none;
+			font-size: 18px;
+			outline: none;
+		}
+		label {
+			font-size: 18px;
+			color: $black;
+			position: absolute;
+			top: 50%;
+			left: 20px;
+			transition: .3s;
+			transform: translate(0,-50%);
+			cursor: text;
+		}
+		&--name {
+			float: left;
+			width: 100%;
+			max-width: 330px;
+			margin-right: 10px;
+		}
+		&--tel {
+			float: right;
+			width: 257px;
+		}
+		&--city {
+			margin-bottom: 24px;
+		}
+		&--message {
+			height: auto;
+			margin-bottom: 20px;
+			label {
+				top: 20px;
+			}
+		}
+		&.active {
+			border-color: $green;
+			input {
+				height: auto;
+				color: $green;
+				position: absolute;
+				left: 0;
+				bottom: 5px;
+			}
+			textarea {
+				color: $green;
+			}
+			label {
+				font-size: 12px;
+				top: 5px;
+				color: $grayD;
+				transform: translate(0,0);
+			}
+		}
+		&.error {
+			border-color: $red;
+			input {
+				color: $red;
+			}
+			textarea {
+				color: $red;
+			}
+		}
+	}
+	.delivery_buttons {
+		margin-bottom: 50px;
+		&--mb20 {
+			margin-bottom: 24px;
+		}
+	}
+	&_btn {
+		height: 55px;
+		width: 100%;
+		border: none;
+		border-radius: 5px;
+		background-color: $green;
+		font-size: 18px;
+	}
+	&_reset {
+		display: none;
+	}
+	&_ovh {
+		max-width: 300px;
+		padding-top: 30px;
+		overflow: hidden;
+		padding-left: 50px;
+	}
+	&_ovh-text {
+		font-size: 18px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&_lot {
+		font-size: 18px;
+		margin-bottom: 50px;
+		span {
+			font-weight: 700;
+		}
+	}
+	&_address {
+		max-width: 850px;
+		font-size: 18px;
+		padding-left: 20px;
+		margin-bottom: 30px;
+		p {
+			overflow: hidden;
+			padding-top: 10px;
+		}
+	}
+	&_address-mob {
+		margin-bottom: 30px;
+	}
+	&_address-price {
+		float: right;
+		font-weight: 700;
+		white-space: nowrap;
+		span {
+			font-size: 30px;
+		}
+	}
+	@media (max-width: $break_sm) {
+		&_body {
+			max-width: none;
+			&--float-left {
+				float: none;
+			}
+		}
+		&_grayblock {
+			span {
+				font-weight: 400;
+			}
+		}
+		&_left {
+			width: 55%;
+			padding-right: 15px;
+		}
+		&_text {
+			max-width: none;
+			margin-right: 0;
+		}
+		&_img {
+			display: none;
+		}
+		&_right {
+			width: 45%;
+			padding-top: 0;
+			padding-left: 40px;
+		}
+		&_price-one {
+			float: none;
+		}
+		&_num-one {
+			font-weight: 600;
+		}
+		.item-count {
+			float: none;
+		}
+		&_price-result {
+			display: none;
+		}
+		&_body {
+			max-width: none;
+		}
+		&_reset {
+			display: inline-block;
+			width: 40px;
+			height: 45px;
+			position: relative;
+			&:after, &:before {
+				content: '';
+				display: block;
+				width: 15px;
+				height: 2px;
+				background-color: $grayD;
+				position: absolute;
+				top: 22px;
+				left: 12px;
+				cursor: pointer;
+			}
+			&:after {
+				transform: rotate(45deg);
+			}
+			&:before {
+				transform: rotate(-45deg);
+			}
+		}
+		&_field {
+			max-width: none;
+			width: 100%;
+		}
+		&_address {
+			font-weight: 600;
+			padding-left: 0;
+			p {
+				width: 50%;
+			}
+			span {
+				font-weight: 400;
+			}
+		}
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		&_grayblock {
+			font-size: 26px;
+		}
+		&_text {
+			font-size: 26px;
+		}
+		&_num-one {
+			font-size: 24px;
+			span {
+				font-size: 40px;
+			}
+		}
+		&_num-description {
+			font-size: 22px;
+		}
+		&_reset {
+			width: 60px;
+			height: 60px;
+			&:after, &:before {
+				width: 30px;
+				height: 3px;
+				top: 32px;
+				left: 17px;
+			}
+		}
+		&_title {
+			margin-bottom: 40px;
+			font-size: 40px;
+			font-weight: 700;
+		}
+		&_field {
+			border-radius: 10px;
+			height: 92px;
+			input {
+				padding: 0 30px;
+				font-size: 30px;
+			}
+			textarea {
+				min-height: 260px;
+				padding: 40px 30px 30px;
+				font-size: 30px;
+			}
+			label {
+				left: 30px;
+				font-size: 30px;
+			}
+			&.active {
+				label {
+					font-size: 18px;
+					top: 10px;
+				}
+			}
+			&--name {
+				margin-bottom: 40px;
+			}
+			&--tel {
+				margin-bottom: 65px;
+			}
+			&--city {
+				margin-bottom: 35px;
+			}
+			&--message {
+				height: auto;
+				margin-bottom: 50px;
+				label {
+					top: 40px;
+				}
+			}
+		}
+		.delivery_buttons--mb20 {
+			margin-bottom: 35px;
+		}
+		&_btn {
+			max-width: 650px;
+			height: 112px;
+			border-radius: 10px;
+			font-size: 30px;
+		}
+		&_address {
+			font-size: 26px;
+		}
+		&_address-price {
+			span {
+				font-size: 40px;
+				font-weight: 600;
+			}
+		}
+		&_grayblock {
+			padding: 40px 30px;
+		}
+		&_ovh {
+			max-width: none;
+			margin-top: 20px;
+		}
+		&_lot {
+			font-size: 30px;
+		}
+	}
+	@media (max-width: $break_xs) {
+		&_left {
+			width: 100%;
+		}
+		&_text {
+			margin-bottom: 15px;
+		}
+		&_right {
+			width: 100%;
+			padding-left: 0;
+		}
+		&_field {
+			margin-bottom: 24px;
+		}
+		&_lot {
+			margin-bottom: 20px;
+		}
+	}
+}
+.points-delivery {
+	margin-bottom: 24px;
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+	&_field {
+		float: left;
+		height: 55px;
+		width: 100%;
+		max-width: 400px;
+		padding: 5px 100px 0 20px;
+		margin-right: 10px;
+		border: 1px solid $border;
+		border-radius: 5px;
+		position: relative;
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+			width: 100%;
+		}
+	}
+	&_label {
+		font-size: 12px;
+		color: $grayD;
+	}
+	&_text {
+		font-size: 18px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: clip;
+	}
+	&_logo {
+		width: 75px;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translate(0,-50%);
+		svg {
+			display: block;
+		}
+	}
+	&_btn {
+		float: right;
+		width: 180px;
+		height: 55px;
+		padding-top: 14px;
+		background-color: $gray;
+		border-radius: 5px;
+		cursor: pointer;
+		text-align: center;
+		font-size: 18px;
+		transition: .15s;
+		&:hover {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+	@media (max-width: $break_sm) {
+		&_field {
+			margin-bottom: 24px;
+		}
+		&_btn {
+			width: 100%;
+		}
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		margin-bottom: 35px;
+		&_field {
+			float: none;
+			max-width: none;
+			height: 92px;
+			margin-bottom: 35px;
+			padding: 10px 100px 0 30px;
+		}
+		&_label {
+			font-size: 18px;
+		}
+		&_text {
+			font-size: 30px;
+		}
+		&_btn {
+			height: 77px;
+			font-size: 30px;
+			color: $red;
+			padding-top: 15px;
+		}
+		&_logo {
+			width: 130px;
+		}
+	}
+}
+.order-result {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	font-size: 18px;
+	&--big {
+		font-size: 30px;
+		margin-bottom: 20px;
+		span {
+			font-weight: 700;
+		}
+	}
+	@media (max-width: $break_sm) {
+		float: none;
+	}
+	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
+		margin-bottom: 20px;
+		font-size: 28px;
+		&--big {
+			margin-bottom: 40px;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Заказ оплачен
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		// order-paid
+		.order-paid
+
+			.order-paid_content
+
+				.title Заказ оплачен
+
+				.order_lot Номер заказа: 
+					span 2Y2-al-0107
+				p СМС об изменениях статуса заказа будут отправлены на номер 
+					span +7 919 343-34-34.
+				p Заказ будет доставлен 
+					span 2 июля по 
+					|  адресу: 
+					span <br>ПВЗ 5, Москва, проспект Вернадского д 1.
+				p.mobile-hide Спасибо за заказ.
+
+			.order-paid_map
+				iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" frameborder="1" allowfullscreen="true" width="100%" height="100%")
+
+			.order-paid_mob.mobile-visible Спасибо за заказ.
+			
+		// /order-paid
+
+	include blocks/footer.jade

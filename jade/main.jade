@@ -53,12 +53,13 @@ block content
 		.image-btn
 			.row
 				.image-btn_col
-					a(href="#").image-btn_item.data-img(data-img="img/cover-eco.jpg")
+					a(href="#").image-btn_item
 						.image-btn_title Модельные чехлы из экокожи
+						.image-btn_img.data-img(data-img="img/cover-eco.jpg")
 				.image-btn_col
-					a(href="#").image-btn_item.data-img(data-img="img/cover-combo.jpg")
+					a(href="#").image-btn_item
 						.image-btn_title Модельные чехлы комбинированные
-		// /image-btn
+						.image-btn_img.data-img(data-img="img/cover-combo.jpg")
 
 		// cards-slider
 		.cards-slider
@@ -180,21 +181,3 @@ block content
 		include blocks/bottom-blocks.jade
 
 	include blocks/footer.jade
-
-block js
-	script(src="js/jquery-3.2.1.min.js")
-	//- script(src="js/jquery.fancybox.min.js")
-	script(src="js/slick.min.js")
-	script(src="js/jquery.matchHeight-min.js")
-	//- script(src="js/jquery.inputmask.bundle.min.js")
-	//- script(src="js/autosize.min.js")
-	//- script(src="js/tooltipster.bundle.min.js")
-	//- script(src="js/jquery.mmenu.all.js")
-	//- script(src="js/wow.min.js")
-	//- script(src="js/fullpage.min.js")
-	//- script(src="js/jquery.vide.min.js")
-	script(src="js/jquery.scrollbar.min.js")
-	//- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-	//- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y"></script>
-	script(src="js/jquery.formstyler.min.js")
-	script(src="js/script.js")

@@ -1,0 +1,217 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Оформление заказа
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		// order
+		form(action="#").order#calc
+
+			h1.title Оформление заказа
+
+			.order_top
+
+				.order_left
+					.order_img.img-responsive
+						img(src="img/catalog/eco3.jpg", alt="cover")
+					p.order_text Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019 седан, хэтчбек фокс CH03-0203-EC27
+
+				.order_right.count
+
+					.order_price-one
+						.order_num-one
+							span#one-price 6290
+							|  руб
+						.order_num-description Цена за комплект
+
+					// item-count
+					.item-count
+						.item-count_controll.item-count_controll--minus#calc-minus &ndash;
+						.item-count_result
+							input(type="text", name="item-count" value="1" readonly)#calc-result
+						.item-count_controll.item-count_controll--plus#calc-plus +
+
+						#reset.order_reset
+					// /item-count
+
+					.order_price-result
+						.order_num
+							span.js-all-price
+							|  руб
+
+			.order_body
+
+				.order_grayblock
+					p Данный товар отгружается по предоплате 50%, под заказ, сроки изоговления 12-20 дней.
+					p Первый платеж: предоплата 50% + доставка 
+						span 345
+						|  руб. Второй платеж: наличными при получении товара 
+						span 3145 
+						|  руб.
+
+				.order_title Покупатель
+				.clearfix
+					.order_field.order_field--name
+						input#order-name(type="text" name="name").js-input-focus
+						label(for="order-name") Имя и фамилия
+					.order_field.order_field--tel.error
+						input#order-tel(type="tel" name="tel").js-input-focus
+						label(for="order-tel") Телефон
+
+				.order_title Оплата 
+
+				.delivery_buttons.delivery_buttons--border-red-mob
+					input#order-pay1(type="radio", name="order-pay" checked)
+					label(for="order-pay1").delivery_btn.js-match-height Наличными при получении
+					input#order-pay2(type="radio", name="order-pay")
+					label(for="order-pay2").delivery_btn.js-match-height Банковской картой на сайте
+
+				.order_title Доставка
+
+				.order_field.order_field--city
+					input#order-city(type="text" name="city").js-input-focus
+					label(for="order-city") Город или населенный пункт
+
+				#delivery-buttons.delivery_buttons--border-red-mob.delivery_buttons.delivery_buttons--mb20
+					input#order-delivery1(type="radio", name="order-delivery" checked data-price="445")
+					label(for="order-delivery1").delivery_btn.delivery_btn--span.js-match-height В пункт выдачи
+						span 445 Р  - 3 дня
+					input#order-delivery2(type="radio", name="order-delivery" data-price="330")
+					label(for="order-delivery2").delivery_btn.delivery_btn--span.js-match-height Почтой РФ
+						span 330 Р  - 5 дней
+					input#order-delivery3(type="radio", name="order-delivery" data-price="650")
+					label(for="order-delivery3").delivery_btn.delivery_btn--span.js-match-height Курьером
+						span 650 Р  - 1 день
+
+				.points-delivery
+					.points-delivery_field
+						.points-delivery_label Пункт выдачи
+						.points-delivery_text Пощадь революции, д. 12
+						.points-delivery_logo
+							img(src="img/cdek.svg", alt="cdek")
+					.points-delivery_btn.modal-trigger(data-modal="#order-map") Изменить
+
+				.order_field.order_field--message
+					textarea#order-message(name="message").js-input-focus
+					label(for="order-message") Комментарий к заказу
+
+				.clearfix
+
+					.order-result Стоимость товара: 
+						span.js-all-price
+						|  руб.
+
+					.order-result Доставка: 
+						span#delivery-price
+						|  руб.
+
+				.order-result.order-result--big Итого: 
+					span#result-price
+					|  руб.
+
+				input#all-price-input(type="text" name="all-price").order_input
+				input#delivery-price-input(type="text", name="delivery-price").order_input
+				input#result-price-input(type="text", name="result-price").order_input
+
+				button(type="submit").order_btn Отправить заказ
+
+		// /order
+
+		// order-map
+		#order-map.order-map.modal
+			.modal_body.order-map_body
+				.modal_content.order-map_content
+					.title Пункты выдачи в Москве
+					
+					.clearfix
+						.order-map_mobileto
+
+						.order-map_float-right
+
+							.js-scrollbar.scrollbar-inner.order-map_scroll
+
+								ul.order-map_list
+
+									li.order-map_item
+										.order-map_top
+											.order-map_img.order-map_img--boxberry
+												img(src="img/boxberry.svg", alt="boxberry")
+											.order-map_btn.btn.btn--gray Выбрать
+										.order-map_bottom
+											.order-map_right
+												.order-map_price
+													span 345
+													|  р
+												.order-map_text 1 день
+											.order-map_left
+												.order-map_text ул. Золоторожский Вал, 38, стр. 1
+
+									li.order-map_item
+										.order-map_top
+											.order-map_img.order-map_img--dpd
+												img(src="img/dpd.svg", alt="dpd")
+											.order-map_btn.btn.btn--gray Выбрать
+										.order-map_bottom
+											.order-map_right
+												.order-map_price
+													span 345
+													|  р
+												.order-map_text 1 день
+											.order-map_left
+												.order-map_text ул. Золоторожский Вал, 38, стр. 1
+
+									li.order-map_item
+										.order-map_top
+											.order-map_img.order-map_img--pek
+												img(src="img/pek.svg", alt="pek")
+											.order-map_btn.btn.btn--gray Выбрать
+										.order-map_bottom
+											.order-map_right
+												.order-map_price
+													span 345
+													|  р
+												.order-map_text 1 день
+											.order-map_left
+												.order-map_text ул. Золоторожский Вал, 38, стр. 1
+
+									li.order-map_item
+										.order-map_top
+											.order-map_img.order-map_img--iml
+												img(src="img/iml.svg", alt="iml")
+											.order-map_btn.btn.btn--gray Выбрать
+										.order-map_bottom
+											.order-map_right
+												.order-map_price
+													span 345
+													|  р
+												.order-map_text 1 день
+											.order-map_left
+												.order-map_text ул. Золоторожский Вал, 38, стр. 1
+
+									li.order-map_item
+										.order-map_top
+											.order-map_img.order-map_img--cdek
+												img(src="img/cdek.svg", alt="cdek")
+											.order-map_btn.btn.btn--gray Выбрать
+										.order-map_bottom
+											.order-map_right
+												.order-map_price
+													span 345
+													|  р
+												.order-map_text 1 день
+											.order-map_left
+												.order-map_text ул. Золоторожский Вал, 38, стр. 1
+
+						.order-map_map
+							iframe(src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&z=12" frameborder="1" allowfullscreen="true" width="100%" height="100%")
+
+					.modal_close.order-map_close
+		// /order-map
+
+	.mobile-hide
+		include blocks/footer.jade

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Авточехлы - Оформление заказа</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- header-->
+    <header class="header" id="header">
+      <div class="wrapper">
+        <div class="header_left">
+          <div class="menu" id="menu">
+            <div class="menu_btn" id="menu-btn"></div>
+            <nav class="menu_nav">
+              <div class="menu_header">
+                <div class="menu_close" id="menu-close"></div><a class="logo" href="main.html"><img src="img/logo.svg" alt="logo"></a>
+              </div>
+              <ul class="menu_list">
+                <li class="menu_item"><a class="menu_link" href="#">Доставка</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Оплата</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Установка чехлов</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Индивидуальный пошив</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Где купить</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Контакты</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Отзывы</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Отслеживание заказа</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Гарантия и возврат</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Скидки и акции</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Правила продажи</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Политика конфиденциальности</a></li>
+              </ul>
+            </nav>
+          </div><a class="logo logo--desktop" href="main.html"><img src="img/logo.svg" alt="logo"></a>
+          <div class="location-wrapper"><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a></div>
+        </div>
+        <div class="header_right">
+          <div class="call"><a href="tel:88006005429"><img class="call_img mobile-hide" src="img/call.svg" alt="call"><img class="call_img mobile-visible" src="img/call-mob.svg" alt="call"></a>
+            <div class="call_content mobile-hide--md"><a class="call_num" href="tel:88006005429">8 800 600-54-29</a>
+              <div class="call_text">Ежедневно с 9 до 21</div>
+            </div>
+          </div>
+          <div class="cart"><a class="cart_img" href="#"><img class="mobile-hide" src="img/cart.svg" alt="cart"><img class="mobile-visible" src="img/cart-mob.svg" alt="cart"><span class="cart_count">4</span></a><a class="cart_btn mobile-hide" href="#">Оформить заказ</a></div>
+        </div>
+      </div>
+    </header>
+    <!-- /header-->
+    <div class="wrapper">
+      <!-- order-->
+      <form class="order" action="#" id="calc">
+        <h1 class="title">Оформление заказа</h1>
+        <div class="order_top">
+          <div class="order_left">
+            <div class="order_img img-responsive"><img src="img/catalog/eco3.jpg" alt="cover"></div>
+            <p class="order_text">Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019 седан, хэтчбек фокс CH03-0203-EC27</p>
+          </div>
+          <div class="order_right count">
+            <div class="order_price-one">
+              <div class="order_num-one"><span id="one-price">6290</span> руб</div>
+              <div class="order_num-description">Цена за комплект</div>
+            </div>
+            <!-- item-count-->
+            <div class="item-count">
+              <div class="item-count_controll item-count_controll--minus" id="calc-minus">&ndash;</div>
+              <div class="item-count_result">
+                <input type="text" name="item-count" value="1" readonly id="calc-result">
+              </div>
+              <div class="item-count_controll item-count_controll--plus" id="calc-plus">+</div>
+              <div class="order_reset" id="reset"></div>
+            </div>
+            <!-- /item-count-->
+            <div class="order_price-result">
+              <div class="order_num"><span class="js-all-price"></span> руб</div>
+            </div>
+          </div>
+        </div>
+        <div class="order_body">
+          <div class="order_grayblock">
+            <p>Данный товар отгружается по предоплате 50%, под заказ, сроки изоговления 12-20 дней.</p>
+            <p>Первый платеж: предоплата 50% + доставка <span>345</span> руб. Второй платеж: наличными при получении товара <span>3145 </span> руб.</p>
+          </div>
+          <div class="order_title">Покупатель</div>
+          <div class="clearfix">
+            <div class="order_field order_field--name">
+              <input class="js-input-focus" id="order-name" type="text" name="name">
+              <label for="order-name">Имя и фамилия</label>
+            </div>
+            <div class="order_field order_field--tel error">
+              <input class="js-input-focus" id="order-tel" type="tel" name="tel">
+              <label for="order-tel">Телефон</label>
+            </div>
+          </div>
+          <div class="order_title">Оплата </div>
+          <div class="delivery_buttons delivery_buttons--border-red-mob">
+            <input id="order-pay1" type="radio" name="order-pay" checked>
+            <label class="delivery_btn js-match-height" for="order-pay1">Наличными при получении</label>
+            <input id="order-pay2" type="radio" name="order-pay">
+            <label class="delivery_btn js-match-height" for="order-pay2">Банковской картой на сайте</label>
+          </div>
+          <div class="order_title">Доставка</div>
+          <div class="order_field order_field--city">
+            <input class="js-input-focus" id="order-city" type="text" name="city">
+            <label for="order-city">Город или населенный пункт</label>
+          </div>
+          <div class="delivery_buttons--border-red-mob delivery_buttons delivery_buttons--mb20" id="delivery-buttons">
+            <input id="order-delivery1" type="radio" name="order-delivery" checked data-price="445">
+            <label class="delivery_btn delivery_btn--span js-match-height" for="order-delivery1">В пункт выдачи<span>445 Р  - 3 дня</span></label>
+            <input id="order-delivery2" type="radio" name="order-delivery" data-price="330">
+            <label class="delivery_btn delivery_btn--span js-match-height" for="order-delivery2">Почтой РФ<span>330 Р  - 5 дней</span></label>
+            <input id="order-delivery3" type="radio" name="order-delivery" data-price="650">
+            <label class="delivery_btn delivery_btn--span js-match-height" for="order-delivery3">Курьером<span>650 Р  - 1 день</span></label>
+          </div>
+          <div class="points-delivery">
+            <div class="points-delivery_field">
+              <div class="points-delivery_label">Пункт выдачи</div>
+              <div class="points-delivery_text">Пощадь революции, д. 12</div>
+              <div class="points-delivery_logo"><img src="img/cdek.svg" alt="cdek"></div>
+            </div>
+            <div class="points-delivery_btn modal-trigger" data-modal="#order-map">Изменить</div>
+          </div>
+          <div class="order_field order_field--message">
+            <textarea class="js-input-focus" id="order-message" name="message"></textarea>
+            <label for="order-message">Комментарий к заказу</label>
+          </div>
+          <div class="clearfix">
+            <div class="order-result">Стоимость товара: <span class="js-all-price"></span> руб.</div>
+            <div class="order-result">Доставка: <span id="delivery-price"></span> руб.</div>
+          </div>
+          <div class="order-result order-result--big">Итого: <span id="result-price"></span> руб.</div>
+          <input class="order_input" id="all-price-input" type="text" name="all-price">
+          <input class="order_input" id="delivery-price-input" type="text" name="delivery-price">
+          <input class="order_input" id="result-price-input" type="text" name="result-price">
+          <button class="order_btn" type="submit">Отправить заказ</button>
+        </div>
+      </form>
+      <!-- /order-->
+      <!-- order-map-->
+      <div class="order-map modal" id="order-map">
+        <div class="modal_body order-map_body">
+          <div class="modal_content order-map_content">
+            <div class="title">Пункты выдачи в Москве</div>
+            <div class="clearfix">
+              <div class="order-map_mobileto"></div>
+              <div class="order-map_float-right">
+                <div class="js-scrollbar scrollbar-inner order-map_scroll">
+                  <ul class="order-map_list">
+                    <li class="order-map_item">
+                      <div class="order-map_top">
+                        <div class="order-map_img order-map_img--boxberry"><img src="img/boxberry.svg" alt="boxberry"></div>
+                        <div class="order-map_btn btn btn--gray">Выбрать</div>
+                      </div>
+                      <div class="order-map_bottom">
+                        <div class="order-map_right">
+                          <div class="order-map_price"><span>345</span> р</div>
+                          <div class="order-map_text">1 день</div>
+                        </div>
+                        <div class="order-map_left">
+                          <div class="order-map_text">ул. Золоторожский Вал, 38, стр. 1</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="order-map_item">
+                      <div class="order-map_top">
+                        <div class="order-map_img order-map_img--dpd"><img src="img/dpd.svg" alt="dpd"></div>
+                        <div class="order-map_btn btn btn--gray">Выбрать</div>
+                      </div>
+                      <div class="order-map_bottom">
+                        <div class="order-map_right">
+                          <div class="order-map_price"><span>345</span> р</div>
+                          <div class="order-map_text">1 день</div>
+                        </div>
+                        <div class="order-map_left">
+                          <div class="order-map_text">ул. Золоторожский Вал, 38, стр. 1</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="order-map_item">
+                      <div class="order-map_top">
+                        <div class="order-map_img order-map_img--pek"><img src="img/pek.svg" alt="pek"></div>
+                        <div class="order-map_btn btn btn--gray">Выбрать</div>
+                      </div>
+                      <div class="order-map_bottom">
+                        <div class="order-map_right">
+                          <div class="order-map_price"><span>345</span> р</div>
+                          <div class="order-map_text">1 день</div>
+                        </div>
+                        <div class="order-map_left">
+                          <div class="order-map_text">ул. Золоторожский Вал, 38, стр. 1</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="order-map_item">
+                      <div class="order-map_top">
+                        <div class="order-map_img order-map_img--iml"><img src="img/iml.svg" alt="iml"></div>
+                        <div class="order-map_btn btn btn--gray">Выбрать</div>
+                      </div>
+                      <div class="order-map_bottom">
+                        <div class="order-map_right">
+                          <div class="order-map_price"><span>345</span> р</div>
+                          <div class="order-map_text">1 день</div>
+                        </div>
+                        <div class="order-map_left">
+                          <div class="order-map_text">ул. Золоторожский Вал, 38, стр. 1</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="order-map_item">
+                      <div class="order-map_top">
+                        <div class="order-map_img order-map_img--cdek"><img src="img/cdek.svg" alt="cdek"></div>
+                        <div class="order-map_btn btn btn--gray">Выбрать</div>
+                      </div>
+                      <div class="order-map_bottom">
+                        <div class="order-map_right">
+                          <div class="order-map_price"><span>345</span> р</div>
+                          <div class="order-map_text">1 день</div>
+                        </div>
+                        <div class="order-map_left">
+                          <div class="order-map_text">ул. Золоторожский Вал, 38, стр. 1</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="order-map_map">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&amp;z=12" frameborder="1" allowfullscreen="true" width="100%" height="100%"></iframe>
+              </div>
+            </div>
+            <div class="modal_close order-map_close"></div>
+          </div>
+        </div>
+      </div>
+      <!-- /order-map-->
+    </div>
+    <div class="mobile-hide">
+      <!-- footer-->
+      <footer class="footer"> 
+        <div class="wrapper"> 
+          <div class="footer_top">
+            <div class="row">
+              <div class="footer_col">
+                <ul class="footer_nav">
+                  <li class="footer_item"><a class="footer_link" href="#">Доставка</a></li>
+                  <li class="footer_item"><a class="footer_link" href="#">Оплата</a></li>
+                  <li class="footer_item"><a class="footer_link" href="#">Установка чехлов</a></li>
+                  <li class="footer_item"><a class="footer_link" href="#">Индивидуальный пошив</a></li>
+                  <li class="footer_item"><a class="footer_link" href="#">Где купить</a></li>
+                </ul>
+              </div>
+              <div class="footer_col">
+                <ul class="footer_nav">
+                  <li class="footer_item"><a class="footer_link" href="#">Контакты</a></li>
+                  <li class="footer_item"><a class="footer_link" href="#">Отзывы</a></li>
+                  <li class="footer_item"><a class="footer_link" href="#">Отслеживание заказа</a></li>
+                  <li class="footer_item"><a class="footer_link" href="#">Гарантия и возврат</a></li>
+                  <li class="footer_item"><a class="footer_link" href="#">Скидки и акции</a></li>
+                </ul>
+              </div>
+              <div class="footer_col mobile-visible">
+                <div class="footer_rectangle"></div>
+              </div>
+              <div class="footer_col">
+                <div class="call_content"><a class="call_num" href="tel:88006005429">8 800 600-54-29</a>
+                  <div class="call_text">Ежедневно с 9 до 21</div>
+                </div>
+                <div class="social">
+                  <ul class="social_list">
+                    <li class="social_item"><a class="social_link" href="#"><img class="social_icon" src="img/whatsapp.svg" alt="whatsapp"></a></li>
+                    <li class="social_item"><a class="social_link" href="#"><img class="social_icon" src="img/viber.svg" alt="viber"></a></li>
+                    <li class="social_item"><a class="social_link" href="#"><img class="social_icon" src="img/telegram.svg" alt="telegram"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer_col mobile-hide">
+                <div class="footer_rectangle"></div>
+              </div>
+              <div class="footer_col mobile-hide"><a class="footer_logo" href="main.html"><img src="img/logo.svg" alt="logo"></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="wrapper">
+            <div class="row">
+              <div class="footer_bottom_col">© 2019 ООО AutoChekhly.ru </div>
+              <div class="footer_bottom_col"><a class="footer_linkb" href="#">Правила продажи </a></div>
+              <div class="footer_bottom_col-big"><a class="footer_linkb" href="#">Политика  конфиденциальности</a></div>
+            </div>
+            <div class="footer_wings"><img src="img/wings.svg" alt="wings"></div><a class="footer_logo-mobile" href="main.html"><img src="img/logo.svg" alt="logo"></a>
+          </div>
+        </div>
+      </footer>
+      <!-- /footer-->
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/jquery.matchHeight-min.js"></script>
+      <script src="js/jquery.inputmask.bundle.min.js"></script>
+      <script src="js/autosize.min.js"></script>
+      <script src="js/jquery.scrollbar.min.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>
