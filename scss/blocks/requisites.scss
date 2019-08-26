@@ -11,24 +11,17 @@
 			margin-bottom: 15px;
 		}
 	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		margin-bottom: 80px;
-		.title {
-			margin-bottom: 60px;
-		}
-		&_text {
-			max-width: none;
-			border-radius: 10px;
-			font-size: 26px;
-		}
-		p {
-			margin-bottom: 30px;
-		}
-	}
 	@media (max-width: $break_xs) {
 		margin-bottom: 40px;
 		.title {
 			margin-bottom: 30px;
+		}
+		&_text {
+			padding: 10px 15px;
+			font-size: 13px;
+			p {
+				margin-bottom: 10px;
+			}
 		}
 	}
 }

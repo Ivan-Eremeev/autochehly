@@ -81,6 +81,7 @@ $(document).ready(function () {
 
 	// Простая выпадайка
 	easyDropdown($('#item-map-open'), $('.item-map_dropdown'));
+	easyDropdown($('.location-wrapper'), $('.location-dropdown'));
 
 	// Вставляет svg в html, позволяет управлять цветом через css 
 	$('img[src$=".svg"]').each(function(){
@@ -120,9 +121,9 @@ function myMenu(menu) {
 			close = menu.find('#menu-close'),
 			documentWidth = parseInt(document.documentElement.clientWidth),
 			windowsWidth = parseInt(window.innerWidth),
-			scrollbarWidth = windowsWidth - documentWidth,
 			html = $('html');
 	menuBtn.click(function () {
+		var scrollbarWidth = windowsWidth - documentWidth;
 		html.toggleClass('lock').css('padding-right',scrollbarWidth);
 		menu.toggleClass('open');
 		menuBtn.toggleClass('is-active');
@@ -141,8 +142,7 @@ function cityScroll(menuItem) {
 		var scroll_el = $(this).attr('href'),
 				time = 500,
 				blockScroll = $('.buy_scroll');
-		console.log($(scroll_el).position().top);
-		blockScroll.animate({ scrollTop: $(scroll_el).position().top }, time);
+		blockScroll.animate({ scrollLeft: $(scroll_el).position().left }, time);
 		menuItem.find('a[href^="#"]').removeClass('active');
 		$(this).addClass('active');
 	});
@@ -356,6 +356,7 @@ function itemTabs() {
 
 // Простая выпадайка
 function easyDropdown(link, drop) {
+	var	close = drop.find('.js-close');
 	link.click(function() {
 		if (!link.hasClass('active')) {
 			$(this).addClass('active');
@@ -364,6 +365,10 @@ function easyDropdown(link, drop) {
 			link.removeClass('active');
 			drop.removeClass('open');
 		}
+	});
+	close.click(function() {
+		link.removeClass('active');
+		drop.removeClass('open');
 	});
 };
 
@@ -395,12 +400,12 @@ function calcPrice() {
 			resultPriceInput = $('#result-price-input'),
 			deliveryButtons = $('#delivery-buttons input'),
 			val = 1;
+	deliveryPrice.text($('#delivery-buttons input:checked').data('price'));
 	allPrice.text(onePrice.text() * val);
-	resultPrice.text(onePrice.text() * val + parseInt(deliveryPrice.text()));
 	allPriceInput.val(onePrice.text() * val);
+	resultPrice.text(onePrice.text() * val + parseInt(deliveryPrice.text()));
 	deliveryPriceInput.val(deliveryPrice.text());
 	resultPriceInput.val(resultPrice.text());
-	deliveryPrice.text($('#delivery-buttons input:checked').data('price'));
 	minus.click(function() {
 		if (val > 1) {
 			val --;

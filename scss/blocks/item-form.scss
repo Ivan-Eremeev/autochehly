@@ -44,8 +44,8 @@
 		}
 		img {
 			display: block;
-			width: 48px;
-			height: 29px;
+			width: 100%;
+			height: 100%;
 			border-radius: 3px;
 		}
 	}
@@ -73,64 +73,56 @@
 		max-width: 240px;
 		font-size: 18px;
 	}
-	@media (max-width: $break_sm) and (min-width: $break_xs) {
+	@media (max-width: $break_sm) {
 		&_text {
-			font-size: 22px;
-			margin-bottom: 30px;
+			font-size: 11px;
+			margin-bottom: 20px;
 		}
 		&_materials {
-			max-width: 480px;
+			max-width: none;
+			width: calc(100% - 83px);
+			margin-right: 13px;
+			margin-bottom: 0;
 		}
 		&_colors {
-			width: 100%;
-			max-width: 140px;
-		}
-		&_select {
-			border-radius: 10px;
+			float: right;
+			width: 70px;
+			margin-bottom: 0;
 		}
 		&_trigger {
-			height: 90px;
-			padding: 22px 0 0 20px;
-			font-size: 30px;
+			height: 47px;
+			padding: 12px 30px 0 15px;
+			font-size: 15px;
 			span {
-				height: 40px;
-			}
-			img {
-				width: 110px;
-				height: 68px;
+				height: 20px;
 			}
 			&--colors {
-				padding: 12px 14px;
+				padding: 5px 5px;
 			}
 		}
 		&_arrow {
-			font-size: 50px;
-			top: 20px;
+			font-size: 30px;
+			top: 10px;
 		}
 		&_price {
-			font-size: 40px;
+			font-size: 17px;
 			span {
-				font-size: 75px;
+				font-size: 37px;
 			}
 		}
 		.btn {
 			float: none;
 			display: block;
-			max-width: 480px;
-			height: 92px;
-			margin-bottom: 30px;
-			border-radius: 10px;
-			font-size: 30px;
+			max-width: 242px;
+			height: 47px;
+			margin-bottom: 10px;
+			margin-top: -12px;
+			font-size: 15px;
 			font-weight: 900;
 		}
 	}
-	@media (max-width: $break_xs) {
-		.btn {
-			float: none;
-			margin-bottom: 30px;
-		}
-	}
 }
+
 
 .item-dropdown {
 	display: none;
@@ -144,6 +136,9 @@
 	z-index: 2;
 	&.open {
 		display: block;
+	}
+	&_row {
+		margin-left: -7px;
 	}
 	&_item {
 		display: inline-block;
@@ -166,7 +161,7 @@
 		}
 		&--colors {
 			width: auto;
-			margin-right: 7px;
+			margin-left: -7px;
 			position: relative;
 			label {
 				border: 1px solid transparent;
@@ -177,8 +172,9 @@
 					display: none;
 					position: absolute;
 					font-size: 24px;
-					top: 7px;
-					left: 18px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
 					color: #fff;
 				}
 				&:hover {
@@ -196,32 +192,33 @@
 			color: $red;
 		}
 		img {
-			width: 48px;
-			height: 27px;
+			width: 100%;
+			height: 100%;
 		}
 	}
-	@media (max-width: $break_sm) and (min-width: $break_xs) {
-		font-size: 26px;
+	@media (max-width: $break_sm) {
+		margin-top: 10px;
+		padding: 10px 10px 15px;
+		font-size: 15px;
+		&_row {
+			margin-left: -17px;
+		}
 		&_item {
+			margin-bottom: 15px;
 			&--colors {
+				margin-left: 17px;
 				label {
 					&:after {
-						font-size: 40px;
-						top: 8px;
-						left: 24px;
+						font-size: 20px;
 					}
 				}
 			}
 		}
 		&_label {
 			&--colors {
-				width: 87px;
-				height: 56px;
-				padding: 8px;
-				img {
-					width: 68px;
-					height: 39px;
-				}
+				width: 44px;
+				height: 29px;
+				padding: 3px;
 			}
 		}
 	}

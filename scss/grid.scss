@@ -8,6 +8,7 @@
 $columns: 12; // Колличество колонок
 $max-width: 1200px; // Максимальная ширина контейнера
 $gutter: 15px; // Расстояние между колонками
+$gutterSm: 5px; // Расстояние между колонками на мобилке
 $offset: 30px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
 
@@ -49,8 +50,6 @@ $break_xs: 500px;
 	margin-right: auto;
 	@include sm(padding-left, $offset-sm);
 	@include sm(padding-right, $offset-sm);
-	@include xs(padding-left, $offset-xs);
-	@include xs(padding-right, $offset-xs);
 }
 @mixin clearfix() {
 	&:after {
@@ -63,21 +62,33 @@ $break_xs: 500px;
 @mixin row(){
 	@include clearfix();
 	margin-left: $gutter * - 1;
+	@media (max-width: $break_sm) {
+		margin-left: $gutterSm * - 1;
+	}
 	> * {
 		float: left;
 		word-wrap: break-word;
 		box-sizing: border-box;
 		padding-left: $gutter;
+		@media (max-width: $break_sm) {
+			padding-left: $gutterSm;
+		}
 	}
 }
 @mixin row-flex(){
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: $gutter * - 1;
+	@media (max-width: $break_sm) {
+		margin-left: $gutterSm * - 1;
+	}
 	> * {
 		word-wrap: break-word;
 		box-sizing: border-box;
 		padding-left: $gutter;
+		@media (max-width: $break_sm) {
+			padding-left: $gutterSm;
+		}
 	}
 }
 @mixin col($n) {

@@ -34,12 +34,12 @@
 		overflow: hidden;
 	}
 	&_scroll {
-		max-height: 620px;
-		overflow-y: auto;
-		padding-right: 30px;
-		margin-right: -30px;
+		overflow-x: auto;
+		padding-bottom: 30px;
+		margin-bottom: -30px;
 	}
-	.row {
+	&_row {
+		white-space: nowrap;
 		position: relative;
 	}
 	&_list-title {
@@ -50,9 +50,8 @@
 		text-transform: uppercase;
 	}
 	&_list {
-		@include col(2);
-		@include col-md(3);
-		@include col-sm(6);
+		display: inline-block;
+		width: 157px;
 		margin-bottom: 56px;
 		vertical-align: top;
 	}
@@ -67,41 +66,52 @@
 		}
 	}
 	@media (max-width: $break_sm) {
-		margin-top: 70px;
+		margin-top: 40px;
 		margin-bottom: 40px;
-	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
 		.title {
-			margin-bottom: 30px;
+			margin-bottom: 15px;
 		}
 		.text {
-			font-size: 26px;
-			margin-bottom: 90px;
-		}
-		&_scroll {
-			max-height: 1140px;
+			margin-bottom: 45px;
+			font-size: 13px;
 		}
 		&_select {
-			padding: 20px 20px 15px;
-			margin-bottom: 45px;
-		}
-		&_list-title {
-			margin-bottom: 35px;
-		}
-		&_item {
-			margin-bottom: 40px;
+			padding-top: 5px;
+			margin-bottom: 25px;
+			font-size: 11px;
 		}
 		&_link {
-			width: 40px;
-			height: 40px;
-			margin: 0 3px 5px;
-			font-size: 22px;
+			width: 20px;
+			height: 20px;
+			padding-top: 1px;
+			margin-bottom: 5px;
+			&:hover, &.active {
+				
+			}
+		}
+		&_body {
+			
+		}
+		&_scroll {
+			
+		}
+		&_row {
+			
 		}
 		&_list-title {
-			font-size: 62px;
+			
+		}
+		&_list {
+			margin-bottom: 30px;
+		}
+		&_item {
+			
 		}
 		&_city {
-			font-size: 30px;
+			
+			&:hover {
+				
+			}
 		}
 	}
 }

@@ -74,11 +74,29 @@
 			button {
 				width: 17px;
 				height: 17px;
-				margin-right: 10px;
+				margin: 0 5px;
 				background-color: #fff;
 				border-radius: 50%;
 				border: 1px solid $border;
 				font-size: 0;
+			}
+		}
+	}
+	@media (max-width: $break_sm) {
+		margin-bottom: 30px;
+		&_slide {
+			img {
+				max-width: 270px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.slick-dots {
+			margin-top: 13px;
+			button {
+				width: 9px;
+				height: 9px;
+				margin: 0 10px;
 			}
 		}
 	}

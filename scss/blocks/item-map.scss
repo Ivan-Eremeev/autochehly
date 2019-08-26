@@ -1,7 +1,6 @@
 .item-map {
 	position: relative;
-	iframe {
-		width: 100%;
+	&_map {
 		height: 260px;
 	}
 	@media (max-width: $break_sm) {
@@ -16,13 +15,8 @@
 				display: block;
 			}
 		}
-		iframe {
-			height: 460px;
-		}
-	}
-	@media (max-width: $break_xs) {
-		iframe {
-			height: 200px;
+		&_map {
+			height: 190px;
 		}
 	}
 }

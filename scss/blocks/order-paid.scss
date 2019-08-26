@@ -28,9 +28,14 @@
 		margin: 50px 0 30px;
 	}
 	@media (max-width: $break_sm) {
+		margin-top: 35px;
+		.title {
+			margin-bottom: 30px;
+		}
 		&_content {
 			float: none;
 			width: 100%;
+			font-size: 13px;
 			p {
 				max-width: none;
 			}
@@ -38,21 +43,11 @@
 		&_map {
 			float: none;
 			width: 100%;
-			height: 450px;
+			height: 220px;
 		}
-	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		font-size: 26px;
-		.title {
-			margin-bottom: 60px;
+		&_mob {
+			margin: 40px 0 30px;
+			font-size: 13px;
 		}
-		&_content {
-			p {
-				margin-bottom: 50px;
-			}
-		}
-	}
-	@media (max-width: $break_xs) {
-		margin-top: 30px;
 	}
 }

@@ -36,6 +36,17 @@
             </nav>
           </div><a class="logo logo--desktop" href="main.html"><img src="img/logo.svg" alt="logo"></a>
           <div class="location-wrapper"><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a></div>
+          <div class="location-dropdown">
+            <form class="location-dropdown_block" action="#">
+              <div class="clearfix">
+                <div class="location-dropdown_close js-close"></div>
+                <div class="location-dropdown_text">Город доставки: <span>Санкт-Петербург</span></div>
+                <input class="location-dropdown_input" type="text" placeholder="Город или населенный пункт">
+              </div>
+              <button class="btn btn--green location-dropdown_btn" type="submit">Выбрать</button>
+              <button class="btn btn--gray location-dropdown_btn location-dropdown_btn--remove" type="submit">Изменить</button>
+            </form>
+          </div>
         </div>
         <div class="header_right">
           <div class="call"><a href="tel:88006005429"><img class="call_img mobile-hide" src="img/call.svg" alt="call"><img class="call_img mobile-visible" src="img/call-mob.svg" alt="call"></a>
@@ -51,7 +62,7 @@
     <div class="wrapper">
       <div class="main-sidebar">
         <div class="sidebar sidebar--w500">
-          <div class="sideb mb-40">
+          <div class="sideb sideb--item">
             <!-- breadcrumbs-->
             <ul class="breadcrumbs">
               <li class="breadcrumbs_item"><a href="#">Чехлы на сиденья</a><span class="breadcrumbs_arrow">&rarr;</span></li>
@@ -118,103 +129,105 @@
                 <div class="item-form_colors">
                   <div class="item-form_text">Цвет</div>
                   <div class="item-form_select js-dropdown-wrapper">
-                    <div class="item-form_trigger item-form_trigger--colors js-drop-trigger"> <img src="img/colors/color1.jpg" alt="color"></div>
+                    <div class="item-form_trigger item-form_trigger--colors js-drop-trigger"><img src="img/colors/color1.jpg" alt="color"></div>
                     <div class="item-dropdown item-dropdown--full js-dropdown">
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors1" type="radio" name="item-colors" checked>
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors1"><img src="img/colors/color1.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors2" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors2"><img src="img/colors/color2.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors3" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors3"><img src="img/colors/color3.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors4" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors4"><img src="img/colors/color4.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors5" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors5"><img src="img/colors/color5.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors6" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors6"><img src="img/colors/color6.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors7" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors7"><img src="img/colors/color1.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors8" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors8"><img src="img/colors/color2.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors9" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors9"><img src="img/colors/color3.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors10" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors10"><img src="img/colors/color4.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors11" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors11"><img src="img/colors/color5.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors12" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors12"><img src="img/colors/color6.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors13" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors13"><img src="img/colors/color1.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors14" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors14"><img src="img/colors/color2.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors15" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors15"><img src="img/colors/color3.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors16" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors16"><img src="img/colors/color4.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors17" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors17"><img src="img/colors/color5.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors18" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors18"><img src="img/colors/color6.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors10" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors10"><img src="img/colors/color1.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors20" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors20"><img src="img/colors/color2.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors21" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors21"><img src="img/colors/color3.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors22" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors22"><img src="img/colors/color4.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors23" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors23"><img src="img/colors/color5.jpg" alt="color"></label>
-                      </div>
-                      <div class="item-dropdown_item item-dropdown_item--colors">
-                        <input id="item-colors24" type="radio" name="item-colors">
-                        <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors24"><img src="img/colors/color6.jpg" alt="color"></label>
+                      <div class="item-dropdown_row">
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors1" type="radio" name="item-colors" checked>
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors1"><img src="img/colors/color1.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors2" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors2"><img src="img/colors/color2.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors3" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors3"><img src="img/colors/color3.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors4" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors4"><img src="img/colors/color4.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors5" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors5"><img src="img/colors/color5.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors6" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors6"><img src="img/colors/color6.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors7" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors7"><img src="img/colors/color1.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors8" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors8"><img src="img/colors/color2.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors9" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors9"><img src="img/colors/color3.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors10" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors10"><img src="img/colors/color4.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors11" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors11"><img src="img/colors/color5.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors12" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors12"><img src="img/colors/color6.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors13" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors13"><img src="img/colors/color1.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors14" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors14"><img src="img/colors/color2.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors15" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors15"><img src="img/colors/color3.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors16" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors16"><img src="img/colors/color4.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors17" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors17"><img src="img/colors/color5.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors18" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors18"><img src="img/colors/color6.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors10" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors10"><img src="img/colors/color1.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors20" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors20"><img src="img/colors/color2.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors21" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors21"><img src="img/colors/color3.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors22" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors22"><img src="img/colors/color4.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors23" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors23"><img src="img/colors/color5.jpg" alt="color"></label>
+                        </div>
+                        <div class="item-dropdown_item item-dropdown_item--colors">
+                          <input id="item-colors24" type="radio" name="item-colors">
+                          <label class="item-dropdown_label item-dropdown_label--colors js-drop_link" for="item-colors24"><img src="img/colors/color6.jpg" alt="color"></label>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -251,7 +264,7 @@
             <div class="subtitle2 mobile-visible">Установка в <a href="#" id="item-map-open">сервисном центре</a> в Москве</div>
             <div class="item-map_dropdown mb-40">
               <h3 class="subtitle2 pl-20">Москва, карта пунктов выдачи заказов</h3>
-              <iframe src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&amp;z=12" frameborder="1" allowfullscreen="true"></iframe>
+              <iframe class="item-map_map" src="https://yandex.ru/map-widget/v1/?ll=37.624513%2C55.748635&amp;z=12" frameborder="1" allowfullscreen="true" width="100%" height="100%"></iframe>
             </div>
           </div>
           <!-- /item-map-->
@@ -262,10 +275,12 @@
           <div class="pl-20">
             <h3 class="subtitle2">Гарантия</h3>
             <div class="text text--big mb-40">
-              <p>Возврат и обмен товара в течение 10-ти дней</p>
+              <p><a href="#">Возврат и обмен</a> товара в течение 10-ти дней</p>
             </div>
             <!-- share-->
-            <div class="share"><span>Поделиться:</span><a class="share_item" href="#"><img src="img/whatsapp.svg" alt="whatsapp"></a><a class="share_item" href="#"><img src="img/telegram.svg" alt="telegram"></a><a class="share_item" href="#"><img src="img/viber.svg" alt="viber"></a><a class="share_item" href="#"><img src="img/insta.png" alt="insta"></a><a class="share_item" href="#"><img src="img/vk.svg" alt="whatsapp"></a><a class="share_item share_item--mail" href="#"><img src="img/mail.svg" alt="whatsapp"></a></div>
+            <div class="share"><span>Поделиться:</span>
+              <div class="share_row"><a class="share_item" href="#"><img src="img/whatsapp.svg" alt="whatsapp"></a><a class="share_item" href="#"><img src="img/telegram.svg" alt="telegram"></a><a class="share_item" href="#"><img src="img/viber.svg" alt="viber"></a><a class="share_item" href="#"><img src="img/insta.png" alt="insta"></a><a class="share_item" href="#"><img src="img/vk.svg" alt="whatsapp"></a><a class="share_item share_item--mail" href="#"><img src="img/mail.svg" alt="whatsapp"></a></div>
+            </div>
             <!-- /share-->
           </div>
         </div>
@@ -361,7 +376,11 @@
                       <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
                       <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--big img-responsive" href="#"><img src="#" alt="photo"></a></div>
                       <div class="item-tabs_photo"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
+                      <div class="item-tabs_photo mobile-visible"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
+                      <div class="item-tabs_photo mobile-visible"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
+                      <div class="item-tabs_photo mobile-visible"><a class="item-tabs_img item-tabs_img--middle img-responsive" href="#"><img src="#" alt="photo"></a></div>
                     </div>
+                    <div class="btn show-more mobile-visible">Показать еще</div>
                   </li>
                 </ul>
               </li>
@@ -560,7 +579,7 @@
           <div class="sideb">
             <h2 class="title">Доставка</h2>
             <!-- transport-company-->
-            <div class="transport-company"><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/dpd.svg" alt="dpd"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/boxberry.svg" alt="boxberry"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/iml.svg" alt="iml"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pek.svg" alt="pek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/cdek.svg" alt="cdek"></a></div>
+            <div class="transport-company"><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/dpd.svg" alt="dpd"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/boxberry.svg" alt="boxberry"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/iml.svg" alt="iml"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pek.svg" alt="pek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/cdek.svg" alt="cdek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pochta_rossii.svg" alt="pochta-rossii"></a></div>
             <!-- /transport-company-->
             <h2 class="title">Оплата</h2>
             <!-- pay-->
@@ -584,13 +603,16 @@
           <h2 class="title">Как заказать</h2>
           <!-- tutorial-->
           <ul class="tutorial">
-            <li class="tutorial_item"><img class="tutorial_img" src="img/purse.svg" alt="purse">
+            <li class="tutorial_item js-match-height">
+              <div class="tutorial_img"><img src="img/purse.svg" alt="purse"></div>
               <p class="tutorial_text">Сделайте заказ на сайте или любым удобным способом</p>
             </li>
-            <li class="tutorial_item"><img class="tutorial_img" src="img/truck.svg" alt="truck">
+            <li class="tutorial_item js-match-height">
+              <div class="tutorial_img"><img src="img/truck.svg" alt="truck"></div>
               <p class="tutorial_text">Мы подготовим и отправим заказ на следующий день</p>
             </li>
-            <li class="tutorial_item"><img class="tutorial_img" src="img/smartphone.svg" alt="smartphone">
+            <li class="tutorial_item js-match-height">
+              <div class="tutorial_img"><img src="img/smartphone.svg" alt="smartphone"></div>
               <p class="tutorial_text">Дождитесь СМС о доставке и получите заказ</p>
             </li>
           </ul>
@@ -630,7 +652,7 @@
           <div class="sideb">
             <h2 class="title">Доставка</h2>
             <!-- transport-company-->
-            <div class="transport-company"><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/dpd.svg" alt="dpd"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/boxberry.svg" alt="boxberry"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/iml.svg" alt="iml"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pek.svg" alt="pek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/cdek.svg" alt="cdek"></a></div>
+            <div class="transport-company"><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/dpd.svg" alt="dpd"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/boxberry.svg" alt="boxberry"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/iml.svg" alt="iml"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pek.svg" alt="pek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/cdek.svg" alt="cdek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pochta_rossii.svg" alt="pochta-rossii"></a></div>
             <!-- /transport-company-->
             <h2 class="title">Оплата</h2>
             <!-- pay-->
@@ -678,7 +700,7 @@
             <div class="footer_col mobile-visible">
               <div class="footer_rectangle"></div>
             </div>
-            <div class="footer_col">
+            <div class="footer_col footer_col--right">
               <div class="call_content"><a class="call_num" href="tel:88006005429">8 800 600-54-29</a>
                 <div class="call_text">Ежедневно с 9 до 21</div>
               </div>

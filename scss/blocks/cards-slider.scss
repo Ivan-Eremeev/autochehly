@@ -1,5 +1,5 @@
 .cards-slider {
-	padding-bottom: 69px;
+	margin-bottom: 69px;
 	overflow: hidden;
 	&_title {
 		
@@ -36,6 +36,7 @@
 		padding: 10px 0 0 40px;
 	}
 	@media (max-width: $break_sm) {
+		margin-bottom: 40px;
 		&_controll {
 			display: none;
 		}

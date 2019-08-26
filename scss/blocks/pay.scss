@@ -3,6 +3,7 @@
 
 	}
 	&_item {
+		min-height: 44px;
 		margin-bottom: 25px;
 		padding-left: 63px;
 		position: relative;
@@ -16,7 +17,7 @@
 		stroke: $red;
 	}
 	&_text {
-
+		
 	}
 	&_cards {
 		font-size: 14px;
@@ -49,61 +50,45 @@
 	&_sberbank-text {
 		font-size: 12px;
 	}
-	@media (max-width: $break_sm) {
-		font-size: 28px;
+	@media (max-width: $break_md) {
 		&_item {
-			padding: 15px 0px 15px 90px;
+			min-height: auto;
+			padding: 15px 0px 23px 63px;
+			margin-bottom: 0;
+		}
+	}
+	@media (max-width: $break_sm) {
+		font-size: 14px;
+		&_item {
+			padding: 10px 0px 18px 48px;
 		}
 		&_img {
-			width: 65px;
-			height: 60px;
+			width: 40px;
+			height: 30px;
+		}
+		&_cards {
+			margin-top: 10px;
 		}
 		&_card {
-			width: 90px;
-			height: 60px;
+			width: 50px;
+			height: 30px;
+			margin-right: 4px;
+			margin-bottom: 15px;
 		}
 		&_card-img {
 			
 		}
-		&_sberbank-logo {
-			width: 190px;
-			height: 40px;
-		}
-		&_sberbank-text {
-			font-size: 22px;
-		}
-	}
-	@media (max-width: $break_xs) {
-		font-size: 16px;
-		&_item {
-			padding: 0px 0px 0px 90px;
-		}
-		&_img {
-			width: auto;
-			height: auto;
-		}
-		&_card {
-			width: 50px;
-			height: 40px;
-		}
-		&_card-img {
-			&--svg {
-				width: auto;
-				height: auto;
-			}
-			&--desktop {
-
-			}
-			&--mobile {
-				
-			}
+		&_sberbank {
+			margin-top: 2px;
+			margin-left: 5px;
 		}
 		&_sberbank-logo {
-			width: auto;
-			height: auto;
+			width: 100px;
+			height: 20px;
 		}
 		&_sberbank-text {
-			font-size: 12px;
+			width: 100%;
+			font-size: 11px;
 		}
 	}
 }

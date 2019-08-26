@@ -59,8 +59,21 @@
 		@include col-sm(12);
 	}
 	@media (max-width: $break_sm) {
-		margin-top: 70px;
+		margin-top: 40px;
+		margin-bottom: 0;
+		.title {
+			margin-bottom: 15px;
+		}
+		&_text {
+			margin-bottom: 20px;
+			font-size: 13px;
+			&--big-mobile {
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
 		&_buttons {
+			margin-bottom: 30px;
 			input {
 				&:checked {
 					+ label {
@@ -78,26 +91,16 @@
 				}
 			}
 		}
-	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		.title {
-			margin-bottom: 30px;
-		}
-		&_text {
-			margin-bottom: 50px;
-			font-size: 26px;
-			&--big-mobile {
-				font-size: 40px;
-				font-weight: 700;
-			}
-		}
-		&_buttons {
-			border-radius: 10px;
-		}
 		&_btn {
-			font-size: 30px;
+			padding: 10px 10px;
+			font-size: 15px;
 			span {
-				font-size: 18px;
+				margin-top: 5px;
+				font-size: 9px;
+			}
+			&--span {
+				padding: 7px;
+				line-height: 1;
 			}
 		}
 	}

@@ -38,20 +38,20 @@
 			user-select: none;
 		}
 	}
-	@media (max-width: $break_sm) and (min-width: $break_xs) {
+	@media (max-width: $break_sm) {
 		float: right;
-		padding-top: 40px;
 		&_controll {
-			padding: 2px 20px;
-			font-size: 40px;
+			padding: 2px 5px;
+			font-size: 20px;
 			&--plus {
-				margin-top: 3px;
+				margin-top: 2px;
 			}
 		}
 		&_result {
 			input {
-				width: 55px;
-				font-size: 30px;
+				width: 30px;
+				padding: 7px 0;
+				font-size: 15px;
 				font-weight: 600;
 			}
 		}

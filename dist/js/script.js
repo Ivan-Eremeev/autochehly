@@ -81,6 +81,7 @@ $(document).ready(function () {
 
 	// Простая выпадайка
 	easyDropdown($('#item-map-open'), $('.item-map_dropdown'));
+	easyDropdown($('.location-wrapper'), $('.location-dropdown'));
 
 	// Вставляет svg в html, позволяет управлять цветом через css 
 	$('img[src$=".svg"]').each(function(){
@@ -120,9 +121,9 @@ function myMenu(menu) {
 			close = menu.find('#menu-close'),
 			documentWidth = parseInt(document.documentElement.clientWidth),
 			windowsWidth = parseInt(window.innerWidth),
-			scrollbarWidth = windowsWidth - documentWidth,
 			html = $('html');
 	menuBtn.click(function () {
+		var scrollbarWidth = windowsWidth - documentWidth;
 		html.toggleClass('lock').css('padding-right',scrollbarWidth);
 		menu.toggleClass('open');
 		menuBtn.toggleClass('is-active');
@@ -141,8 +142,7 @@ function cityScroll(menuItem) {
 		var scroll_el = $(this).attr('href'),
 				time = 500,
 				blockScroll = $('.buy_scroll');
-		console.log($(scroll_el).position().top);
-		blockScroll.animate({ scrollTop: $(scroll_el).position().top }, time);
+		blockScroll.animate({ scrollLeft: $(scroll_el).position().left }, time);
 		menuItem.find('a[href^="#"]').removeClass('active');
 		$(this).addClass('active');
 	});
@@ -356,6 +356,7 @@ function itemTabs() {
 
 // Простая выпадайка
 function easyDropdown(link, drop) {
+	var	close = drop.find('.js-close');
 	link.click(function() {
 		if (!link.hasClass('active')) {
 			$(this).addClass('active');
@@ -364,6 +365,10 @@ function easyDropdown(link, drop) {
 			link.removeClass('active');
 			drop.removeClass('open');
 		}
+	});
+	close.click(function() {
+		link.removeClass('active');
+		drop.removeClass('open');
 	});
 };
 
@@ -395,12 +400,12 @@ function calcPrice() {
 			resultPriceInput = $('#result-price-input'),
 			deliveryButtons = $('#delivery-buttons input'),
 			val = 1;
+	deliveryPrice.text($('#delivery-buttons input:checked').data('price'));
 	allPrice.text(onePrice.text() * val);
-	resultPrice.text(onePrice.text() * val + parseInt(deliveryPrice.text()));
 	allPriceInput.val(onePrice.text() * val);
+	resultPrice.text(onePrice.text() * val + parseInt(deliveryPrice.text()));
 	deliveryPriceInput.val(deliveryPrice.text());
 	resultPriceInput.val(resultPrice.text());
-	deliveryPrice.text($('#delivery-buttons input:checked').data('price'));
 	minus.click(function() {
 		if (val > 1) {
 			val --;
@@ -442,84 +447,6 @@ function calcPrice() {
 	});
 };
 calcPrice();
-function slider(slider,sliderFor) {
-  slider.slick({
-    slidesToShow: 1, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    asNavFor: '.slider-for', // Связь со слайдерами
-    dots: true, // Пагинация
-    arrows: true, // Стрелки
-    speed: 500, // Скорость перехода слайдов
-    autoplay: false, // Автопрокрутка
-    autoplaySpeed: 2000, // Скорость автопрокрутки
-    centerMode: false, // Задает класс .slick-center слайду в центре
-    focusOnSelect: true, // Выбрать слайд кликом
-    infinite: false, // Зацикленное пролистывание
-    vertical: false, // Вертикальный слайдер
-    rtl: false, // Слайды листаются справа налево
-    centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-    responsive: [ // Адаптация
-      {
-      breakpoint: 992,
-        settings: {
-          arrows: false,
-        }
-      },
-      {
-      breakpoint: 720,
-        settings: {
-          arrows: false,
-        }
-      }
-    ]
-    // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
-  });
-  
-  sliderFor.slick({
-    slidesToShow: 1, // Сколько слайдов показывать на экране
-    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    dots: false, // Пагинация
-    arrows: false, // Стрелки
-    fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-    asNavFor: '.slider-nav' // Связь со слайдерами
-  });
-
-  // Кастомные кнопки "вперед" "назад"
-  $('.sliderButton_prev').click(function() {
-    slider.slick('slickPrev');
-  });
-  $('.sliderButton_next').click(function() {
-    slider.slick('slickNext');
-  });
-};
-
-// Добавляем кастомную пагинацию в слайдер
-function addDotsInPagination(sliderB, sliderPagination) {
-  var sliderCount = sliderB.find('.js-slider-slide');
-  for (var i = 1; i < sliderCount.length + 1; i++) {
-    var dot = $('<div class="slider-pagination_dot"></div>');
-    dot.text(i);
-    sliderPagination.append(dot);
-  };
-  // Вызов слайдера нужно делать после добавления пагинации
-  slider();
-};
-
-// Инициализация слайдеров на десктопе и мобилке
-// function sliderReinstall() {
-//   if (window.matchMedia("(max-width: 769px)").matches) {
-//     $('.slick-initialized').slick('unslick');
-//   }
-//   else {
-//     $('.slick-initialized').slick('unslick');
-//     sliderInit($('.slider'), $('.slider-for'));
-//   }
-// }
-
-// $('.your-slider').slick('unslick'); // Уничтожить слайдер
-
 function cardsSlider(slider) {
   slider.slick({
     slidesToShow: 4, // Сколько слайдов показывать на экране
@@ -535,15 +462,7 @@ function cardsSlider(slider) {
         settings: {
           slidesToShow: 2, // Сколько слайдов показывать на экране
           swipe: true, // Перелистывание пальцем
-          draggable: false, // Перелистывание мышью
-        }
-      },
-      {
-      breakpoint: breakXs,
-        settings: {
-          slidesToShow: 1, // Сколько слайдов показывать на экране
-          swipe: true, // Перелистывание пальцем
-          draggable: false, // Перелистывание мышью
+          draggable: true, // Перелистывание мышью
         }
       }
     ]
@@ -557,6 +476,7 @@ function cardsSlider(slider) {
     slider.slick('slickNext');
   });
 };
+
 
 function itemSlider(slider, sliderFor) {
   slider.slick({

@@ -1,5 +1,5 @@
 .contacts {
-	margin-top: 80px;
+	margin-top: 30px;
 	margin-bottom: 70px;
 	.title {
 		margin-bottom: 40px;
@@ -35,25 +35,23 @@
 			border-color: $red;
 		}
 	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		margin-bottom: 50px;
+	@media (max-width: $break_sm) {
+		margin-top: 40px;
+		margin-bottom: 25px;
+		.title {
+			margin-bottom: 20px;
+		}
 		&_title {
-			margin-bottom: 45px;
-			font-size: 30px;
+			font-size: 15px;
 		}
 		&_text {
-			font-size: 26px;
+			font-size: 13px;
 			p {
-				margin-bottom: 4px;
+				margin-bottom: 2px;
 				&.contacts_mb40 {
-					margin-bottom: 40px;
+					margin-bottom: 20px;
 				}
 			}
-		}
-	}
-	@media (max-width: $break_xs) {
-		.title {
-			margin-bottom: 30px;
 		}
 	}
 }

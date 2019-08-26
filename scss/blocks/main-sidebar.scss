@@ -6,7 +6,12 @@
 		clear: both;
 		width: 100%;
 	}
+	@media (max-width: $break_sm) {
+		margin: 16px 0;
+	}
 }
+
+
 .main {
 	margin-right: 270px;
 	&--maw-780 {
@@ -26,6 +31,8 @@
 		}
 	}
 }
+
+
 .sidebar {
 	float: right;
 	width: 250px;
@@ -47,13 +54,21 @@
 		}
 	}
 }
+
+
 .sideb {
 	padding: 20px;
 	border: 1px solid $border;
 	border-radius: 5px;
+	&--item {
+
+	}
 	@media (max-width: $break_md) {
-		padding: 0;
-		margin-bottom: 30px;
-		border: none;
+		margin-bottom: 20px;
+		&--item {
+			padding: 10px 0 0;
+			border: none;
+			margin-bottom: 10px;
+		}
 	}
 }

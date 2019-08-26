@@ -136,7 +136,7 @@
 	@media (max-width: $break_sm) {
 		background-color: #fff;
 		&_body {
-			padding: 10px 15px;
+			padding: 0 18px;
 		}
 		&_content {
 			box-shadow: none;
@@ -145,10 +145,10 @@
 			padding: 0 30px 0 0px;
 		}
 		.title {
-			padding: 40px 30px 40px 0;
+			padding: 20px 30px 20px 0;
 		}
 		&_map {
-			height: 560px;
+			height: 280px;
 		}
 		&_float-right {
 			float: none;
@@ -158,54 +158,8 @@
 			width: 100%;
 		}
 		&_close {
+			top: 23px;
 			right: 0px;
-		}
-	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		&_body {
-			padding: 10px 35px;
-		}
-		&_float-right {
-			padding-top: 60px;
-		}
-		&_scroll {
-			> .scroll-element.scroll-y {
-				width: 44px;
-			}
-		}
-		&_list {
-			padding: 0 60px 0 0px;
-		}
-		&_img {
-			width: 150px;
-			height: 100px;
-			svg {
-				width: 150px;
-				height: 100%;
-			}
-		}
-		&_right {
-			font-size: 30px;
-		}
-		&_text {
-			font-size: 30px;
-		}
-		&_btn {
-			width: 100%;
-			max-width: 186px;
-			height: 55px;
-			padding-top: 4px;
-			border-radius: 10px;
-			font-size: 30px;
-			text-align: center;
-		}
-		&_close {
-			width: 40px;
-			height: 40px;
-			&:after, &:before {
-				top: 20px;
-				height: 3px;
-			}
 		}
 	}
 }

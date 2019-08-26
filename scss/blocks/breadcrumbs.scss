@@ -13,7 +13,8 @@
 	&_arrow {
 		color: $red;
 	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		font-size: 18px;
+	@media (max-width: $break_sm) {
+		margin-bottom: 10px;
+		font-size: 9px;
 	}
 }

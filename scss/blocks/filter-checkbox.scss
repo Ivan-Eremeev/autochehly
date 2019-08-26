@@ -61,54 +61,33 @@
 	@media (max-width: $break_md) {
 		&_item {
 			display: inline-block;
-			width: 49%;
+			width: 32%;
 		}
 	}
 	@media (max-width: $break_sm) {
-		font-size: 30px;
+		margin-bottom: 20px;
+		font-size: 15px;
 		&_item {
+			width: 49%;
 			display: inline-block;
-			padding-left: 50px;
-		}
-		&_checkbox {
-			width: 32px;
-			height: 32px;
-			border-radius: 5px;
-			top: 5px;
-			&:after {
-				width: 20px;
-				height: 20px;
-				top: 5px;
-				left: 5px;
-				border-radius: 5px;
-			}
-		}
-		&_label {
-			margin-right: 30px;
-		}
-	}
-	@media (max-width: $break_xs) {
-		margin-bottom: 30px;
-		font-size: 18px;
-		&_item {
-			width: 100%;
 			padding-left: 30px;
+			margin-bottom: 25px;
 		}
 		&_checkbox {
-			width: 20px;
-			height:20px;
+			width: 16px;
+			height: 16px;
 			border-radius: 3px;
 			top: 3px;
 			&:after {
-				width: 12px;
-				height: 12px;
-				top: 3px;
-				left: 3px;
+				width: 10px;
+				height: 10px;
+				top: 2px;
+				left: 2px;
 				border-radius: 2px;
 			}
 		}
 		&_label {
-			margin-right: 15px;
+			margin-right: 30px;
 		}
 	}
 }

@@ -10,6 +10,8 @@
 		}
 	}
 }
+
+
 .sort {
 	float: right;
 	width: 283px;
@@ -55,9 +57,14 @@
 	}
 	@media (max-width: $break_md) {
 		float: none;
-		margin-bottom: 50px;
-	}
-	@media (max-width: $break_xs) {
 		margin-bottom: 30px;
+	}
+	@media (max-width: $break_sm) {
+		font-size: 11px;
+		&_item {
+			label {
+				padding: 5px 12px;
+			}
+		}
 	}
 }

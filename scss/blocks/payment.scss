@@ -35,17 +35,29 @@
 		overflow: hidden;
 	}
 	@media (max-width: $break_sm) {
-		margin-top: 70px;
+		margin-top: 40px;
 		.title {
-			margin-bottom: 30px;
+			margin-bottom: 15px;
+		}
+		&_title {
+			margin-bottom: 15px;
+			font-size: 13px;
+			&--big {
+				font-size: 20px;
+			}
 		}
 		&_text {
 			max-width: none;
+			padding: 20px 15px;
+			margin-bottom: 30px;
 			background-color: $gray;
+			border: none;
+			font-size: 13px;
+			line-height: 1.3;
 		}
 		&_cards {
 			max-width: none;
-			margin-bottom: 75px;
+			margin-bottom: 30px;
 		}
 		&_left {
 			width: 100%;
@@ -54,33 +66,12 @@
 			text-align: center;
 		}
 		&_right {
-			padding: 45px 30px;
+			padding: 20px 15px;
 			background-color: $gray;
-			border-radius: 10px;
+			font-size: 13px;
+			line-height: 1.3;
+			border-radius: 5px;
 			overflow: visible;
-		}
-	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		&_title {
-			margin-bottom: 40px;
-			font-size: 26px;
-			&--big {
-				font-size: 40px;
-			}
-		}
-		&_text {
-			padding: 45px 30px;
-			font-size: 26px;
-			border: none;
-			border-radius: 10px;
-		}
-		&_right {
-			font-size: 26px;
-		}
-	}
-	@media (max-width: $break_xs) {
-		&_left {
-			margin-bottom: 40px;
 		}
 	}
 }

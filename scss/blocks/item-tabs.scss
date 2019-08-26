@@ -148,7 +148,7 @@
 				display: block;
 				color: $grayD;
 				position: absolute;
-				font-size: 30px;
+				font-size: 23px;
 				right: 10px;
 				top: 50%;
 				transform: translate(0,-50%);
@@ -164,38 +164,40 @@
 		}
 	}
 	@media (max-width: $break_sm) {
+		margin-bottom: 30px;
+		&_title {
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+		&_text {
+			font-size: 13px;
+			line-height: 1.3;
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+		&_triggers {
+			margin-bottom: 0;
+		}
+		&_trigger {
+			padding: 12px 70px 12px 15px;
+			font-size: 15px;
+		}
+		&_dropdown {
+			padding: 20px 15px;
+			font-size: 14px;
+		}
 		&_list {
 			width: 100%;
 			padding-right: 0;
 		}
 		&_link {
 			display: inline-block;
-			margin-bottom: 30px;
-		}
-	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		&_triggers {
-			border-radius: 10px;
-		}
-		&_trigger {
-			padding: 25px 70px 25px 25px;
-			font-size: 30px;
-			&:after {
-				font-size: 50px;
-				right: 25px;
-			}
-		}
-		&_dropdown {
-			padding: 50px 25px;
-			font-size: 28px;
-		}
-		&_link {
-			margin-bottom: 50px;
 		}
 		&_item {
 			&:before {
-				border-width: 3px;
-				bottom: 8px;
+				border-width: 2px;
+				bottom: 3px;
 			}
 		}
 		&_name {
@@ -204,10 +206,27 @@
 		&_val {
 			padding-left: 10px;
 		}
-	}
-	@media (max-width: $break_xs) {
-		&_title {
-			font-size: 20px;
+		&_img {
+			&:after {
+				padding-top: 64%;
+			}
+			&--middle {
+				&:after {
+					padding-top: 84%;
+				}
+			}
+			&--big {
+				&:after {
+					padding-top: 120%;
+				}
+			}
+		}
+		&_link {
+			margin-bottom: 25px;
+		}
+		.show-more {
+			text-align: center;
+			margin-bottom: 0;
 		}
 	}
 }

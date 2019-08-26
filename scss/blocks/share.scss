@@ -5,6 +5,9 @@
 		vertical-align: top;
 		padding-top: 3px;
 	}
+	&_row {
+		margin-left: -15px;
+	}
 	&_item {
 		display: inline-block;
 		margin-left: 15px;
@@ -15,7 +18,6 @@
 		}
 		img {
 			width: 30px;
-			height: 30px;
 		}
 		&--mail {
 			width: 30px;
@@ -29,48 +31,32 @@
 		}
 	}
 	@media (max-width: $break_sm) {
-		span {
-			display: block;
-		}
-	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
-		margin-bottom: 50px;
-		span {
-			display: block;
-			font-size: 28px;
-			padding-top: 0;
-			margin-bottom: 30px;
+		margin-bottom: 10px;
+		&_row {
+			margin-left: -25px;
 		}
 		&_item {
+			margin-right: 0;
+			margin-left: 25px;
 			margin-bottom: 20px;
-			margin-left: 0;
-			&:not(:last-child) {
-				margin-right: 50px;
-			}
 			svg {
-				width: 63px;
-				height: 63px;
+				width: 33px;
+				height: 33px;
 			}
 			img {
-				width: 63px;
-				height: 63px;
+				width: 33px;
 			}
 			&--mail {
-				width: 63px;
-				height: 63px;
-				padding-left: 12px;
+				width: 33px;
+				height: 33px;
+				padding-left: 6px;
 				svg {
-					width: 40px;
+					width: 20px;
 				}
 			}
 		}
-	}
-	@media (max-width: $break_xs) {
-		&_item {
-			margin-right: 0;
-			margin-bottom: 20px;
-		}
 		span {
+			display: block;
 			margin-bottom: 20px;
 		}
 	}

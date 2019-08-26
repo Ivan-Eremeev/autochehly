@@ -36,6 +36,17 @@
             </nav>
           </div><a class="logo logo--desktop" href="main.html"><img src="img/logo.svg" alt="logo"></a>
           <div class="location-wrapper"><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a></div>
+          <div class="location-dropdown">
+            <form class="location-dropdown_block" action="#">
+              <div class="clearfix">
+                <div class="location-dropdown_close js-close"></div>
+                <div class="location-dropdown_text">Город доставки: <span>Санкт-Петербург</span></div>
+                <input class="location-dropdown_input" type="text" placeholder="Город или населенный пункт">
+              </div>
+              <button class="btn btn--green location-dropdown_btn" type="submit">Выбрать</button>
+              <button class="btn btn--gray location-dropdown_btn location-dropdown_btn--remove" type="submit">Изменить</button>
+            </form>
+          </div>
         </div>
         <div class="header_right">
           <div class="call"><a href="tel:88006005429"><img class="call_img mobile-hide" src="img/call.svg" alt="call"><img class="call_img mobile-visible" src="img/call-mob.svg" alt="call"></a>
@@ -91,7 +102,7 @@
             <div class="footer_col mobile-visible">
               <div class="footer_rectangle"></div>
             </div>
-            <div class="footer_col">
+            <div class="footer_col footer_col--right">
               <div class="call_content"><a class="call_num" href="tel:88006005429">8 800 600-54-29</a>
                 <div class="call_text">Ежедневно с 9 до 21</div>
               </div>

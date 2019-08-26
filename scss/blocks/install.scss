@@ -52,40 +52,20 @@
 	&_price {
 		font-weight: 600;
 	}
-	@media (max-width: $break_sm) {
-		&_item {
-			padding: 60px 18px 60px 230px;
-		}
-		&_img {
-			&--house {
-				width: 113px;
-				height: 97px;
-			}
-			&--seat {
-				width: 86px;
-				height: 121px;
-			}
-			&--car {
-				width: 132px;
-				height: 70px;
-			}
-			&--car-end-seat {
-				width: 162px;
-				height: 82px;
-			}
-		}
-		.text {
-			font-size: 30px;
-		}
-		&_content {
-			font-size: 28px;
-		}
+	@media (max-width: $break_md) {
+		max-width: none;
 	}
-	@media (max-width: $break_xs) {
+	@media (max-width: $break_sm) {
+		margin-bottom: 12px;
+		&_col {
+			margin-bottom: 11px;
+		}
 		&_item {
-			padding: 18px 18px 25px 141px;
+			min-height: 112px;
+			padding: 14px 10px 10px 120px;
 		}
 		&_img {
+			transform: translate(0,-50%) scale(.8);
 			&--house {
 				width: auto;
 				height: auto;
@@ -101,13 +81,16 @@
 			&--car-end-seat {
 				width: auto;
 				height: auto;
+				transform: translate(-10%,-50%) scale(.8);
 			}
 		}
-		.text {
-			font-size: 16px;
-		}
 		&_content {
-			font-size: 16px;
-		}	
+			font-size: 15px;
+		}
+		.text {
+			padding: 0;
+			line-height: 1.2;
+			margin-bottom: 30px;
+		}
 	}
 }

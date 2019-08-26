@@ -18,23 +18,39 @@
 		float: right;
 		margin-bottom: 10px;
 	}
+	@media (max-width: $break_sm) {
+		padding: 6px 0 0;
+		&_left {
+			margin-bottom: 0;
+		}
+		&_right {
+			margin-bottom: 0;
+		}
+	}
 }
+
 .logo {
 	margin-right: 35px;
 	svg {
 		fill: $red;
 	}
-	@media (max-width: $break_xs) {
-		&--desktop {
-			display: none;
+	@media (max-width: $break_sm) {
+		margin-right: 12px;
+		svg {
+			width: 60px;
 		}
 	}
 }
+
 .location-wrapper {
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 5px;
+	@media (max-width: $break_sm) {
+		margin-top: 10px;
+	}
 }
+
 .location {
 	font-size: 15px;
 	color: $black;
@@ -54,15 +70,13 @@
 		}
 	}
 	@media (max-width: $break_sm) {
-		font-size: 26px;
+		font-size: 13px;
 		&_icon {
 			display: none;
 		}
 	}
-	@media (max-width: $break_xs) {
-		display: none;
-	}
 }
+
 .call {
 	display: inline-block;
 	&_img {
@@ -85,24 +99,18 @@
 	@media (max-width: $break_md) {
 		margin-top: 5px;
 	}
+	
 	@media (max-width: $break_sm) {
 		margin-top: 0;
-		&_num {
-			font-size: 41px;
+		svg {
+			width: 22px;
 		}
-		&_text {
+		&_num {
 			font-size: 20px;
 		}
 	}
-	@media (max-width: $break_xs) {
-		&_num {
-			font-size: 25px;
-		}
-		&_text {
-			font-size: 12px;
-		}
-	}
 }
+
 .cart {
 	display: inline-block;
 	margin-left: 30px;
@@ -157,12 +165,19 @@
 		}
 	}
 	@media (max-width: $break_sm) {
+		margin-left: 10px;
 		&_count {
-			width: 28px;
-			height: 28px;
-			font-size: 19px;
-			top: -5px;
-			left: 15px;
+			width: 15px;
+			height: 15px;
+			padding-top: 1px;
+			font-size: 9px;
+			top: 8px;
+			left: 7px;
+		}
+		&_img {
+			svg {
+				width: 23px;
+			}
 		}
 	}
 }
@@ -170,13 +185,19 @@
 	from {left: -20%;}
 	to {left: 120%;}
 }
+
+
 .location-dropdown {
+	display: none;
 	width: 90%;
 	max-width: 320px;
 	padding-top: 20px;
 	position: absolute;
 	z-index: 2;
 	left: 180px;
+	&.open {
+		display: block;
+	}
 	&_block {
 		padding: 30px 20px 20px;
 		background-color: #fff;
@@ -187,7 +208,7 @@
 	&_text {
 		color: $grayD;
 		font-size: 15px;
-		margin-right: 30px;
+		margin-right: 20px;
 		margin-bottom: 20px;
 		span {
 			color: $black;
@@ -237,7 +258,15 @@
 		margin-right: 15px;
 		font-size: 14px;
 	}
-	@media (max-width: $break_xs) {
-		left: 15px;
+	&_btn {
+		&--remove {
+			color: $black;
+		}
+	}
+	@media (max-width: $break_sm) {
+		left: auto;
+		&_block {
+			padding: 20px;
+		}
 	}
 }

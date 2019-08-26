@@ -13,21 +13,14 @@
 		transform: translate(-50%,-50%);
 	}
 	@media (max-width: $break_sm) {
+		margin-bottom: 10px;
 		&_link {
-			width: 140px;
-			height: 70px;
-			margin-bottom: 20px;
+			width: 65px;
+			height: 40px;
+			margin-bottom: 10px;
 		}
-	}
-	@media (max-width: $break_xs) {
-		&_link {
-			width: 94px;
-			height: 60px;
-		}
-	}
-	@media (max-width: $break_sm) and (min-width: $break_xs + 1) {
 		&_img {
-			transform: translate(-50%,-50%) scale(1.3, 1.3);
+			transform: translate(-50%,-50%) scale(.9);
 		}
 	}
 }
