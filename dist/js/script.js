@@ -485,8 +485,8 @@ function itemSlider(slider, sliderFor) {
     asNavFor: sliderFor, // Связь со слайдерами
     dots: false, // Пагинация
     arrows: true, // Стрелки
-    prevArrow: '<div class="item-images_controll item-images_prev"><span class="icon-keyboard_arrow_up"></span></div>',
-    nextArrow: '<div class="item-images_controll item-images_next"><span class="icon-keyboard_arrow_down"></span></div>',
+    prevArrow: '<div class="item-images_controll item-images_prev"><img src="img/arrow-slider.svg"></div>',
+    nextArrow: '<div class="item-images_controll item-images_next"><img src="img/arrow-slider.svg"></div>',
     focusOnSelect: true, // Выбрать слайд кликом
     infinite: true, // Зацикленное пролистывание
     vertical: true, // Вертикальный слайдер

@@ -9,6 +9,9 @@ header.header#header
 
 				nav.menu_nav
 					.menu_header
+						#menu-close.menu_close
+						a(href="main.html").logo
+							img(src="img/logo.svg", alt="logo")
 					ul.menu_list
 						li.menu_item
 							a(href="#").menu_link Доставка
@@ -35,9 +38,8 @@ header.header#header
 						li.menu_item
 							a(href="#").menu_link Политика конфиденциальности
 
-			a(href="main.html").logo
-				img(src="img/logo.svg", alt="logo").mobile-hide
-				img(src="img/logo-mob.svg", alt="logo").mobile-visible
+			a(href="main.html").logo.logo--desktop
+				img(src="img/logo.svg", alt="logo")
 
 			.location-wrapper
 				a(href="#").location
@@ -62,12 +64,5 @@ header.header#header
 				.call_content.mobile-hide--md
 					a(href="tel:88006005429").call_num 8 800 600-54-29
 					.call_text Ежедневно с 9 до 21
-
-			.cart
-				a(href="#").cart_img
-					img(src="img/cart.svg", alt="cart").mobile-hide
-					img(src="img/cart-mob.svg", alt="cart").mobile-visible
-					span.cart_count 4
-				a(href="#").cart_btn.mobile-hide Оформить заказ
 
 // /header

@@ -5,7 +5,7 @@ block title
 
 block content
 
-	include blocks/header.jade
+	include blocks/header--order.jade
 	
 	.wrapper
 
@@ -17,11 +17,11 @@ block content
 			.order_lot Номер заказа: 
 				span 2Y2-al-0107
 
-			.order_top
+			.order_top.order_top--mb
 
 				.order_left
-					.order_img.img-responsive
-						img(src="img/catalog/eco3.jpg", alt="cover")
+					.order_img
+						img(src="img/catalog/eco4.jpg", alt="cover")
 					p.order_text Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019 седан, хэтчбек фокс CH03-0203-EC27
 
 				.order_right.count
@@ -58,13 +58,14 @@ block content
 
 			.order_body.order_body--float-left
 
-				.order_grayblock
-					p Заказ передается на отправку после оплаты доставки.
-					p Стоимость товара оплачивается при получении заказа.
+				.order_grayblock.order_grayblock--mb
+					p Заказ передается на отправку после оплаты доставки. Стоимость товара оплачивается при получении заказа.
 
 				button(type="submit").order_btn Оплатить доставку 
 					span 345
 					|  руб
+
+				.order_sbertext.mobile-hide Обработку платежей осуществляет ПАО Сбербанк
 
 			.order_ovh
 				.order_ovh-text.mobile-visible Обработку платежей осуществляет ПАО Сбербанк

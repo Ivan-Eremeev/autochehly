@@ -1,6 +1,7 @@
 .breadcrumbs {
 	margin-bottom: 25px;
 	font-size: 12px;
+	letter-spacing: .1em;
 	color: $grayD;
 	&_item {
 		display: inline-block;
@@ -9,6 +10,9 @@
 	a {
 		color: $grayD;
 		margin-right: 10px;
+		&:hover {
+			color: $red;
+		}
 	}
 	&_arrow {
 		color: $red;
@@ -16,5 +20,14 @@
 	@media (max-width: $break_sm) {
 		margin-bottom: 10px;
 		font-size: 9px;
+		&--item {
+			margin-bottom: 20px;
+		}
+		&_item {
+			margin-right: 5px;
+		}
+		a {
+			margin-right: 5px;
+		}
 	}
 }

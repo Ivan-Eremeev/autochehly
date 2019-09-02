@@ -5,16 +5,20 @@
 		max-height: 360px;
 	}
 	&--generation {
-		max-height: 375px;
+		max-height: 385px;
 	}
 	.scroll-element.scroll-y {
     width: 17px;
+    right: 0;
 	}
 	.scroll-bar {
 		background-color: $grayD;
 	}
 	.scroll-element .scroll-element_track {
 		background-color: $gray;
+	}
+	> .scroll-element .scroll-element_outer, > .scroll-element .scroll-element_track, > .scroll-element .scroll-bar {
+		border-radius: 5px;
 	}
 	@media (max-width: $break_sm) {
 		&--h360 {
@@ -26,16 +30,10 @@
 		.scroll-element.scroll-y {
 	    width: 44px;
 		}
-		> .scroll-element .scroll-element_outer, > .scroll-element .scroll-element_track, > .scroll-element .scroll-bar {
-			border-radius: 15px;
-		}
 	}
 	@media (max-width: $break_xs) {
 		.scroll-element.scroll-y {
 	    width: 17px;
-		}
-		> .scroll-element .scroll-element_outer, > .scroll-element .scroll-element_track, > .scroll-element .scroll-bar {
-			border-radius: 5px;
 		}
 	}
 }

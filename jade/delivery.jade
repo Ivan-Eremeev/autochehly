@@ -53,18 +53,18 @@ block content
 					p.delivery_text.delivery_text--big-mobile Транспортные компании
 					// transport-company
 					.transport-company
-						a(href="#").transport-company_link
-							img(src="img/dpd.svg", alt="dpd").transport-company_img
-						a(href="#").transport-company_link
-							img(src="img/boxberry.svg", alt="boxberry").transport-company_img
-						a(href="#").transport-company_link
-							img(src="img/iml.svg", alt="iml").transport-company_img
-						a(href="#").transport-company_link
-							img(src="img/pek.svg", alt="pek").transport-company_img
-						a(href="#").transport-company_link
-							img(src="img/cdek.svg", alt="cdek").transport-company_img
-						a(href="#").transport-company_link
-							img(src="img/pochta_rossii.svg", alt="pochta_rossii").transport-company_img
+						a(href="#").transport-company_link.transport-company_link--delivery
+							img(src="img/dpd.svg", alt="dpd").transport-company_img.transport-company_img--dpd
+						a(href="#").transport-company_link.transport-company_link--delivery
+							img(src="img/boxberry.svg", alt="boxberry").transport-company_img.transport-company_img--boxberry
+						a(href="#").transport-company_link.transport-company_link--delivery
+							img(src="img/iml.svg", alt="iml").transport-company_img.transport-company_img--iml
+						a(href="#").transport-company_link.transport-company_link--delivery
+							img(src="img/pek.svg", alt="pek").transport-company_img.transport-company_img--pek
+						a(href="#").transport-company_link.transport-company_link--delivery
+							img(src="img/cdek.svg", alt="cdek").transport-company_img.transport-company_img--cdek
+						a(href="#").transport-company_link.transport-company_link--delivery
+							img(src="img/pochta_rossii.svg", alt="pochta-rossii").transport-company_img.transport-company_img--pochta-rossii
 					// /transport-company
 		// /delivery
 
@@ -78,7 +78,7 @@ block content
 		.title Вы смотрели
 
 		// cards
-		.cards
+		.cards.cards--mb
 
 			.row
 
@@ -152,6 +152,6 @@ block content
 
 		// /cards
 
-		include blocks/bottom-blocks.jade
+		include blocks/bottom-blocks--pages.jade
 
 	include blocks/footer.jade

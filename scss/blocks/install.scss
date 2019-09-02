@@ -1,7 +1,7 @@
 .install {
 	max-width: 780px;
 	&--mb {
-		margin-bottom: 100px;
+		margin-bottom: 55px;
 	}
 	.text {
 		padding: 15px 0 25px;
@@ -27,6 +27,7 @@
 		}
 		&:hover {
 			background-color: $red;
+			border-color: $red;
 			color: #fff;
 			.install_img {
 				stroke: #fff;

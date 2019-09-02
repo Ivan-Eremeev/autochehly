@@ -25,14 +25,14 @@
 		float: left;
 		label {
 			display: block;
-			padding: 10px 20px;
+			padding: 9px 20px 11px;
 			border: 1px solid $border;
 			background-color: #fff;
 			transition: .15s;
 			cursor: pointer;
 			user-select: none;
 			&:hover {
-				background-color: $gray;
+				color: $red;
 			}
 		}
 		&--popular {
@@ -51,6 +51,7 @@
 			&:checked {
 				+ label {
 					color: $red;
+					background-color: $gray;
 				}
 			}
 		}

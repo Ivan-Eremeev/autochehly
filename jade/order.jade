@@ -5,7 +5,7 @@ block title
 
 block content
 
-	include blocks/header.jade
+	include blocks/header--order.jade
 	
 	.wrapper
 
@@ -17,8 +17,8 @@ block content
 			.order_top
 
 				.order_left
-					.order_img.img-responsive
-						img(src="img/catalog/eco3.jpg", alt="cover")
+					.order_img
+						img(src="img/catalog/eco4.jpg", alt="cover")
 					p.order_text Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019 седан, хэтчбек фокс CH03-0203-EC27
 
 				.order_right.count
@@ -59,15 +59,15 @@ block content
 					.order_field.order_field--name
 						input#order-name(type="text" name="name").js-input-focus
 						label(for="order-name") Имя и фамилия
-					.order_field.order_field--tel.error
+					.order_field.order_field--tel
 						input#order-tel(type="tel" name="tel").js-input-focus
 						label(for="order-tel") Телефон
 
 				.order_title Оплата 
 
-				.delivery_buttons.delivery_buttons--border-red-mob
+				.delivery_buttons
 					input#order-pay1(type="radio", name="order-pay" checked)
-					label(for="order-pay1").delivery_btn.js-match-height Наличными при получении
+					label(for="order-pay1").delivery_btn.delivery_btn--first.js-match-height Наличными при получении
 					input#order-pay2(type="radio", name="order-pay")
 					label(for="order-pay2").delivery_btn.js-match-height Банковской картой на сайте
 
@@ -77,9 +77,9 @@ block content
 					input#order-city(type="text" name="city").js-input-focus
 					label(for="order-city") Город или населенный пункт
 
-				#delivery-buttons.delivery_buttons--border-red-mob.delivery_buttons.delivery_buttons--mb20
+				#delivery-buttons.delivery_buttons.delivery_buttons--mb20
 					input#order-delivery1(type="radio", name="order-delivery" checked data-price="445")
-					label(for="order-delivery1").delivery_btn.delivery_btn--span.js-match-height В пункт выдачи
+					label(for="order-delivery1").delivery_btn.delivery_btn--first.delivery_btn--span.js-match-height В пункт выдачи
 						span 445 Р  - 3 дня
 					input#order-delivery2(type="radio", name="order-delivery" data-price="330")
 					label(for="order-delivery2").delivery_btn.delivery_btn--span.js-match-height Почтой РФ

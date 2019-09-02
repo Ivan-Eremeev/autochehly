@@ -2,6 +2,11 @@
 	position: relative;
 	&_map {
 		height: 260px;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	.subtitle2 {
+		margin-bottom: 20px;
 	}
 	@media (max-width: $break_sm) {
 		&_dropdown {

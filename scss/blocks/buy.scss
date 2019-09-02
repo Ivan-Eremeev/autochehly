@@ -1,6 +1,6 @@
 .buy {
 	max-width: 930px;
-	margin-bottom: 63px;
+	margin-bottom: 2px;
 	.title {
 		margin-bottom: 50px;
 	}
@@ -52,7 +52,7 @@
 	&_list {
 		display: inline-block;
 		width: 157px;
-		margin-bottom: 56px;
+		margin-bottom: 55px;
 		vertical-align: top;
 	}
 	&_item {
@@ -67,7 +67,6 @@
 	}
 	@media (max-width: $break_sm) {
 		margin-top: 40px;
-		margin-bottom: 40px;
 		.title {
 			margin-bottom: 15px;
 		}
@@ -76,7 +75,7 @@
 			font-size: 13px;
 		}
 		&_select {
-			padding-top: 5px;
+			padding: 7px 5px;
 			margin-bottom: 25px;
 			font-size: 11px;
 		}
@@ -85,33 +84,9 @@
 			height: 20px;
 			padding-top: 1px;
 			margin-bottom: 5px;
-			&:hover, &.active {
-				
-			}
-		}
-		&_body {
-			
-		}
-		&_scroll {
-			
-		}
-		&_row {
-			
-		}
-		&_list-title {
-			
 		}
 		&_list {
 			margin-bottom: 30px;
-		}
-		&_item {
-			
-		}
-		&_city {
-			
-			&:hover {
-				
-			}
 		}
 	}
 }

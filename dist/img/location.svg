@@ -4,17 +4,12 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="36px" height="36px" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve">
 <g id="location_2_">
-	
-		<circle fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="18.033" cy="9.885" r="4.379"/>
-	<path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-		M26.791,9.885c0,4.837-7.115,14.229-8.758,14.229c-1.642,0-8.757-9.392-8.757-14.229c0-4.837,3.921-8.757,8.757-8.757
-		S26.791,5.048,26.791,9.885z"/>
-	
-		<line fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="10.371" y1="31.231" x2="12.012" y2="23.021"/>
-	
-		<line fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="25.695" y1="31.231" x2="24.052" y2="23.021"/>
-	
-		<polyline fill="none" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10" points="
-		9.275,19.19 5.992,20.284 1.066,35.063 10.371,31.231 18.033,34.516 25.695,31.231 35,35.063 30.074,20.284 26.791,19.19 	"/>
+	<circle fill="none" cx="18.033" cy="9.885" r="4.379"/>
+	<path fill="none" d="M26.791,9.885c0,4.837-7.115,14.228-8.758,14.228c-1.642,0-8.757-9.391-8.757-14.228
+		c0-4.837,3.921-8.757,8.757-8.757C22.869,1.128,26.791,5.048,26.791,9.885z"/>
+	<line fill="none" x1="10.371" y1="31.23" x2="12.012" y2="23.021"/>
+	<line fill="none" x1="25.695" y1="31.23" x2="24.053" y2="23.021"/>
+	<polyline fill="none" points="9.275,19.189 5.992,20.284 1.066,35.063 10.371,31.23 18.033,34.516 25.695,31.23 35,35.063 
+		30.074,20.284 26.791,19.189 	"/>
 </g>
 </svg>

@@ -20,14 +20,14 @@
 	}
 	&_trigger {
 		height: 40px;
-		padding: 8px 25px 0 14px;
+		padding: 7px 25px 0 14px;
 		border: 1px solid $border;
 		overflow: hidden;
 		border-radius: 5px;
 		cursor: pointer;
 		transition: .15s;
 		position: relative;
-		&:hover, &.active, &.select {
+		&:hover, &.active {
 			border-color: $red;
 			color: $red;
 			>.filter_arrow {
@@ -43,7 +43,7 @@
 	&_arrow {
 		font-size: 25px;
 		position: absolute;
-		top: 8px;
+		top: 7px;
 		right: 5px;
 		color: $grayD;
 		transition: .15s;
@@ -52,20 +52,28 @@
 		width: 100%;
 		max-width: 170px;
 		vertical-align: top;
+		&--red {
+			&:hover {
+				background-color: #fb4646;
+			}
+		}
 	}
 	&_body {
 		padding-bottom: 18px;
+		margin-right: -18px;
 		.hide {
 			display: none;
 		}
 	}
 	&_content {
-		
+		margin-left: -50px;
 	}
 	&_item {
 		display: inline-block;
-		width: 210px;
+		width: 180px;
+		margin-left: 50px;
 		margin-bottom: 3px;
+		vertical-align: top;
 		&--mb {
 			margin-bottom: 15px;
 		}
@@ -103,7 +111,7 @@
 	}
 	&_row {
 		margin-left: -13px;
-		padding-right: 40px;
+		padding-right: 30px;
 		&:after {
 			content: '';
 			display: table;
@@ -133,6 +141,7 @@
 		}
 	}
 	&_generation-img {
+		display: block;
 		border-radius: 5px;
 		&:after {
 			padding-top: 75%;
@@ -163,11 +172,11 @@
 		}
 		&_arrow {
 			font-size: 28px;
-			top: 10px;
+			top: 8px;
 		}
 		&_trigger {
 			height: 47px;
-			padding: 12px 30px 0 14px;
+			padding: 10px 30px 0 14px;
 			span {
 				height: 20px;
 			}
@@ -185,7 +194,7 @@
 	display: none;
 	margin-top: 18px;
 	box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: #fff;
 	transition: 1s;
 	position: absolute;
@@ -200,6 +209,9 @@
 	&_list {
 		padding: 10px 20px 10px 14px;
 		border-radius: 5px;
+		&--generation {
+			padding: 14px 20px 14px 14px;
+		}
 	}
 	&_item {
 		margin-bottom: 18px;
@@ -260,7 +272,7 @@
 	}
 	&_row {
 		margin-left: -10px;
-		padding-right: 20px;
+		padding-right: 5px;
 		&:after {
 			content: '';
 			display: table;
@@ -289,7 +301,10 @@
 			max-width: none;
 		}
 		&_list {
-			padding: 5px 14px 0px 14px;
+			padding: 5px 14px 0px;
+			&--generation {
+				padding: 14px 14px 4px;
+			}
 		}
 		&_item {
 			margin-bottom: 0;
@@ -306,7 +321,7 @@
 			width: 17px;
 			height: 17px;
 			&:after, &:before {
-				top: 10px;
+				top: 8px;
 				height: 1px;
 			}
 		}
@@ -323,7 +338,7 @@
 .filters-btn {
 	display: inline-block;
 	height: 47px;
-	padding: 8px 25px 0 10px;
+	padding: 9px 25px 0 10px;
 	border: 1px solid $border;
 	border-radius: 5px;
 	font-size: 15px;

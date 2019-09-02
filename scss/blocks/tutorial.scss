@@ -1,10 +1,13 @@
 .tutorial {
 	padding: 33px 0px 75px 20px;
 	font-size: 14px;
+	&--mb {
+		padding: 33px 0px 85px 20px;
+	}
 	&_item {
 		display: inline-block;
-		width: 33%;
-		padding: 0 40px 0 60px;
+		width: 38%;
+		padding: 0 60px 0 65px;
 		line-height: 1.25;
 		position: relative;
 		vertical-align: top;
@@ -17,8 +20,15 @@
 				color: $red;
 				position: absolute;
 				top: 50%;
-				right: 5px;
+				right: 10px;
 				transform: translate(0,-50%);
+			}
+		}
+		&:last-child {
+			width: 23%;
+			padding-right: 0;
+			.tutorial_img {
+				left: 11px;
 			}
 		}
 	}
@@ -42,6 +52,12 @@
 			padding: 0 10px 0 45px;
 			&:not(:last-child):after {
 				display: none;
+			}
+			&:last-child {
+				width: 100%;
+				.tutorial_img {
+					left: 0;
+				}
 			}
 		}
 		&_img {

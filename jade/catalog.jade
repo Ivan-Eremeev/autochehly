@@ -55,8 +55,6 @@ block content
 
 			.sidebar.sidebar--filters#filters
 
-				.title.mobile-visible--md Фильтры
-
 				#close-filters.close
 
 				h2.subtitle Материалы
@@ -230,7 +228,7 @@ block content
 					// sort
 					form(action="#").sort
 						.sort_item.sort_item--popular
-							input(type="radio" name="sort")#sort_popular
+							input(type="radio" name="sort" checked)#sort_popular
 							label(for="sort_popular") По популярности
 						.sort_item.sort_item--price
 							input(type="radio" name="sort")#sort_price

@@ -1,10 +1,18 @@
 .cards {
+	&--mb {
+		margin-bottom: 45px;
+	}
 	&_col {
 		@include col(4);
 		@include col-sm(6);
 		&--four-col {
 			@include col(3);
 			@include col-sm(6);
+		}
+	}
+	@media (max-width: $break_sm) {
+		&--mb {
+			margin-bottom: 0;
 		}
 	}
 }

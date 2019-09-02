@@ -54,7 +54,6 @@
               <div class="call_text">Ежедневно с 9 до 21</div>
             </div>
           </div>
-          <div class="cart"><a class="cart_img" href="#"><img class="mobile-hide" src="img/cart.svg" alt="cart"><img class="mobile-visible" src="img/cart-mob.svg" alt="cart"><span class="cart_count">4</span></a><a class="cart_btn mobile-hide" href="#">Оформить заказ</a></div>
         </div>
       </div>
     </header>
@@ -65,7 +64,7 @@
         <h1 class="title">Оформление заказа</h1>
         <div class="order_top">
           <div class="order_left">
-            <div class="order_img img-responsive"><img src="img/catalog/eco3.jpg" alt="cover"></div>
+            <div class="order_img"><img src="img/catalog/eco4.jpg" alt="cover"></div>
             <p class="order_text">Чехлы для сидений экокожа Chevrolet Aveo 2 с 2011-2019 седан, хэтчбек фокс CH03-0203-EC27</p>
           </div>
           <div class="order_right count">
@@ -99,15 +98,15 @@
               <input class="js-input-focus" id="order-name" type="text" name="name">
               <label for="order-name">Имя и фамилия</label>
             </div>
-            <div class="order_field order_field--tel error">
+            <div class="order_field order_field--tel">
               <input class="js-input-focus" id="order-tel" type="tel" name="tel">
               <label for="order-tel">Телефон</label>
             </div>
           </div>
           <div class="order_title">Оплата </div>
-          <div class="delivery_buttons delivery_buttons--border-red-mob">
+          <div class="delivery_buttons">
             <input id="order-pay1" type="radio" name="order-pay" checked>
-            <label class="delivery_btn js-match-height" for="order-pay1">Наличными при получении</label>
+            <label class="delivery_btn delivery_btn--first js-match-height" for="order-pay1">Наличными при получении</label>
             <input id="order-pay2" type="radio" name="order-pay">
             <label class="delivery_btn js-match-height" for="order-pay2">Банковской картой на сайте</label>
           </div>
@@ -116,9 +115,9 @@
             <input class="js-input-focus" id="order-city" type="text" name="city">
             <label for="order-city">Город или населенный пункт</label>
           </div>
-          <div class="delivery_buttons--border-red-mob delivery_buttons delivery_buttons--mb20" id="delivery-buttons">
+          <div class="delivery_buttons delivery_buttons--mb20" id="delivery-buttons">
             <input id="order-delivery1" type="radio" name="order-delivery" checked data-price="445">
-            <label class="delivery_btn delivery_btn--span js-match-height" for="order-delivery1">В пункт выдачи<span>445 Р  - 3 дня</span></label>
+            <label class="delivery_btn delivery_btn--first delivery_btn--span js-match-height" for="order-delivery1">В пункт выдачи<span>445 Р  - 3 дня</span></label>
             <input id="order-delivery2" type="radio" name="order-delivery" data-price="330">
             <label class="delivery_btn delivery_btn--span js-match-height" for="order-delivery2">Почтой РФ<span>330 Р  - 5 дней</span></label>
             <input id="order-delivery3" type="radio" name="order-delivery" data-price="650">
@@ -252,7 +251,7 @@
         <div class="wrapper"> 
           <div class="footer_top">
             <div class="row">
-              <div class="footer_col">
+              <div class="footer_col footer_col--1">
                 <ul class="footer_nav">
                   <li class="footer_item"><a class="footer_link" href="#">Доставка</a></li>
                   <li class="footer_item"><a class="footer_link" href="#">Оплата</a></li>
@@ -261,7 +260,7 @@
                   <li class="footer_item"><a class="footer_link" href="#">Где купить</a></li>
                 </ul>
               </div>
-              <div class="footer_col">
+              <div class="footer_col footer_col--2">
                 <ul class="footer_nav">
                   <li class="footer_item"><a class="footer_link" href="#">Контакты</a></li>
                   <li class="footer_item"><a class="footer_link" href="#">Отзывы</a></li>
@@ -273,7 +272,7 @@
               <div class="footer_col mobile-visible">
                 <div class="footer_rectangle"></div>
               </div>
-              <div class="footer_col footer_col--right">
+              <div class="footer_col footer_col--3">
                 <div class="call_content"><a class="call_num" href="tel:88006005429">8 800 600-54-29</a>
                   <div class="call_text">Ежедневно с 9 до 21</div>
                 </div>
@@ -285,10 +284,10 @@
                   </ul>
                 </div>
               </div>
-              <div class="footer_col mobile-hide">
+              <div class="footer_col footer_col--4 mobile-hide">
                 <div class="footer_rectangle"></div>
               </div>
-              <div class="footer_col mobile-hide"><a class="footer_logo" href="main.html"><img src="img/logo.svg" alt="logo"></a></div>
+              <div class="footer_col footer_col--5 mobile-hide"><a class="footer_logo" href="main.html"><img src="img/logo.svg" alt="logo"></a></div>
             </div>
           </div>
         </div>

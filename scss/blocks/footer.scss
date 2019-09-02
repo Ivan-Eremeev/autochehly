@@ -8,6 +8,28 @@
 		@include col(2.4);
 		@include col-md(4);
 		@include col-sm(6);
+		&--1 {
+			@include col(2.2);
+			@include col-md(4);
+			@include col-sm(6);
+		}
+		&--2 {
+			@include col(2.5);
+			@include col-md(4);
+			@include col-sm(6);
+		}
+		&--3 {
+			@include col(2.8);
+			@include col-md(4);
+			@include col-sm(6);
+		}
+		&--4 {
+			
+		}
+		&--5 {
+			@include col(2);
+			@include col-md(4);
+		}
 	}
 	&_nav {
 		font-size: 14px;
@@ -74,11 +96,6 @@
 	}
 	@media (max-width: $break_sm) {
 		padding: 0;
-		&_col {
-			&--right {
-				text-align: right;
-			}
-		}
 		&_top {
 			padding: 40px 0 10px;
 		}
@@ -109,6 +126,7 @@
 		}
 		&_wings {
 			top: auto;
+			right: 18px;
 			bottom: -10px;
 			transform: translate(0,0);
 			svg {
@@ -120,7 +138,7 @@
 			display: block;
 			position: absolute;
 			top: 0;
-			right: 30px;
+			right: 18px;
 			svg {
 				width: 80px;
 				height: 30px;

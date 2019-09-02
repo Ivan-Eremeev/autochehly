@@ -57,11 +57,12 @@
 
 
 .sideb {
-	padding: 20px;
+	padding: 20px 10px 40px 30px;
 	border: 1px solid $border;
 	border-radius: 5px;
 	&--item {
-
+		padding: 20px 10px 30px 30px;
+		margin-bottom: 40px;
 	}
 	@media (max-width: $break_md) {
 		margin-bottom: 20px;

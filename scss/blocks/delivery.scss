@@ -1,5 +1,5 @@
 .delivery {
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 	.title {
 		margin-bottom: 20px;
 	}
@@ -8,25 +8,32 @@
 		margin-bottom: 30px;
 	}
 	&_buttons {
-		margin-bottom: 70px;
-		border: 1px solid $border;
-		border-radius: 5px;
+		width: 100%;
+		margin-bottom: 50px;
+		// border: 1px solid $gray;
+		// border-radius: 5px;
 		overflow: hidden;
 		input {
 			display: none;
 			&:checked {
 				+ label {
-					background-color: $gray;
-					color: $black;
+					background-color: $red;
+					color: #fff;
+					border-color: $red;
 				}
 			}
 		}
 	}
 	&_btn {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		float: left;
 		width: 50%;
 		padding: 15px 10px;
+		border-top: 1px solid $border;
+		border-bottom: 1px solid $border;
+		border-left: 1px solid $border;
 		font-size: 18px;
 		color: $black;
 		text-align: center;
@@ -34,6 +41,7 @@
 		&:hover {
 			background-color: $red;
 			color: #fff;
+			border-color: $red;
 		}
 		span {
 			display: block;
@@ -44,11 +52,16 @@
 			width: 33.33%;
 			padding: 6px 10px;
 		}
-		&:not(:last-child) {
-			border-right: 1px solid $border;
+		// &:not(:last-child) {
+		// 	border-right: 1px solid $gray;
+		// }
+		&--first, &:first-child {
+			border-radius: 5px 0 0 5px;
 		}
 		&:last-child {
-			float: right;
+			// float: right;
+			border-right: 1px solid $gray;
+			border-radius: 0 5px 5px 0;
 		}
 	}
 	&_row {
@@ -74,33 +87,21 @@
 		}
 		&_buttons {
 			margin-bottom: 30px;
-			input {
-				&:checked {
-					+ label {
-						background-color: $red;
-						color: #fff;
-					}
-				}
-			}
-			&--border-red-mob {
-				border-color: $red;
-				.delivery_btn {
-					&:not(:last-child) {
-						border-color: $red;
-					}
-				}
-			}
+			border-color: $red;
 		}
 		&_btn {
 			padding: 10px 10px;
 			font-size: 15px;
+			line-height: 1;
+			&:not(:last-child) {
+				border-color: $red;
+			}
 			span {
 				margin-top: 5px;
 				font-size: 9px;
 			}
 			&--span {
 				padding: 7px;
-				line-height: 1;
 			}
 		}
 	}

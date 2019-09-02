@@ -1,5 +1,5 @@
 .payment {
-	margin-top: 80px;
+
 	.title {
 		margin-bottom: 50px;
 	}
@@ -17,7 +17,7 @@
 	}
 	&_cards {
 		max-width: 674px;
-		margin-bottom: 122px;
+		margin-bottom: 85px;
 		&:after {
 			content: '';
 			display: table;
@@ -42,9 +42,6 @@
 		&_title {
 			margin-bottom: 15px;
 			font-size: 13px;
-			&--big {
-				font-size: 20px;
-			}
 		}
 		&_text {
 			max-width: none;

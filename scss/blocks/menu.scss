@@ -7,6 +7,7 @@
 		float: left;
 		position: relative;
 		cursor: pointer;
+		z-index: 100;
 		&:after, &:before {
 			content: '';
 			display: block;
@@ -14,6 +15,7 @@
 			height: 3px;
 			background-color: $black;
 			position: absolute;
+			transition: .3s;
 		}
 		&:after {
 			top: 12px;
@@ -40,13 +42,13 @@
 			height: 3px;
 			background-color: $black;
 			position: absolute;
-			top: 18px;
+			transition: .3s;
 		}
 		&:after {
-			transform: rotate(45deg);
+			top: 4px;
 		}
 		&:before {
-			transform: rotate(-45deg);
+			top: 11px;
 		}
 	}
 	&_nav {
@@ -56,8 +58,8 @@
 		position: fixed;
 		top: 0;
 		bottom: 0;
-		left: -800px;
-		transition: 0.5s;
+		right: 100%;
+		transition: 0.3s;
 		z-index: 99;
 		overflow-y: auto;
 		&:after {
@@ -77,10 +79,36 @@
 		font-size: 30px;
 		font-weight: 600;
 		color: $black;
+		opacity: 0;
 	}
 	&.open {
 		.menu_nav {
-			left: 0;
+			right: 0;
+			transition: .3s right cubic-bezier(.03, .55, .16, 1);
+		}
+		.menu_link {
+			opacity: 1;
+			transition: .2s opacity .3s;
+		}
+		.menu_btn {
+			&:after {
+				transform: rotate(45deg);
+				top: 20px;
+			}
+			&:before {
+				transform: rotate(-45deg);
+				top: 20px;
+			}
+		}
+		.menu_close {
+			&:after {
+				transform: rotate(45deg);
+				top: 8px;
+			}
+			&:before {
+				transform: rotate(-45deg);
+				top: 8px;
+			}
 		}
 	}
 	@media (max-width: $break_sm) {

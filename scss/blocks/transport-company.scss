@@ -1,16 +1,39 @@
 .transport-company {
+	margin-bottom: 40px;
 	&_link {
-		width: 94px;
-		height: 60px;
 		display: inline-block;
+		width: 100px;
+		height: 50px;
 		margin: 2px;
 		position: relative;
+		&--delivery {
+			width: 90px;
+		}
 	}
 	&_img {
+		width: 75px;
 		position: absolute;
 		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
+		left: 0;
+		transform: translate(0,-50%);
+		&--dpd {
+
+		}
+		&--boxberry {
+
+		}
+		&--iml {
+			width: 58px;
+		}
+		&--pek {
+			width: 80px;
+		}
+		&--cdek {
+
+		}
+		&--pochta-rossii {
+
+		}
 	}
 	@media (max-width: $break_sm) {
 		margin-bottom: 10px;
@@ -20,7 +43,37 @@
 			margin-bottom: 10px;
 		}
 		&_img {
-			transform: translate(-50%,-50%) scale(.9);
+			width: 60px;
+			height: 38px;
+			&--iml {
+				width: 50px;
+			}
+		}
+	}
+	@media (max-width: $break_xs) {
+		margin-top: -5px;
+		margin-bottom: 5px;
+		&_img {
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		&_link {
+			width: 25%;
+			margin-left: 0;
+			margin-right: 0;
+			&:nth-child(4n + 1) {
+				.transport-company_img {
+					left: 0;
+					transform: translate(0,-50%);
+				}
+			}
+			&:nth-child(4n) {
+				.transport-company_img {
+					left: auto;
+					right: 0;
+					transform: translate(0,-50%);
+				}
+			}
 		}
 	}
 }

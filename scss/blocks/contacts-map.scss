@@ -1,6 +1,8 @@
 .contacts-map {
 	height: 517px;
-	margin-bottom: 140px;
+	margin-bottom: 85px;
+	border-radius: 5px;
+	overflow: hidden;
 	@media (max-width: $break_sm) {
 		height: 280px;
 		margin-bottom: 40px;

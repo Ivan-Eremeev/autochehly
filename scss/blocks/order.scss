@@ -14,6 +14,9 @@
 		margin-bottom: 50px;
 		overflow: hidden;
 		font-size: 18px;
+		&--mb {
+			margin-bottom: 20px;
+		}
 	}
 	&_left {
 		float: left;
@@ -51,6 +54,7 @@
 	}
 	&_num-description {
 		font-size: 15px;
+		color: $grayD;
 	}
 	&_price-result {
 		float: left;
@@ -72,6 +76,9 @@
 		background-color: $gray;
 		border-radius: 5px;
 		font-size: 18px;
+		&--mb {
+			margin-bottom: 30px;
+		}
 		p {
 			&:not(:last-child) {
 				margin-bottom: 20px;
@@ -143,7 +150,7 @@
 			height: auto;
 			margin-bottom: 20px;
 			label {
-				top: 20px;
+				top: 27px;
 			}
 		}
 		&.active {
@@ -183,10 +190,15 @@
 	&_btn {
 		height: 55px;
 		width: 100%;
+		padding-bottom: 2px;
 		border: none;
 		border-radius: 5px;
 		background-color: $green;
 		font-size: 18px;
+		transition: .15s;
+		&:hover {
+			background-color: #28c646;
+		}
 	}
 	&_reset {
 		display: none;
@@ -196,6 +208,9 @@
 		padding-top: 30px;
 		overflow: hidden;
 		padding-left: 50px;
+		.pay_card {
+			margin-bottom: 53px;
+		}
 	}
 	&_ovh-text {
 		font-size: 18px;
@@ -205,6 +220,9 @@
 	&_lot {
 		font-size: 18px;
 		margin-bottom: 50px;
+		&--mb {
+			margin-bottom: 28px;
+		}
 		span {
 			font-weight: 700;
 		}
@@ -213,7 +231,7 @@
 		max-width: 850px;
 		font-size: 18px;
 		padding-left: 20px;
-		margin-bottom: 30px;
+		margin-bottom: 45px;
 		p {
 			overflow: hidden;
 			padding-top: 10px;
@@ -229,6 +247,11 @@
 		span {
 			font-size: 30px;
 		}
+	}
+	&_sbertext {
+		margin-top: 20px;
+		font-size: 16px;
+		text-align: center;
 	}
 	@media (max-width: $break_sm) {
 		margin-top: 35px;
@@ -315,18 +338,23 @@
 			}
 			&--message {
 				height: auto;
+				label {
+					top: 21px;
+				}
 			}
 			&.active {
 				label {
+					top: 6px;
 					font-size: 9px;
 				}
 			}
 		}
 		&_reset {
 			display: inline-block;
+			float: right;
 			width: 20px;
 			height: 30px;
-			margin-top: 3px;
+			margin-top: 4px;
 			margin-left: 20px;
 			position: relative;
 			&:after, &:before {
@@ -355,6 +383,7 @@
 			font-size: 13px;
 			font-weight: 600;
 			padding-left: 0;
+			margin-bottom: 30px;
 			p {
 				padding-top: 0;
 				width: 50%;
@@ -384,6 +413,7 @@
 			font-size: 15px;
 		}
 		&_ovh {
+			max-width: none;
 			padding: 30px 10px 0;
 		}
 		&_ovh-text {
@@ -460,12 +490,13 @@
 			max-width: none;
 			height: 47px;
 			margin-bottom: 20px;
-			padding: 5px 80px 0 15px;
+			padding: 6px 80px 0 15px;
 		}
 		&_text {
 			font-size: 15px;
 		}
 		&_label {
+			margin-bottom: 2px;
 			font-size: 9px;
 		}
 		&_logo {

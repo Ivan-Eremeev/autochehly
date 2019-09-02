@@ -1,11 +1,12 @@
 .requisites {
-	margin-bottom: 130px;
+	margin-bottom: 85px;
 	.title {
 		margin-bottom: 50px;
 	}
 	&_text {
 		max-width: 600px;
 		padding: 20px;
+		border-radius: 5px;
 		background-color: $gray;
 		p {
 			margin-bottom: 15px;

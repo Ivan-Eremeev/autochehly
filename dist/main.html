@@ -16,9 +16,7 @@
           <div class="menu" id="menu">
             <div class="menu_btn" id="menu-btn"></div>
             <nav class="menu_nav">
-              <div class="menu_header">
-                <div class="menu_close" id="menu-close"></div><a class="logo" href="main.html"><img src="img/logo.svg" alt="logo"></a>
-              </div>
+              <div class="menu_header"></div>
               <ul class="menu_list">
                 <li class="menu_item"><a class="menu_link" href="#">Доставка</a></li>
                 <li class="menu_item"><a class="menu_link" href="#">Оплата</a></li>
@@ -34,7 +32,7 @@
                 <li class="menu_item"><a class="menu_link" href="#">Политика конфиденциальности</a></li>
               </ul>
             </nav>
-          </div><a class="logo logo--desktop" href="main.html"><img src="img/logo.svg" alt="logo"></a>
+          </div><a class="logo" href="main.html"><img class="mobile-hide" src="img/logo.svg" alt="logo"><img class="mobile-visible" src="img/logo-mob.svg" alt="logo"></a>
           <div class="location-wrapper"><a class="location" href="#"><img class="location_icon" src="img/location.svg" alt="location"><span class="location_text">Москва</span></a></div>
           <div class="location-dropdown">
             <form class="location-dropdown_block" action="#">
@@ -189,7 +187,7 @@
                 </div>
                 <div class="dropdown js-dropdown">
                   <div class="js-scrollbar scrollbar-inner scroll-filter scroll-filter--generation">
-                    <ul class="dropdown_list">
+                    <ul class="dropdown_list dropdown_list--generation">
                       <div class="dropdown_row">
                         <div class="dropdown_col">
                           <input id="generation1" type="radio" name="generation">
@@ -543,7 +541,7 @@
           <div class="sideb">
             <h2 class="title">Доставка</h2>
             <!-- transport-company-->
-            <div class="transport-company"><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/dpd.svg" alt="dpd"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/boxberry.svg" alt="boxberry"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/iml.svg" alt="iml"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pek.svg" alt="pek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/cdek.svg" alt="cdek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pochta_rossii.svg" alt="pochta-rossii"></a></div>
+            <div class="transport-company"><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--dpd" src="img/dpd.svg" alt="dpd"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--boxberry" src="img/boxberry.svg" alt="boxberry"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--iml" src="img/iml.svg" alt="iml"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--pek" src="img/pek.svg" alt="pek"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--cdek" src="img/cdek.svg" alt="cdek"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--pochta-rossii" src="img/pochta_rossii.svg" alt="pochta-rossii"></a></div>
             <!-- /transport-company-->
             <h2 class="title">Оплата</h2>
             <!-- pay-->
@@ -557,7 +555,7 @@
                 <li class="pay_card"><img class="pay_card-img" src="img/mastercard.svg" alt="mastercard-logo"></li>
                 <li class="pay_card"><img class="pay_card-img" src="img/maestro.svg" alt="maestro-logo"></li>
                 <li class="pay_sberbank"><img class="pay_sberbank-logo" src="img/sberbank.svg" alt="sbarbank-logo"></li>
-                <div class="pay_sberbank-text">Обработку платежей осуществляет ПАО Сбербанк</div>
+                <div class="pay_sberbank-text">Обработку платежей<br>осуществляет ПАО Сбербанк</div>
               </ul>
             </div>
             <!-- /pay-->
@@ -616,7 +614,7 @@
           <div class="sideb">
             <h2 class="title">Доставка</h2>
             <!-- transport-company-->
-            <div class="transport-company"><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/dpd.svg" alt="dpd"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/boxberry.svg" alt="boxberry"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/iml.svg" alt="iml"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pek.svg" alt="pek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/cdek.svg" alt="cdek"></a><a class="transport-company_link" href="#"><img class="transport-company_img" src="img/pochta_rossii.svg" alt="pochta-rossii"></a></div>
+            <div class="transport-company"><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--dpd" src="img/dpd.svg" alt="dpd"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--boxberry" src="img/boxberry.svg" alt="boxberry"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--iml" src="img/iml.svg" alt="iml"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--pek" src="img/pek.svg" alt="pek"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--cdek" src="img/cdek.svg" alt="cdek"></a><a class="transport-company_link" href="#"><img class="transport-company_img transport-company_img--pochta-rossii" src="img/pochta_rossii.svg" alt="pochta-rossii"></a></div>
             <!-- /transport-company-->
             <h2 class="title">Оплата</h2>
             <!-- pay-->
@@ -630,7 +628,7 @@
                 <li class="pay_card"><img class="pay_card-img" src="img/mastercard.svg" alt="mastercard"></li>
                 <li class="pay_card"><img class="pay_card-img" src="img/maestro.svg" alt="maestro"></li>
                 <li class="pay_sberbank"><img class="pay_sberbank-logo" src="img/sberbank.svg" alt="sbarbank"></li>
-                <div class="pay_sberbank-text">Обработку платежей осуществляет ПАО Сбербанк</div>
+                <div class="pay_sberbank-text">Обработку платежей<br>осуществляет ПАО Сбербанк</div>
               </ul>
             </div>
             <!-- /pay-->
@@ -643,7 +641,7 @@
       <div class="wrapper"> 
         <div class="footer_top">
           <div class="row">
-            <div class="footer_col">
+            <div class="footer_col footer_col--1">
               <ul class="footer_nav">
                 <li class="footer_item"><a class="footer_link" href="#">Доставка</a></li>
                 <li class="footer_item"><a class="footer_link" href="#">Оплата</a></li>
@@ -652,7 +650,7 @@
                 <li class="footer_item"><a class="footer_link" href="#">Где купить</a></li>
               </ul>
             </div>
-            <div class="footer_col">
+            <div class="footer_col footer_col--2">
               <ul class="footer_nav">
                 <li class="footer_item"><a class="footer_link" href="#">Контакты</a></li>
                 <li class="footer_item"><a class="footer_link" href="#">Отзывы</a></li>
@@ -664,7 +662,7 @@
             <div class="footer_col mobile-visible">
               <div class="footer_rectangle"></div>
             </div>
-            <div class="footer_col footer_col--right">
+            <div class="footer_col footer_col--3">
               <div class="call_content"><a class="call_num" href="tel:88006005429">8 800 600-54-29</a>
                 <div class="call_text">Ежедневно с 9 до 21</div>
               </div>
@@ -676,10 +674,10 @@
                 </ul>
               </div>
             </div>
-            <div class="footer_col mobile-hide">
+            <div class="footer_col footer_col--4 mobile-hide">
               <div class="footer_rectangle"></div>
             </div>
-            <div class="footer_col mobile-hide"><a class="footer_logo" href="main.html"><img src="img/logo.svg" alt="logo"></a></div>
+            <div class="footer_col footer_col--5 mobile-hide"><a class="footer_logo" href="main.html"><img src="img/logo.svg" alt="logo"></a></div>
           </div>
         </div>
       </div>

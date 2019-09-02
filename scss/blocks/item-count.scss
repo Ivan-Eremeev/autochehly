@@ -20,7 +20,7 @@
 			color: $red;
 		}
 		&--minus {
-
+			padding: 6px 10px 10px;
 		}
 		&--plus {
 
@@ -41,16 +41,20 @@
 	@media (max-width: $break_sm) {
 		float: right;
 		&_controll {
-			padding: 2px 5px;
-			font-size: 20px;
+			padding: 2px 0;
+			font-size: 25px;
+			&--minus {
+				
+			}
 			&--plus {
 				margin-top: 2px;
 			}
 		}
 		&_result {
+			padding: 0 10px;
 			input {
 				width: 30px;
-				padding: 7px 0;
+				padding: 11px 0 7px;
 				font-size: 15px;
 				font-weight: 600;
 			}

@@ -1,5 +1,5 @@
 .item-images {
-	margin-bottom: 13px;
+	margin-bottom: 20px;
 	&:after {
 		content: '';
 		display: table;
@@ -13,8 +13,15 @@
 	&_dot {
 		img {
 			opacity: .5;
+			transition: .15s;
+			cursor: pointer;
 		}
 		&.slick-current {
+			img {
+				opacity: 1;
+			}
+		}
+		&:hover {
 			img {
 				opacity: 1;
 			}
@@ -22,8 +29,9 @@
 	}
 	&_img-dot {
 		width: 80px;
+		margin-bottom: 20px;
 		&:after {
-			padding-top: 131%;
+			padding-top: 100%;
 		}
 	}
 	&_slider2 {
@@ -36,17 +44,22 @@
 		text-align: center;
 		font-size: 45px;
 		cursor: pointer;
-		color: $gray;
 		transition: .15s;
+		svg {
+			stroke: $gray;
+			transition: .15s;
+		}
 		&:hover {
-			color: $grayD;
+			svg {
+				stroke: $grayD;
+			}
 		}
 	}
 	&_prev {
-		
+		padding-bottom: 15px;
 	}
 	&_next {
-
+		transform: rotate(180deg);
 	}
 	@media (max-width: $break_md) {
 		&_slider2 {
