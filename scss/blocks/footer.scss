@@ -79,12 +79,6 @@
 			border-color: #b3b3b3
 		}
 	}
-	&_wings {
-		position: absolute;
-		top: 50%;
-		right: 40px;
-		transform: translate(0,-50%);
-	}
 	@media (max-width: $break_md) {
 		padding-top: 30px;
 		&_top {
@@ -144,5 +138,16 @@
 				height: 30px;
 			}
 		}
+	}
+}
+
+
+.wings {
+	position: absolute;
+	top: 50%;
+	right: 40px;
+	transform: translate(0,-50%);
+	@media (max-width: $break_sm) {
+		top: auto;
 	}
 }

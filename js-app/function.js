@@ -62,6 +62,31 @@ $(document).ready(function () {
 	// Инициализация стилизуемого скроллбара
 	$('.js-scrollbar').scrollbar();
 
+	// Fancybox. Открыть картинки на странице товара
+	$().fancybox({
+	  selector : '#item-images_slider2 .slick-slide:not(.slick-cloned)',
+	  backFocus : false,
+	  afterShow : function( instance, current ) {
+	    $('#item-images_slider2').slick('slickGoTo', parseInt(current.index), true);
+	    console.log(current.opts.$orig);
+	  },
+    buttons: [
+      "zoom",
+      "close"
+    ]
+	});
+	$(document).on('click', '.slick-cloned', function(e) {
+	  var $slides = $(this)
+	    .parent()
+	    .children('.slick-slide:not(.slick-cloned)');
+
+	  $slides
+	    .eq( ( $(this).attr("data-slick-index") || 0) % $slides.length )
+	    .trigger("click.fb-start", { $trigger: $(this) });
+
+	  return false;
+	});
+
 	// Инициализация слайдера с карточками товаров
 	cardsSlider($('#cards-slider'));
 	
@@ -255,7 +280,7 @@ function filtersBtn() {
 	var btn = $('.filters-btn'),
 			filters = $('#filters'),
 			close = $('#close-filters')
-	btn.click(function() {
+	btn.mouseup(function() {
 		if (!btn.hasClass('active')) {
 			btn.addClass('active');
 			filters.addClass('open');

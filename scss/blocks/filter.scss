@@ -343,11 +343,22 @@
 	border-radius: 5px;
 	font-size: 15px;
 	color: $black;
+	position: relative;
 	&_img {
 		width: 16px;
 		margin-right: 10px;
 		stroke: $black;
 		vertical-align: middle;
+	}
+	.close {
+		display: none;
+		top: 15px;
+		right: 10px;
+	}
+	&.active {
+		.close {
+			display: block;
+		}
 	}
 	@media (max-width: $break_sm) {
 		display: block;
