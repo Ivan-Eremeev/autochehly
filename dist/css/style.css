@@ -2246,6 +2246,17 @@ body {
 .mb-40 {
   margin-bottom: 40px; }
 
+.indexBtn {
+  display: block;
+  max-width: 200px;
+  background-color: #e11f1f;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center; }
+
 .menu {
   display: none; }
   .menu_btn {
@@ -5509,3 +5520,5 @@ body {
       .order-paid_mob {
         margin: 40px 0 30px;
         font-size: 13px; } }
+
+/*# sourceMappingURL=style.css.map */

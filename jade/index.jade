@@ -1,0 +1,39 @@
+extends blocks/base.jade
+
+block title 
+	title Авточехлы - Главная
+
+block content
+
+	include blocks/header.jade
+	
+	.wrapper
+
+		.main-sidebar
+
+			.title Страницы
+
+			div
+				a(href="main.html").indexBtn Главная
+			div
+				a(href="catalog.html").indexBtn Каталог
+			div
+				a(href="contacts.html").indexBtn Контакты
+			div
+				a(href="item.html").indexBtn Карточка товара
+			div
+				a(href="buy.html").indexBtn Где купить
+			div
+				a(href="delivery.html").indexBtn Доставка
+			div
+				a(href="install.html").indexBtn Установка
+			div
+				a(href="after-order.html").indexBtn Оформление заказа
+			div
+				a(href="order.html").indexBtn Оформление заказа 2
+			div
+				a(href="payment.html").indexBtn Оплата
+			div
+				a(href="order-paid.html").indexBtn Спасибо
+
+	include blocks/footer.jade
